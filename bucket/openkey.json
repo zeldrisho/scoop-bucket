@@ -1,7 +1,7 @@
 {
     "version": "2.0.5",
-    "description": "Vietnamese input system",
-    "homepage": "https://open-key.org",
+    "description": "Vietnamese Input for macOS, Windows and Linux - Bộ gõ Tiếng Việt nguồn mở đa nền tảng",
+    "homepage": "https://github.com/tuyenvm/OpenKey",
     "license": "GPL-3.0-only",
     "architecture": {
         "64bit": {
@@ -9,17 +9,19 @@
             "hash": "ec5860dbd25ce2f949366838fa22c46e88324463f1d818eb9f329bb431ace62f"
         }
     },
-    "pre_install": "Expand-7zipArchive \"$dir\"",
+    "bin": "OpenKey64.exe",
     "shortcuts": [
         [
             "OpenKey64.exe",
             "OpenKey"
         ]
     ],
-    "checkver": {
-        "github": "https://github.com/tuyenvm/OpenKey"
-    },
+    "checkver": "github",
     "autoupdate": {
-        "url": "https://github.com/tuyenvm/OpenKey/releases/download/$version/OpenKey64-Windows-$version-RC.zip"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/tuyenvm/OpenKey/releases/download/$version/OpenKey64-Windows-$version-RC.zip"
+            }
+        }
     }
 }
