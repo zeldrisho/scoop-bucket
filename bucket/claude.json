@@ -13,6 +13,7 @@
             "hash": "3725a07822edefb018aeb70dc029fccbb5b4ce387850ad3dc62e126cc4faca1d"
         }
     },
+    "extract_dir": "lib\\net45",
     "shortcuts": [
         [
             "claude.exe",
