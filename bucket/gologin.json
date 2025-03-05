@@ -25,6 +25,6 @@
         "regex": "GoLogin ([\\d.]+)"
     },
     "autoupdate": {
-        "url": "https://releases.gologin.com/GoLogin%20Setup%20@version@.exe"
+        "url": "https://releases.gologin.com/GoLogin%20Setup%20$version.exe"
     }
 }
