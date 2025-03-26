@@ -1,10 +1,10 @@
 {
-    "version": "3.3.85",
+    "version": "3.3.86",
     "description": "Antidetect browser",
     "homepage": "https://gologin.com",
     "license": "Proprietary",
-    "url": "https://releases.gologin.com/GoLogin%20Setup%203.3.85.exe#/dl.7z",
-    "hash": "cafd3fd7c2a47dc1ad3114e36f6e6c611b6cc376ce9f7dbda6a7eced020f6f32",
+    "url": "https://releases.gologin.com/GoLogin%20Setup%203.3.86.exe#/dl.7z",
+    "hash": "04213db0fb140bb1cb3511446c05b28d5cbcf45ae5fbb3477a88eb8ef29f1133",
     "architecture": {
         "64bit": {
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
