@@ -12,8 +12,7 @@
             "hash": "08e3c37ca679ef09ce8ab861994abfff69b9e3f6f1c04d64b720a7fd869cd71c"
         }
     },
-    "pre_install": "Expand-7zipArchive \"$dir\\Discord-1.0.9187-full.nupkg\" \"$dir\"",
-    "extract_dir": "lib\\net45",
+    "pre_install": "Expand-7zipArchive \"$dir\\Discord-$version-full.nupkg\" \"$dir\"",
     "post_install": "Remove-Item \"$dir\\AnthropicClaude-$version-full.nupkg",
     "shortcuts": [
         [
