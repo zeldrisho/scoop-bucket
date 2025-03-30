@@ -1,0 +1,35 @@
+{
+    "version": "1.0.9187",
+    "description": "Free Voice and Text Chat",
+    "homepage": "https://discord.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://discord.com/terms"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9187/DiscordSetup.exe#dl.7z",
+            "hash": "08e3c37ca679ef09ce8ab861994abfff69b9e3f6f1c04d64b720a7fd869cd71c"
+        }
+    },
+    "pre_install": "Expand-7zipArchive \"$dir\\Discord-1.0.9187-full.nupkg\" \"$dir\"",
+    "extract_dir": "lib\\net45",
+    "post_install": "Remove-Item \"$dir\\AnthropicClaude-$version-full.nupkg",
+    "shortcuts": [
+        [
+            "Discord.exe",
+            "Discord"
+        ]
+    ],
+    "checkver": {
+        "url": "https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=win&arch=x64",
+        "regex": "/win/x64/(\\d+\\.\\d+\\.\\d+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "hhttps://stable.dl2.discordapp.net/distro/app/stable/win/x64/$version/DiscordSetup.exe#dl.7z"
+            }
+        }
+    }
+}
