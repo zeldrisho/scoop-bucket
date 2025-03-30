@@ -5,12 +5,12 @@
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x64-v1.6.5.exe",
+            "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x64-v1.6.5.exe#/dl.7z",
             "hash": "a4e75f4e8dc518c1c44b311a3773ca84c557f3b845e76c7d7aaa3f10fcab39c6",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\""
         },
         "32bit": {
-            "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x86-v1.6.5.exe",
+            "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x86-v1.6.5.exe#/dl.7z",
             "hash": "a4e75f4e8dc518c1c44b311a3773ca84c557f3b845e76c7d7aaa3f10fcab39c6",
             "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-32.7z\" \"$dir\""
         }
@@ -29,10 +29,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x64-v$version.exe"
+                "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x64-v$version.exe#/dl.7z"
             },
             "32bit": {
-                "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x86-v$version.exe"
+                "url": "https://downloads.zohocdn.com/zmail-desktop/windows/zoho-mail-desktop-lite-installer-x86-v$version.exe#/dl.7z"
             }
         }
     }
