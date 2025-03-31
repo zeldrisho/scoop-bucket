@@ -1,12 +1,12 @@
 {
-    "version": "5.14.2",
+    "version": "5.14.3",
     "description": "Access the web safely and privately on unlimited devices",
     "homepage": "https://surfshark.com",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.surfshark.com/windows/stable64/5.14.2/SurfsharkSetup.exe",
-            "hash": "559272003e495ac72f57114872c1e81bee6e006ed1c8f6d6b40cd8bc64dde435"
+            "url": "https://downloads.surfshark.com/windows/stable64/5.14.3/SurfsharkSetup.exe",
+            "hash": "4ef70f2739c0170092eb2fbdd01a8826b250290ffeefb95e89d68914b0e2c4ee"
         }
     },
     "installer": {
