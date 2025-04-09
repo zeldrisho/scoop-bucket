@@ -1,10 +1,10 @@
 {
     "version": "3.8.0",
-    "description": "Genymotion Desktop is fast, simple to install and powerful thanks to user-friendly sensor widgets and interaction features",
+    "description": "Android Emulator",
     "homepage": "https://www.genymotion.com",
     "license": "Proprietary",
-    "url": "https://dl.genymotion.com/releases/genymotion-3.8.0/genymotion-3.8.0.exe",
-    "hash": "1d50b5d5916f071cbb2205c9e4e164b83b37f249ad90b8d2aa3a984989331bf5",
+    "url": "https://dl.genymotion.com/releases/genymotion-3.8.0/genymotion-3.8.0-vbox.exe",
+    "hash": "a1e4b4ae1dbe0f9a710e9f6c674cb428b539f4c17830ed68b690e2f4df59c87f",
     "installer": {
         "args": [
             "/VERYSILENT",
@@ -24,9 +24,9 @@
     },
     "checkver": {
         "url": "https://www.genymotion.com/product-desktop/download",
-        "regex": "/href=.*?genymotion[._-]v?(\\d+(?:\\.\\d+)+)\\.exe/i"
+        "regex": "/href=.*?genymotion[._-]v?(\\d+(?:\\.\\d+)+)(?:-vbox)?\\.exe?/i"
     },
     "autoupdate": {
-        "url": "https://dl.genymotion.com/releases/genymotion-$version/genymotion-$version.exe"
+        "url": "https://dl.genymotion.com/releases/genymotion-$version/genymotion-$version-vbox.exe"
     }
 }
