@@ -6,7 +6,7 @@
     "architecture": {
         "64bit": {
             "url": "https://downloads2.surfshark.com/windows/stable64/5.15.2.999/SurfsharkSetup.exe",
-            "hash": "4ef70f2739c0170092eb2fbdd01a8826b250290ffeefb95e89d68914b0e2c4ee"
+            "hash": "5f904809ef8c3802f9df7457e7ac07e3a605569a2fd8767db91035cdc3a04e41"
         }
     },
     "installer": {
