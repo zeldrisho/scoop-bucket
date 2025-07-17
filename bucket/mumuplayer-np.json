@@ -1,10 +1,10 @@
 {
-    "version": "3.8.18.2845",
+    "version": "4.1.32.3729",
     "description": "Best Android Emulator on PC for Running Mobile Games and Apps",
     "homepage": "https://mumuplayer.com",
     "license": "Proprietary",
-    "url": "https://a11.gdl.netease.com/MuMuNG-setup-V3.8.18.2845-overseas-0417125205.exe",
-    "hash": "md5:435C893E9E93441DD0ABA3174DE3B9D6",
+    "url": "http://a11.gdl.netease.com/MuMuNG-setup-V4.1.32.3729-overseas-0617102718.exe#/setup.exe",
+    "hash": "37751418e0de79790aff27b885e2e096401f153008ec0187e96e9728f64bfaa6",
     "installer": {
         "args": [
             "/S",
