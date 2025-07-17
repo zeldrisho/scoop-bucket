@@ -13,9 +13,9 @@
             "/D=$dir"
         ]
     },
-     "uninstaller": {
+    "uninstaller": {
         "file": "uninstall.exe",
-        "args":  "/S"
+        "args": "/S"
     },
     "persist": "vms",
     "checkver": {
@@ -27,7 +27,6 @@
         "regex": "([\\d.]+)\\s([A-Z\\d]{32})\\s(.*)"
     },
     "autoupdate": {
-        "url": "$response.data.mumu.link",
-        "hash": "md5:$response.data.mumu.checksum"
+        "url": "$match3#/setup.exe"
     }
 }
