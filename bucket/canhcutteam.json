@@ -14,7 +14,7 @@
     ],
     "checkver": {
         "url": "https://canhcutteam.com/launcher",
-        "regex": "V([\\d.]+)"
+        "regex": "<sr7-txt[^>]*>V([\\d.]+)<i\\b"
     },
     "autoupdate": {
         "url": "https://download.canhcutteam.com/Launcher/CanhCutTeam_Portable.zip"
