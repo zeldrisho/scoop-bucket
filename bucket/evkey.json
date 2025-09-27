@@ -1,0 +1,35 @@
+{
+    "version": "5.0.1",
+    "description": "Bộ gõ tiếng Việt",
+    "homepage": "https://evkeyvn.com",
+    "license": "Freeware",
+    "url": "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKey.zip",
+    "hash": "9671472133e5561eeff67ad7237c927d2acaa779e158c02c97d1504deee46734",
+    "architecture": {
+        "64bit": {
+            "pre_install": "Remove-Item \"$dir\\EVKey32.exe\" -Force -Recurse",
+            "shortcuts": [
+                [
+                    "EVKey64.exe",
+                    "EVKey"
+                ]
+            ]
+        },
+        "32bit": {
+            "pre_install": "Remove-Item \"$dir\\EVKey64.exe\" -Force -Recurse",
+            "shortcuts": [
+                [
+                    "EVKey32.exe",
+                    "EVKey"
+                ]
+            ]
+        }
+    },
+    "persist": "setting.ini",
+    "checkver": {
+        "github": "https://github.com/lamquangminh/EVKey"
+    },
+    "autoupdate": {
+        "url": "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKey.zip"
+    }
+}
