@@ -1,7 +1,7 @@
 {
     "version": "13",
-    "description": "As best partition manager for Windows, MiniTool Partition Wizard aims to maximize disk performance. It helps create/resize/format partition flexibly",
-    "homepage": "https://www.partitionwizard.com",
+    "description": "All-in-one Disk Partition Manager",
+    "homepage": "https://partitionwizard.com",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
