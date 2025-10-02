@@ -14,7 +14,7 @@
     },
     "extract_to": "app-0.0.0000",
     "pre_install": [
-        "Expand-7zipArchive \"$dir\\Discord-$version-full.nupkg\" -ExtractDir 'lib\\net45' -Removal",
+        "Expand-7zipArchive \"$dir\\app-0.0.0000\\Discord-$version-full.nupkg\" -ExtractDir 'lib\\net45' -Removal",
         "Copy-Item \"$bucketsdir\\$bucket\\scripts\\discord\\build_info.json\" \"$dir\\app-0.0.0000\\resources\"",
         "New-Item \"$dir\\app-$version\" -ItemType Directory",
         "New-Item \"$dir\\app-$version\\Discord.exe\""
