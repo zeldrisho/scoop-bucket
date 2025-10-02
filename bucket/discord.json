@@ -13,8 +13,9 @@
         }
     },
     "pre_install": [
-        "Expand-7zipArchive \"$dir\\Discord-$version-full.nupkg\" -ExtractDir 'lib\\net45' -DestinationPath \"$dir\\app-0.0.0000\" -Removal",
-        "Copy-Item \"$bucketsdir\\$bucket\\scripts\\discord\\build_info.json\" \"$dir\\app-0.0.0000\\resources\""
+        "Expand-7zipArchive \"$dir\\Discord-$version-full.nupkg\" -ExtractDir 'lib\\net45' -DestinationPath \"$dir\\app-$version\" -Removal",
+        "Move-Item \"$dir\\app-$version\\installer.db\" \"$dir\"",
+        "New-Item \"$dir\\app-0.0.0000\" -ItemType Junction -Target \"$dir\\app-$version\""
     ],
     "shortcuts": [
         [
