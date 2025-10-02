@@ -1,0 +1,39 @@
+{
+    "version": "1.0.9210",
+    "description": "Free Voice and Text Chat",
+    "homepage": "https://discord.com",
+    "license": {
+        "identifier": "Freeware",
+        "url": "https://discordapp.com/terms"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9210/DiscordSetup.exe#/dl.7z",
+            "hash": "97d9ed582ec7efe45a0eb76765b41972483012ebf526708568d5e3d4701ba083"
+        }
+    },
+    "extract_to": "app-0.0.0000",
+    "pre_install": [
+        "Expand-7zipArchive \"$dir\\Discord-$version-full.nupkg\" -ExtractDir 'lib\\net45' -Removal",
+        "Copy-Item \"$bucketsdir\\$bucket\\scripts\\discord\\build_info.json\" \"$dir\\app-0.0.0000\\resources\"",
+        "New-Item \"$dir\\app-$version\" -ItemType Directory",
+        "New-Item \"$dir\\app-$version\\Discord.exe\""
+    ],
+    "shortcuts": [
+        [
+            "app-0.0.0000\\Discord.exe",
+            "Discord"
+        ]
+    ],
+    "checkver": {
+        "url": "https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=win&arch=x64",
+        "regex": "x64/(\\d+\\.\\d+\\.\\d+)/"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/$version/DiscordSetup.exe#/dl.7z"
+            }
+        }
+    }
+}
