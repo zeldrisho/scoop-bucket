@@ -6,7 +6,7 @@
         "identifier": "Freeware",
         "url": "https://discordapp.com/terms"
     },
-    "notes": "Re-enable Discord startup settings if it doesn't autostart",
+    "notes": "Re-enable Discord startup setting if it doesn't autostart",
     "architecture": {
         "64bit": {
             "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9210/DiscordSetup.exe#/dl.7z",
@@ -22,8 +22,10 @@
     ],
     "shortcuts": [
         [
-            "app-0.0.0000\\Discord.exe",
-            "Discord"
+            "Update.exe",
+            "Discord",
+            "--processStart Discord.exe",
+            "\"$dir\\app-0.0.0000\\app.ico\""
         ]
     ],
     "checkver": {
