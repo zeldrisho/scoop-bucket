@@ -25,7 +25,7 @@
             "Update.exe",
             "Discord",
             "--processStart Discord.exe",
-            "\"$dir\\app-0.0.0000\\app.ico\""
+            "$dir\\app-0.0.0000\\app.ico"
         ]
     ],
     "checkver": {
