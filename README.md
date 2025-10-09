@@ -6,7 +6,7 @@ My personal [scoop bucket](https://github.com/lukesampson/scoop/wiki/Buckets) in
 
 ## Usage
 
-[Scoop](http://scoop.sh) is apt (or homebrew) for Windows.
+[Scoop](https://scoop.sh) is apt (or homebrew) for Windows.
 
 Add this bucket:
 ```powershell
@@ -24,6 +24,7 @@ scoop install zeldrisho/<app>
 |----|-----------|
 |[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
 |[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
+|[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
 |[john-the-ripper](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/john-the-ripper.json)|Open Source password security auditing and password recovery tool|
 |[minitool-partition-wizard](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/minitool-partition-wizard.json)|All-in-one Disk Partition Manager|
