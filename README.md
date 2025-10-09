@@ -1,17 +1,50 @@
-[![Tests](https://github.com/zeldrisho/scoop-bucket/actions/workflows/ci.yml/badge.svg)](https://github.com/zeldrisho/scoop-bucket/actions/workflows/ci.yml) [![Excavator](https://github.com/zeldrisho/scoop-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/zeldrisho/scoop-bucket/actions/workflows/excavator.yml)
+[![ci](https://github.com/zeldrisho/scoop-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/zeldrisho/scoop-bucket/actions/workflows/excavator.yml)
+[![license](https://img.shields.io/github/license/zeldrisho/scoop-bucket.svg?style=flat-square)](https://github.com/zeldrisho/scoop-bucket/blob/master/LICENSE)
+[![repo size](https://img.shields.io/github/repo-size/zeldrisho/scoop-bucket.svg?style=flat-square)](https://github.com/zeldrisho/scoop-bucket)
 
-More manifests for https://scoop.sh (the Windows command-line installer) that don't exist in the official buckets.
+My personal [scoop bucket](https://github.com/lukesampson/scoop/wiki/Buckets) includes global or Vietnamese apps missing from [official buckets](https://github.com/ScoopInstaller/Scoop?tab=readme-ov-file#known-application-buckets), or alternate versions thereof.
 
-List: https://scoop.sh/#/apps?q=%22https%3A%2F%2Fgithub.com%2Fzeldrisho%2Fscoop-bucket%22&o=false&dm=false
+## Usage
 
-How do I install these manifests?
----------------------------------
+[Scoop](http://scoop.sh) is apt (or homebrew) for Windows.
 
-To add this bucket, run `scoop bucket add zeldrisho_scoop-bucket https://github.com/zeldrisho/scoop-bucket`.
+Add this bucket:
+```powershell
+scoop bucket add zeldrisho https://github.com/zeldrisho/scoop-bucket
+```
 
-To install, do `scoop install <manifest>`.
+Install an app from this bucket:
+```powershell
+scoop install zeldrisho/<app>
+```
 
-How do I contribute new manifests?
-----------------------------------
+## Global apps
 
-To make a new manifest conribution, please read the [Contributing Guide](https://github.com/ScoopInstaller/.github/blob/main/.github/CONTRIBUTING.md).
+|Name|Description|
+|----|-----------|
+|[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
+|[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
+|[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
+|[john-the-ripper](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/john-the-ripper.json)|Open Source password security auditing and password recovery tool|
+|[minitool-partition-wizard](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/minitool-partition-wizard.json)|All-in-one Disk Partition Manager|
+|[odin-downloader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/odin-downloader.json)|ROM Flashing tool for SAMSUNG Android Smartphone and tablets devices|
+|[op.gg](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/op.gg.json)|The Best LoL Champion Builds and Player Stats|
+|[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|A cross platform automation suite powered by .NET core|
+|[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
+|[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Secure & Professional Business Email for your Organization|
+
+## Alternative apps
+
+|Name|Description|Note|
+|----|-----------|----|
+|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version instead of portapps version in [extras bucket](https://github.com/ScoopInstaller/Extras)
+
+## Vietnamese apps
+
+|Name|Description|
+|----|-----------|
+|[canhcutteam-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/canhcutteam-launcher.json)|Tải và quản lý các bản Việt hóa game|
+|[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Bộ gõ tiếng Việt|
+|[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Bộ gõ tiếng Việt|
+|[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Bộ gõ tiếng Việt|
+|[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Ứng dụng liên lạc|
