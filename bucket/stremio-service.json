@@ -11,7 +11,7 @@
             "/DIR=\"$dir\""
         ]
     },
-    "post_install": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Stremio Service.lnk\", \"$env:USERPROFILE\\Desktop\\Stremio Service.lnk\"",
+    "post_install": "Remove-Item \"$dir\\unins000.exe\", \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Stremio Service.lnk\", \"$env:USERPROFILE\\Desktop\\Stremio Service.lnk\"",
     "shortcuts": [
         [
             "stremio-service.exe",
