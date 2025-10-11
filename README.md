@@ -42,7 +42,7 @@ scoop install zeldrisho/<app>
 |Name|Description|Note|
 |----|-----------|----|
 |[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version instead of portapps version
-|[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|Different manifest name with ARM64 support
+|[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|Different manifest name with ARM64 support
 
 ## Vietnamese apps
 
@@ -53,3 +53,4 @@ scoop install zeldrisho/<app>
 |[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Bộ gõ tiếng Việt|
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Bộ gõ tiếng Việt|
 |[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Ứng dụng liên lạc|
+
