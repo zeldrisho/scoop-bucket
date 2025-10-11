@@ -41,7 +41,8 @@ scoop install zeldrisho/<app>
 
 |Name|Description|Note|
 |----|-----------|----|
-|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version instead of portapps version in [extras bucket](https://github.com/ScoopInstaller/Extras)
+|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version instead of portapps version
+|[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|Different manifest name with ARM64 support
 
 ## Vietnamese apps
 
