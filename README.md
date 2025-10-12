@@ -23,6 +23,7 @@ scoop install zeldrisho/<app>
 |Name|Description|
 |----|-----------|
 |[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
+|[drawpen](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/drawpen.json)|A simple screen annotation|
 |[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
 |[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
@@ -41,8 +42,8 @@ scoop install zeldrisho/<app>
 
 |Name|Description|Note|
 |----|-----------|----|
-|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version instead of portapps version
-|[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|Different manifest name with ARM64 support
+|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version instead of portapps version|
+|[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|Different manifest name with ARM64 support|
 
 ## Vietnamese apps
 
