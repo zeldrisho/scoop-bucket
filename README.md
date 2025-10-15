@@ -29,7 +29,7 @@ scoop install zeldrisho/<app>
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
 |[john-the-ripper](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/john-the-ripper.json)|Open Source password security auditing and password recovery tool|
 |[minitool-partition-wizard](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/minitool-partition-wizard.json)|All-in-one Disk Partition Manager|
-|[odin-downloader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/odin-downloader.json)|ROM Flashing tool for SAMSUNG Android Smartphone and tablets devices|
+|[odin-downloader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/odin-downloader.json)|ROM Flashing tool for SAMSUNG|
 |[op.gg](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/op.gg.json)|The Best LoL Champion Builds and Player Stats|
 |[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|A cross platform automation suite powered by .NET core|
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
