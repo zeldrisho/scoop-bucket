@@ -33,7 +33,7 @@ scoop install zeldrisho/<app>
 |[op.gg](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/op.gg.json)|The Best LoL Champion Builds and Player Stats|
 |[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|A cross platform automation suite powered by .NET core|
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
-|[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protectionG|
+|[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
 |[seelen-ui](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/seelen-ui.json)|The Fully Customizable Desktop Environment for Windows 10/11|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
@@ -54,5 +54,5 @@ scoop install zeldrisho/<app>
 |[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Bộ gõ tiếng Việt|
 |[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Bộ gõ tiếng Việt|
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Bộ gõ tiếng Việt|
+|[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Kích hoạt Dark Mode cho Zalo|
 |[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Ứng dụng liên lạc|
-
