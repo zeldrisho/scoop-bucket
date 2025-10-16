@@ -27,6 +27,7 @@ scoop install zeldrisho/<app>
 |[drawpen](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/drawpen.json)|A simple screen annotation|
 |[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
 |[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
+|[gemini-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gemini-cli.json)|An open-source AI agent that brings the power of Gemini directly into your terminal|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
 |[john-the-ripper](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/john-the-ripper.json)|Open Source password security auditing and password recovery tool|
 |[minitool-partition-wizard](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/minitool-partition-wizard.json)|All-in-one Disk Partition Manager|
