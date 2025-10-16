@@ -3,6 +3,7 @@
     "description": "The Ultimate Notification Customization Tool For Windows",
     "homepage": "https://samsidparty.com/software/topnotify",
     "license": "GPL-3.0",
+    "notes": "Requires WebView2 Runtime to function properly",
     "architecture": {
         "64bit": {
             "url": "https://github.com/SamsidParty/TopNotify/releases/download/3.1.0/TopNotify.Msix#dl.7z",
