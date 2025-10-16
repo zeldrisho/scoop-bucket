@@ -5,7 +5,7 @@
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.0.15/win32-x64/claude.exe",
+            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.0.19/win32-x64/claude.exe",
             "hash": "aca6aa073313b77633415e9a2dbdbb3e51c0605e1ffe09a2d03af9f9ae17d9b9"
         }
     },
