@@ -22,6 +22,7 @@ scoop install zeldrisho/<app>
 
 |Name|Description|
 |----|-----------|
+|[claude-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude-code.json)|An agentic coding tool that lives in your terminal|
 |[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
 |[drawpen](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/drawpen.json)|A simple screen annotation|
 |[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
