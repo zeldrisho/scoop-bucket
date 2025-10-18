@@ -55,9 +55,9 @@ scoop install zeldrisho/<app>
 
 |Name|Description|
 |----|-----------|
-|[canhcutteam-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/canhcutteam-launcher.json)|Tải và quản lý các bản Việt hóa game|
-|[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Bộ gõ tiếng Việt|
-|[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Bộ gõ tiếng Việt|
-|[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Bộ gõ tiếng Việt|
-|[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Kích hoạt Dark Mode cho Zalo|
-|[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Ứng dụng liên lạc|
+|[canhcutteam-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/canhcutteam-launcher.json)|Download and manage Vietnamese localization patches for games|
+|[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Vietnamese input method editor|
+|[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Vietnamese input method editor|
+|[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
+|[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Enable Dark Mode for Zalo|
+|[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Messaging application providing fast, stable, convenient|
