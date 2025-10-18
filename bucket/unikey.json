@@ -1,6 +1,6 @@
 {
     "version": "4.6-rc.2",
-    "description": "Bộ gõ tiếng Việt",
+    "description": "Vietnamese input method editor",
     "homepage": "https://unikey.org",
     "license": "GPL-2.0",
     "architecture": {
