@@ -30,6 +30,7 @@ scoop install zeldrisho/<app>
 |[gemini-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gemini-cli.json)|Brings the power of Gemini directly into your terminal|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
 |[john-the-ripper](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/john-the-ripper.json)|Open Source password security auditing and password recovery tool|
+|[makelnk](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/makelnk.json)|Creates Windows shortcuts (.lnk files) with AppUserModelId|
 |[minitool-partition-wizard](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/minitool-partition-wizard.json)|All-in-one Disk Partition Manager|
 |[netpad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/netpad.json)|A cross-platform C# editor and playground|
 |[odin-downloader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/odin-downloader.json)|ROM Flashing tool for SAMSUNG|
