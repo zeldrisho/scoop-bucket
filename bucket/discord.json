@@ -38,6 +38,7 @@
             "app.ico"
         ]
     ],
+    "post_uninstall": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\"\\Discord.lnk\"",
     "checkver": {
         "url": "https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=win&arch=x64",
         "regex": "x64/([\\d.]+)"
