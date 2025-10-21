@@ -13,15 +13,12 @@
             "hash": "495f2b3d003e93360f6a338a9bd2ee800c5c466450d7619e99c800c399d0d046"
         }
     },
-    "installer": {
-        "script": [
-            "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\_tmp\"",
-            "$msi_file = Get-ChildItem \"$dir\\_tmp\\AttachedContainer\\*.msi\" | Select-Object -First 1",
-            "Expand-MsiArchive $msi_file \"$dir\\_tmp\"",
-            "movedir \"$dir\\_tmp\\PFiles64\\Proton\\Drive\" \"$dir\" | Out-Null",
-            "Remove-Item \"$dir\\_tmp\", \"$dir\\$fname\" -Force -Recurse"
-        ]
-    },
+    "pre_install": [
+        "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\tmp\" -Removal",
+        "$msi = Get-ChildItem \"$dir\\tmp\\AttachedContainer\\*.msi\" | Select-Object -First 1",
+        "Expand-MsiArchive $msi -ExtractDir 'PFiles64\\Proton\\Drive' -DestinationPath \"$dir\""
+    ],
+    "post_install": "Remove-Item \"$dir\\tmp\" -Recurse -Force",
     "shortcuts": [
         [
             "ProtonDrive.exe",
@@ -30,7 +27,7 @@
     ],
     "checkver": {
         "url": "https://proton.me/download/drive/windows/version.json",
-        "regex": "\"Version\"\\s*:\\s*\"([\\d.]+)\""
+        "jsonpath": "$.Releases[0].Version"
     },
     "autoupdate": {
         "architecture": {
