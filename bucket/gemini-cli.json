@@ -17,10 +17,11 @@
     ],
     "checkver": {
         "url": "https://github.com/google-gemini/gemini-cli/tags",
-        "regex": "v([\\d.-]+nightly[\\w.-]+)"
+        "regex": "v([\\d.]+-nightly\\.[\\d.]+\\.[\\w]+)"
     },
     "autoupdate": {
         "url": "https://github.com/google-gemini/gemini-cli/releases/download/v$version/gemini.js"
     }
 }
+
 
