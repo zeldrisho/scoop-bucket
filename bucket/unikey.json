@@ -25,18 +25,19 @@
     ],
     "checkver": {
         "url": "https://unikey.org/download.html",
-        "regex": "unikey(?<version>[\\d.]+[-_]?[Rr][Cc]\\.?\\d+)-(?<build>\\d+)"
+        "regex": "UniKey\\s+(?<major>\\d+)\\.(?<minor>\\d+)\\s+RC\\s*(?<rc>\\d+).*?Build\\s+(?<build>\\d+)",
+        "replace": "${major}.${minor}-rc.${rc}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://unikey.org/assets/release/unikey$matchVersion-$matchBuild-win64.zip"
+                "url": "https://unikey.org/assets/release/unikey$matchMajor$matchMinorRC$matchRc-$matchBuild-win64.zip"
             },
             "32bit": {
-                "url": "https://unikey.org/assets/release/unikey$matchVersion-$matchBuild-win32.zip"
+                "url": "https://unikey.org/assets/release/unikey$matchMajor$matchMinorRC$matchRc-$matchBuild-win32.zip"
             },
             "arm64": {
-                "url": "https://unikey.org/assets/release/unikey$matchVersion-$matchBuild-arm64.zip"
+                "url": "https://unikey.org/assets/release/unikey$matchMajor$matchMinorRC$matchRc-$matchBuild-arm64.zip"
             }
         }
     }
