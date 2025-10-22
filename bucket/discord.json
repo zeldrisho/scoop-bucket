@@ -7,7 +7,7 @@
         "url": "https://discord.com/terms"
     },
     "notes": [
-        "User may need to re-enable startup in Discord settings",
+        "Fix autostart: re-enable startup in Discord settings",
         "Fix notification:",
         "- Download makelnk: https://github.com/Robertof/make-shortcut-with-appusermodelid/releases",
         "- Run: makelnk.exe com.squirrel.Discord.Discord \"$dir\\Update.exe\" Discord \"--processStart Discord.exe\"",
@@ -35,11 +35,7 @@
             "app.ico"
         ]
     ],
-    "post_uninstall": [
-        "if (Test-Path \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Discord.lnk\") {",
-            "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Discord.lnk\"",
-        "}"
-    ],
+    "post_uninstall": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Discord.lnk\" -ErrorAction SilentlyContinue",
     "checkver": {
         "url": "https://updates.discord.com/distributions/app/manifests/latest?channel=stable&platform=win&arch=x64",
         "regex": "x64/([\\d.]+)"
