@@ -29,15 +29,6 @@
         "Expand-7zipArchive \"$dir\\tmp\\chrome.7z\" -ExtractDir 'Chrome-bin' -DestinationPath \"$dir\""
     ],
     "post_install": "Remove-Item \"$dir\\tmp\" -Recurse -Force",
-    "env_set": {
-        "CHROME_EXECUTABLE": "$dir\\chrome.exe"
-    },
-    "bin": [
-        [
-            "chrome.exe",
-            "chrome"
-        ]
-    ],
     "shortcuts": [
         [
             "chrome.exe",
