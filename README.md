@@ -38,7 +38,6 @@ scoop install zeldrisho/<app>
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
 |[qwen-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/qwen-code.json)|A coding agent that lives in the digital world|
-|[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
 |[topnotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/topnotify.json)|The Ultimate Notification Customization Tool For Windows|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
@@ -48,8 +47,9 @@ scoop install zeldrisho/<app>
 
 |Name|Description|Note|
 |----|-----------|----|
-|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version instead of portapps version|
-|[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|Different manifest name with ARM64 support|
+|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version|
+|[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|Different manifest name, add arm64|
+|[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software||No UAC, add arm64, persist|
 
 ## Vietnamese apps
 
