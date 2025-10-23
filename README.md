@@ -49,7 +49,7 @@ scoop install zeldrisho/<app>
 |----|-----------|----|
 |[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version|
 |[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|Different manifest name, add arm64|
-|[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software||No UAC, add arm64, persist|
+|[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|No UAC, add arm64, persist|
 
 ## Vietnamese apps
 
