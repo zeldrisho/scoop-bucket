@@ -38,6 +38,7 @@ scoop install zeldrisho/<app>
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
 |[qwen-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/qwen-code.json)|A coding agent that lives in the digital world|
+|[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
 |[topnotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/topnotify.json)|The Ultimate Notification Customization Tool For Windows|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|

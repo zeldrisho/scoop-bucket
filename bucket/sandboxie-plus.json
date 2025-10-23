@@ -1,0 +1,41 @@
+{
+    "version": "1.16.4",
+    "description": "A sandbox-based isolation software",
+    "homepage": "https://sandboxie-plus.com",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.16.4/Sandboxie-Plus-x64-v1.16.4.exe",
+            "hash": "77681e3c28e3def05d4789cc91356d06385912b2af0509695f40a5cb9fc7e9d5"
+        },
+        "arm64": {
+            "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.16.4/Sandboxie-Plus-ARM64-v1.16.4.exe",
+            "hash": "4af40e928ffdca8411ad63a93298d58498ca69b566c267f010a0f9dd9ee9df40"
+        }
+    },
+    "innosetup": true,
+    "shortcuts": [
+        [
+            "SandMan.exe",
+            "Sandboxie-Plus"
+        ]
+    ],
+    "persist": [
+        "Sandbox",
+        "Sandboxie.ini",
+        "Sandboxie-Plus.ini"
+    ],
+    "checkver": {
+        "github": "https://github.com/sandboxie-plus/Sandboxie"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/Sandboxie-Plus-x64-v$version.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v$version/Sandboxie-Plus-ARM64-v$version.exe"
+            }
+        }
+    }
+}
