@@ -22,6 +22,7 @@ scoop install zeldrisho/<app>
 
 |Name|Description|
 |----|-----------|
+|[capcut](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/capcut.json)|All-in-one video editor & graphic design tool driven by AI|
 |[claude-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude-code.json)|An agentic coding tool that lives in your terminal|
 |[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
 |[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|The AI browser that acts as a personal assistant|
