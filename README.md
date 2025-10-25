@@ -40,7 +40,6 @@ scoop install zeldrisho/<app>
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
 |[qwen-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/qwen-code.json)|A coding agent that lives in the digital world|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
-|[topnotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/topnotify.json)|The Ultimate Notification Customization Tool For Windows|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
 |[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Secure & Professional Business Email for your Organization|
 
