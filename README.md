@@ -22,7 +22,6 @@ scoop install zeldrisho/<app>
 
 |Name|Description|
 |----|-----------|
-|[ai-devkit](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ai-devkit.json)|A CLI toolkit for AI-assisted software development|
 |[capcut](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/capcut.json)|All-in-one video editor & graphic design tool driven by AI|
 |[claude-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude-code.json)|An agentic coding tool that lives in your terminal|
 |[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
@@ -39,7 +38,6 @@ scoop install zeldrisho/<app>
 |[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|A cross platform automation suite powered by .NET core|
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
-|[qwen-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/qwen-code.json)|A coding agent that lives in the digital world|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
 |[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Secure & Professional Business Email for your Organization|
