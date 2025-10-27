@@ -30,6 +30,7 @@ scoop install zeldrisho/<app>
 |[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
 |[gemini-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gemini-cli.json)|Brings the power of Gemini directly into your terminal|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
+|[kiro](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/kiro.json)|The AI IDE for prototype to production|
 |[makelnk](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/makelnk.json)|Creates Windows shortcuts (.lnk files) with AppUserModelId|
 |[minitool-partition-wizard](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/minitool-partition-wizard.json)|All-in-one Disk Partition Manager|
 |[netpad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/netpad.json)|A cross-platform C# editor and playground|
