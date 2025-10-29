@@ -1,5 +1,5 @@
 {
-    "version": "141.0.7390.123",
+    "version": "142.0.7444.60",
     "description": "The Fast & Secure Web Browser Built to be Yours",
     "homepage": "https://google.com/chrome",
     "license": {
@@ -9,15 +9,15 @@
     "architecture": {
         "64bit": {
             "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi#/dl.7z",
-            "hash": "f8f4aedf10183d73ef7fe34488924d8e324bfb34a544bb1f2c43d2b1b0b4c797"
+            "hash": "9342a6a6ad6e81696b1294320beaa1630fb5c14f281061b40afbc9acd765ea88"
         },
         "32bit": {
             "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi#/dl.7z",
-            "hash": "aa5d519ba932b15667b851a938626e640f4b0d3d481b5ad118715c8e599fe8d6"
+            "hash": "115a9e90504eb218bcf4652bf9ecd7ca217ac3e38607f46d93dcf1103e4478a6"
         },
         "arm64": {
             "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise_arm64.msi#/dl.7z",
-            "hash": "9a089199e65786d4c628f0a1f0fa686c45a4c4005398f194dcb0a5147357b9f3"
+            "hash": "2f8f348faf01223ec53363b941a13a54e61acacb8bda364300c036d5a6b1e6ed"
         }
     },
     "extract_to": "tmp",
