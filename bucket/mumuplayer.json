@@ -10,13 +10,14 @@
         }
     },
     "installer": {
-        "script": "if (!(is_admin)) { \"$app requires admin rights to $cmd\"; break }",
-        "args": [
-            "/S",
-            "/auto_start=false",
-            "/D=\"$dir\""
+        "script": [
+            "if (!(is_admin)) { \"$app requires admin rights to $cmd\"; break }",
+            "Start-Process \"$dir\\$fname\" -ArgumentList @('/S', '/auto_start=false', \"/D=$dir\") -RunAs"
         ]
     },
+    "post_install": [
+        "Remove-Item \"$dir\\$fname\", \"$dir\\uninstall.exe\""
+    ],
     "shortcuts": [
         [
             "nx_main\\MuMuNxMain.exe",
