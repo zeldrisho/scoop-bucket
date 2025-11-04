@@ -2,10 +2,7 @@
     "version": "142.0.7444.60",
     "description": "The Fast & Secure Web Browser Built to be Yours",
     "homepage": "https://google.com/chrome",
-    "license": {
-        "identifier": "Freeware",
-        "url": "https://google.com/chrome/terms"
-    },
+    "license": "Freeware",
     "architecture": {
         "64bit": {
             "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi#/dl.7z",
