@@ -10,6 +10,7 @@
         }
     },
     "installer": {
+        "script": "if (!(is_admin)) { \"$app requires admin rights to $cmd\"; break }",
         "args": [
             "/S",
             "/auto_start=false",
