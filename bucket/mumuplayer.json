@@ -12,7 +12,7 @@
     "installer": {
         "script": [
             "if (!(is_admin)) { \"$app requires admin rights to $cmd\"; break }",
-            "Start-Process \"$dir\\$fname\" -ArgumentList @('/S', '/auto_start=false', \"/D=$dir\") -RunAs"
+            "Start-Process \"$dir\\$fname\" -ArgumentList @('/S', '/auto_start=false', \"/D=$dir\") -Verb RunAs"
         ]
     },
     "post_install": [
