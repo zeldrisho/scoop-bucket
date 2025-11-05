@@ -22,6 +22,9 @@
             "Cloudflare WARP"
         ]
     ],
+    "post_uninstall": [
+        "Remove-Item \"$env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Cloudflare\" -Recurse -Force -ErrorAction SilentlyContinue"
+    ],
     "checkver": {
         "url": "https://downloads.cloudflareclient.com/v1/update/sparkle/windows/ga",
         "regex": "Version ([\\d.]+)"
