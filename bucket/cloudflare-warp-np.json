@@ -1,0 +1,36 @@
+{
+    "version": "2025.1.861.0",
+    "homepage": "https://1.1.1.1",
+    "description": "The free app that makes your Internet faster",
+    "license": "Freeware",
+    "architecture": {
+        "64bit": {
+            "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/2025.8.779.0",
+            "hash": "dc912d37335c6b92f8a948534047db204afb3504c61c2b8355c5e2f893300d9c"
+        }
+    },
+    "pre_install": [
+        "if (!(is_admin)) { \"$app requires admin rights to $cmd\"; break }",
+        "msiexec \"$dir\\$fname\" /i /qn /norestart INSTALLFOLDER=\"$dir\""
+    ],
+    "post_install": [
+        "Remove-Item \"$dir\\$fname\""
+    ],
+    "shortcuts": [
+        [
+            "Cloudflare WARP.exe",
+            "Cloudflare WARP"
+        ]
+    ],
+    "checkver": {
+        "url": "https://downloads.cloudflareclient.com/v1/update/sparkle/windows/ga",
+        "regex": "Version ([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/$version"
+            }
+        }
+    }
+}
