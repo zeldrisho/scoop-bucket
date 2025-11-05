@@ -25,7 +25,7 @@ scoop install zeldrisho/<app>
 |[capcut](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/capcut.json)|All-in-one video editor & graphic design tool driven by AI|
 |[claude-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude-code.json)|An agentic coding tool that lives in your terminal|
 |[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
-|[cloudflare-warp-np](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp-np.json)|The free app that makes your Internet faster|
+|[cloudflare-warp](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp.json)|The free app that makes your Internet faster|
 |[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|The AI browser that acts as a personal assistant|
 |[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
 |[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
