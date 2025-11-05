@@ -3,6 +3,10 @@
     "description": "VPN & all-in-one cybersecurity suites",
     "homepage": "https://surfshark.com",
     "license": "Proprietary",
+    "notes": [
+        "Install service by running as administrator:",
+        "New-Service -Name 'Surfshark Service' -BinaryPathName \"$dir\\Surfshark.Service.exe\"; Start-Service -Name \"Surfshark Service\""
+    ],
     "architecture": {
         "64bit": {
             "url": "https://downloads.surfshark.com/windows/stable64/6.1.1.999/SurfsharkSetup.exe",
@@ -17,9 +21,7 @@
         "if (!(is_admin)) { \"$app requires admin rights to $cmd\"; break }",
         "Start-Process \"$dir\\$fname\" -ArgumentList @('/exenoui', '/quiet', '/norestart', \"APPDIR=$dir\") -Wait -Verb RunAs"
     ],
-    "post_install": [
-        "Remove-Item \"$dir\\$fname\""
-    ],
+    "post_install": "Remove-Item \"$dir\\$fname\"",
     "shortcuts": [
         [
             "Surfshark.exe",
