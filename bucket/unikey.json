@@ -25,7 +25,7 @@
     ],
     "checkver": {
         "url": "https://unikey.org/download.html",
-        "regex": "UniKey\\s+(?<major>\\d+)\\.(?<minor>\\d+)\\s+RC\\s*(?<rc>\\d+).*?Build\\s+(?<build>\\d+)",
+        "regex": "unikey(?<major>[\\d]+)(?<minor>[\\d]+)RC(?<rc>[\\d]+)-(?<build>[\\d]+)",
         "replace": "${major}.${minor}-rc.${rc}"
     },
     "autoupdate": {
