@@ -1,12 +1,12 @@
-[![ci](https://github.com/zeldrisho/scoop-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/zeldrisho/scoop-bucket/actions/workflows/excavator.yml)
-[![license](https://img.shields.io/github/license/zeldrisho/scoop-bucket.svg?style=flat-square)](https://github.com/zeldrisho/scoop-bucket/blob/master/LICENSE)
+[![excavator](https://github.com/zeldrisho/scoop-bucket/actions/workflows/excavator.yml/badge.svg)](https://github.com/zeldrisho/scoop-bucket/actions/workflows/excavator.yml)
+[![manifests](https://img.shields.io/github/directory-file-count/zeldrisho/scoop-bucket/bucket?type=file&extension=json&style=flat&label=manifests)](https://github.com/zeldrisho/scoop-bucket/tree/master/bucket)
 [![repo size](https://img.shields.io/github/repo-size/zeldrisho/scoop-bucket.svg?style=flat-square)](https://github.com/zeldrisho/scoop-bucket)
 
-My personal [scoop bucket](https://github.com/lukesampson/scoop/wiki/Buckets) includes global or Vietnamese apps missing from [official buckets](https://github.com/ScoopInstaller/Scoop?tab=readme-ov-file#known-application-buckets), or alternate versions thereof.
+My personal [scoop bucket](https://github.com/lukesampson/scoop/wiki/Buckets) includes global & Vietnamese apps missing from [official buckets](https://github.com/ScoopInstaller/Scoop?tab=readme-ov-file#known-application-buckets), or alternate versions thereof
 
 ## Usage
 
-[Scoop](https://scoop.sh) is apt (or homebrew) for Windows.
+[Scoop](https://scoop.sh) is APT (or Homebrew) for Windows
 
 Add this bucket:
 ```powershell
@@ -50,7 +50,7 @@ scoop install zeldrisho/<app>
 |----|-----------|----|
 |[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|Official version|
 |[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|Different manifest name, add arm64|
-|[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|No UAC, add arm64, persist|
+|[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|Portable, add arm64, persist|
 
 ## Vietnamese apps
 
