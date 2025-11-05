@@ -3,27 +3,25 @@
     "homepage": "https://1.1.1.1",
     "description": "The free app that makes your Internet faster",
     "license": "Freeware",
+    "notes": [
+        "Install service by running as administrator:",
+        "New-Service -Name 'Cloudflare WARP' -BinaryPathName \"$dir\\warp-svc.exe\" -DependsOn \"WlanSvc\"; Start-Service -Name \"Cloudflare WARP\""
+    ],
     "architecture": {
         "64bit": {
-            "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/2025.8.779.0",
+            "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/2025.8.779.0#/setup.msi",
             "hash": "dc912d37335c6b92f8a948534047db204afb3504c61c2b8355c5e2f893300d9c"
         }
     },
     "pre_install": [
-        "if (!(is_admin)) { \"$app requires admin rights to $cmd\"; break }",
-        "msiexec \"$dir\\$fname\" /i /qn /norestart TARGETDIR=\"$dir\""
-    ],
-    "post_install": [
-        "Remove-Item \"$dir\\$fname\""
+        "Move-Item \"$dir\\Cloudflare\\Cloudflare WARP\\*\" \"$dir\"",
+        "Remove-Item \"$dir\\Cloudflare\" -Recurse -Force"
     ],
     "shortcuts": [
         [
             "Cloudflare WARP.exe",
             "Cloudflare WARP"
         ]
-    ],
-    "post_uninstall": [
-        "Remove-Item \"$env:PROGRAMDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Cloudflare\" -Recurse -Force -ErrorAction SilentlyContinue"
     ],
     "checkver": {
         "url": "https://downloads.cloudflareclient.com/v1/update/sparkle/windows/ga",
@@ -32,7 +30,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/$version"
+                "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/$version#/setup.msi"
             }
         }
     }
