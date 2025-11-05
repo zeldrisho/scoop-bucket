@@ -4,10 +4,9 @@
     "homepage": "https://discord.com",
     "license": "Freeware",
     "notes": [
-        "Fix autostart: re-enable startup in Discord settings",
-        "Fix notification:",
-        "- Download makelnk: https://github.com/Robertof/make-shortcut-with-appusermodelid/releases",
-        "- Run: makelnk.exe com.squirrel.Discord.Discord \"$dir\\Update.exe\" Discord \"--processStart Discord.exe\"",
+        "Autostart: re-enable startup in Discord settings",
+        "Notifications:",
+        "- Run: scoop install makelnk; makelnk com.squirrel.Discord.Discord \"$dir\\Update.exe\" Discord \"--processStart Discord.exe\"",
         "- Navigate to: \"%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\"",
         "- Right click Discord -> Properties -> Change icon -> \"$dir\\app.ico\""
     ],
