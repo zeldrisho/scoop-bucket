@@ -44,7 +44,7 @@ scoop install zeldrisho/<app>
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
-|[surfshark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/surfshark-np.json)|VPN & all-in-one cybersecurity suites|
+|[surfshark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/surfshark.json)|VPN & all-in-one cybersecurity suites|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
 |[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Secure & Professional Business Email for your Organization|
 
