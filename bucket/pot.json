@@ -21,7 +21,7 @@
             "hash": "fd478816fa62c137bc0c187a09b82aa37c52b8ccbd441ef715e87c02a45dbc0e"
         }
     },
-    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force",
+    "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\`$TEMP\", \"$dir\\uninstall.exe\" -Recurse -Force",
     "shortcuts": [
         [
             "pot.exe",
