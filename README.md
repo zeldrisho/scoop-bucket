@@ -6,7 +6,7 @@ My personal [scoop bucket](https://github.com/lukesampson/scoop/wiki/Buckets) in
 
 ## Usage
 
-[Scoop](https://scoop.sh) is APT (or Homebrew) for Windows
+[Scoop](https://scoop.sh) is a command-line installer for Windows
 
 Add this bucket:
 ```powershell
@@ -66,3 +66,4 @@ scoop install zeldrisho/<app>
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
 |[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Enable Dark Mode for Zalo|
 |[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Messaging application providing fast, stable, convenient|
+
