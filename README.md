@@ -54,6 +54,7 @@ scoop install zeldrisho/<app>
 |[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
 |[surfshark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/surfshark.json)|VPN & all-in-one cybersecurity suites|
+|[translumo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/translumo.json)|Advanced real-time screen translator|
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
 |[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Enable Dark Mode for Zalo|
