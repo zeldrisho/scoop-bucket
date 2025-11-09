@@ -40,6 +40,7 @@ scoop install zeldrisho/<app>
 |[kiro](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/kiro.json)|The AI IDE for prototype to production|
 |[makelnk](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/makelnk.json)|Creates Windows shortcuts (.lnk files) with AppUserModelId|
 |[minitool-partition-wizard](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/minitool-partition-wizard.json)|All-in-one Disk Partition Manager|
+|[mort](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/mort.json)|Real-time game translator with OCR|
 |[mumuplayer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/mumuplayer.json)|Best Android Emulator on PC for Running Mobile Games and Apps|
 |[netpad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/netpad.json)|A cross-platform C# editor and playground|
 |[odin-downloader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/odin-downloader.json)|ROM Flashing tool for SAMSUNG|
