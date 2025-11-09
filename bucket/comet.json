@@ -23,8 +23,7 @@
     ],
     "checkver": {
         "url": "https://api.github.com/repositories/197275551/contents/manifests/p/Perplexity/Comet",
-        "jsonpath": "$..name",
-        "regex": "([\\d.]+)"
+        "jsonpath": "$..name"
     },
     "autoupdate": {
         "architecture": {
