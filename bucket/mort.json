@@ -33,7 +33,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://github.com/killkimno/MORT/releases/download/$version/MORT.$matchVersionv.-.$matchBuild.zip"
+                "url": "https://github.com/killkimno/MORT/releases/download/$matchVersion/MORT.$matchVersionv.-.$matchBuild.zip"
             }
         }
     }
