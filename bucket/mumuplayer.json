@@ -40,7 +40,10 @@
         "regex": "V(?<version>[\\d.]+)-overseas-(?<build>[\\d]+)"
     },
     "autoupdate": {
-        "url": "https://a11.gdl.easebar.com/MuMu-setup-V$matchVersion-overseas-$matchBuild.exe"
+        "architecture": {
+            "64bit": {
+                "url": "https://a11.gdl.easebar.com/MuMu-setup-V$matchVersion-overseas-$matchBuild.exe"
+            }
+        }
     }
 }
-

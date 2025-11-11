@@ -21,6 +21,10 @@
         "jsonpath": "$.Releases[0].Version"
     },
     "autoupdate": {
-        "url": "https://proton.me/download/pass/windows/ProtonPass-$version-full.nupkg"
+        "architecture": {
+            "64bit": {
+                "url": "https://proton.me/download/pass/windows/ProtonPass-$version-full.nupkg"
+            }
+        }
     }
 }

@@ -22,7 +22,11 @@
         "replace": "${major}.${minor}.${patch}.${build}"
     },
     "autoupdate": {
-        "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-sg/packages/CapCut_$underscoreVersion_capcutpc_0_creatortool.exe#/dl.7z",
+        "architecture": {
+            "64bit": {
+                "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-sg/packages/CapCut_$underscoreVersion_capcutpc_0_creatortool.exe#/dl.7z"
+            }
+        },
         "extract_dir": "JYPacket/$version"
     }
 }

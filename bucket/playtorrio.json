@@ -21,6 +21,10 @@
         "github": "https://github.com/ayman707-ux/PlayTorrio"
     },
     "autoupdate": {
-        "url": "https://github.com/ayman707-ux/PlayTorrio/releases/download/v$version/PlayTorrio-installer.exe#/dl.7z"
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ayman707-ux/PlayTorrio/releases/download/v$version/PlayTorrio-installer.exe#/dl.7z"
+            }
+        }
     }
 }
