@@ -5,7 +5,7 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "http://a11.gdl.easebar.com/MuMu-setup-V5.9.4.2090-overseas-1111103319.exe",
+            "url": "https://a11.gdl.easebar.com/MuMu-setup-V5.9.4.2090-overseas-1111103319.exe",
             "hash": "c248980f8aeca5080ddc7948effaa6e02d6d28347a827b0f3f8b2726249c06d8"
         }
     },
@@ -40,6 +40,7 @@
         "regex": "V(?<version>[\\d.]+)-overseas-(?<build>[\\d]+)"
     },
     "autoupdate": {
-        "url": "http://a11.gdl.easebar.com/MuMu-setup-V$matchVersion-overseas-$matchBuild.exe"
+        "url": "https://a11.gdl.easebar.com/MuMu-setup-V$matchVersion-overseas-$matchBuild.exe"
     }
 }
+
