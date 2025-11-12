@@ -47,6 +47,7 @@ scoop install zeldrisho/<app>
 |[op.gg](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/op.gg.json)|The Best LoL Champion Builds and Player Stats|
 |[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|A cross platform automation suite powered by .NET core|
 |[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Vietnamese input method editor|
+|[perplexity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/perplexity.json)|A free AI-powered answer engine|
 |[playtorrio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/playtorrio.json)|The Ultimate Entertainment Hub|
 |[pot](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/pot.json)|A powerful cross-platform text selection translation and OCR software|
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
