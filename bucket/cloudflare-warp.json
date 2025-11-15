@@ -9,7 +9,7 @@
     ],
     "architecture": {
         "64bit": {
-            "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/2025.9.558.0",
+            "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/2025.9.558.0#/setup.msi",
             "hash": "ac519bcc2937d93d67d31497d72a6262801d30cea98894a9584c0b92d0635ba2"
         }
     },
@@ -27,7 +27,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/$version"
+                "url": "https://downloads.cloudflareclient.com/v1/download/windows/version/$version#/setup.msi"
             }
         }
     }
