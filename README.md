@@ -22,6 +22,7 @@ scoop install zeldrisho/<app>
 
 |Name|Description|
 |----|-----------|
+|[antigravity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/antigravity.json)|Experience liftoff with the next-generation IDE|
 |[blitz](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/blitz.json)|Personalized Stats and Insights Powered by Billions of Matches|
 |[canhcutteam-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/canhcutteam-launcher.json)|Download and manage Vietnamese localization patches for games|
 |[capcut](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/capcut.json)|All-in-one video editor & graphic design tool driven by AI|
