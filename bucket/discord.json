@@ -13,20 +13,27 @@
     "architecture": {
         "64bit": {
             "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9215/DiscordSetup.exe#/dl.7z",
-            "hash": "15c911b05945529704353eb11d4ea5e80c573d6480e13599d445e1a32f01bba1"
+            "hash": "15c911b05945529704353eb11d4ea5e80c573d6480e13599d445e1a32f01bba1",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\Discord-1.0.9215-full.nupkg\" -ExtractDir 'lib\\net45' -DestinationPath \"$dir\\app-1.0.9215\" -Removal",
+                "Move-Item \"$dir\\app-1.0.9215\\installer.db\" \"$dir\"",
+                "Move-Item \"$dir\\app-1.0.9215\\app.ico\" \"$dir\"",
+                "New-Item \"$dir\\packages\" -ItemType Directory | Out-Null",
+                "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\""
+            ]
         },
         "arm64": {
             "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/arm64/1.0.7/DiscordSetup.exe#/dl.7z",
-            "hash": "8a5903d1532f5f31f810a7ba0117c0e061ae6dfbdb29cecb7614c8104279faa6"
+            "hash": "8a5903d1532f5f31f810a7ba0117c0e061ae6dfbdb29cecb7614c8104279faa6",
+            "pre_install": [
+                "Expand-7zipArchive \"$dir\\Discord-1.0.7-full.nupkg\" -ExtractDir 'lib\\net45' -DestinationPath \"$dir\\app-1.0.7\" -Removal",
+                "Move-Item \"$dir\\app-1.0.7\\installer.db\" \"$dir\"",
+                "Move-Item \"$dir\\app-1.0.7\\app.ico\" \"$dir\"",
+                "New-Item \"$dir\\packages\" -ItemType Directory | Out-Null",
+                "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\""
+            ]
         }
     },
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\Discord-$version-full.nupkg\" -ExtractDir 'lib\\net45' -DestinationPath \"$dir\\app-$version\" -Removal",
-        "Move-Item \"$dir\\app-$version\\installer.db\" \"$dir\"",
-        "Move-Item \"$dir\\app-$version\\app.ico\" \"$dir\"",
-        "New-Item \"$dir\\packages\" -ItemType Directory | Out-Null",
-        "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\""
-    ],
     "shortcuts": [
         [
             "Update.exe",
@@ -48,10 +55,24 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/$matchVersion/DiscordSetup.exe#/dl.7z"
+                "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/$matchVersion/DiscordSetup.exe#/dl.7z",
+                "pre_install": [
+                    "Expand-7zipArchive \"$dir\\Discord-$matchVersion-full.nupkg\" -ExtractDir 'lib\\net45' -DestinationPath \"$dir\\app-$matchVersion\" -Removal",
+                    "Move-Item \"$dir\\app-$matchVersion\\installer.db\" \"$dir\"",
+                    "Move-Item \"$dir\\app-$matchVersion\\app.ico\" \"$dir\"",
+                    "New-Item \"$dir\\packages\" -ItemType Directory | Out-Null",
+                    "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\""
+                ]
             },
             "arm64": {
-                "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/arm64/$matchArmVersion/DiscordSetup.exe#/dl.7z"
+                "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/arm64/$matchArmVersion/DiscordSetup.exe#/dl.7z",
+                "pre_install": [
+                    "Expand-7zipArchive \"$dir\\Discord-$matchArmVersion-full.nupkg\" -ExtractDir 'lib\\net45' -DestinationPath \"$dir\\app-$matchArmVersion\" -Removal",
+                    "Move-Item \"$dir\\app-$matchArmVersion\\installer.db\" \"$dir\"",
+                    "Move-Item \"$dir\\app-$matchArmVersion\\app.ico\" \"$dir\"",
+                    "New-Item \"$dir\\packages\" -ItemType Directory | Out-Null",
+                    "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\""
+                ]
             }
         }
     }
