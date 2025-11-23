@@ -30,7 +30,7 @@ scoop install zeldrisho/<app>
 |[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
 |[cloudflare-warp](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp.json)|The free app that makes your Internet faster|
 |[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|The AI browser that acts as a personal assistant|
-|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json)|Group Chat That's All Fun & Games|
+|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json), [discord-arm](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord-arm.json)|Group Chat That's All Fun & Games|
 |[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
 |[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
 |[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Vietnamese input method editor|
