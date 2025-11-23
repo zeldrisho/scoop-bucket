@@ -91,7 +91,7 @@ namespace ShellLinkHelper
         public PropVariant(string value)
         {
             // VT_LPWSTR = 31
-            this.vt = 31; 
+            this.vt = 31;
             this.ptr = Marshal.StringToCoTaskMemUni(value);
         }
 
@@ -120,7 +120,7 @@ namespace ShellLinkHelper
             // 1. Set standard properties
             link.SetPath(targetPath);
             link.SetArguments(arguments);
-            
+
             if (!string.IsNullOrEmpty(iconPath))
             {
                 link.SetIconLocation(iconPath, 0);
@@ -128,10 +128,10 @@ namespace ShellLinkHelper
 
             // 2. Load Property Store to set AppUserModelID
             IPropertyStore propStore = (IPropertyStore)link;
-            
+
             // PKEY_AppUserModel_ID: {9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3}, 5
             PropertyKey appModelIdKey = new PropertyKey(new Guid("9F4C2855-9F79-4B39-A8D0-E1D42DE1D5F3"), 5);
-            
+
             if (!string.IsNullOrEmpty(appId))
             {
                 using (PropVariant pv = new PropVariant(appId))
