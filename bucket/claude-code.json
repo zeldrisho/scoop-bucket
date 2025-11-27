@@ -1,12 +1,12 @@
 {
-    "version": "2.0.54",
+    "version": "2.0.55",
     "description": "An agentic coding tool that lives in your terminal",
     "homepage": "https://claude.com/product/claude-code",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.0.54/win32-x64/claude.exe",
-            "hash": "80e4160f4b34be137ced8eedcefcf70d67b95e4071b2113a0c32c35fd6db0d4f"
+            "url": "https://storage.googleapis.com/claude-code-dist-86c565f3-f756-42ad-8dfa-d59b1c096819/claude-code-releases/2.0.55/win32-x64/claude.exe",
+            "hash": "a81f0210058092f48bd469adcb8597b8cf934780c0173e2dc29a480f467bf6b0"
         }
     },
     "env_set": {
