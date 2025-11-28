@@ -30,7 +30,7 @@ scoop install zeldrisho/<app>
 |[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
 |[cloudflare-warp](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp.json)|The free app that makes your Internet faster|
 |[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|The AI browser that acts as a personal assistant|
-|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json), [discord-arm](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord-arm.json)|Group Chat That's All Fun & Games|
+|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json) / [discord-arm](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord-arm.json)|A voice, video and text communication platform|
 |[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
 |[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
 |[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Vietnamese input method editor|
@@ -57,6 +57,7 @@ scoop install zeldrisho/<app>
 |[rstgametranslation](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/rstgametranslation.json)|Real-time Game Screen Translation Software|
 |[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
+|[stremio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio.json)|Freedom to Stream|
 |[surfshark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/surfshark.json)|VPN & all-in-one cybersecurity suites|
 |[translumo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/translumo.json)|Advanced real-time screen translator|
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
