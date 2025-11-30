@@ -57,6 +57,7 @@ scoop install zeldrisho/<app>
 |[repak](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/repak.json)|CLI tool for working with Unreal Engine .pak files|
 |[rstgametranslation](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/rstgametranslation.json)|Real-time Game Screen Translation Software|
 |[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|
+|[spotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/spotify.json)|Music for everyone|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
 |[stremio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio.json)|Freedom to Stream|
 |[surfshark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/surfshark.json)|VPN & all-in-one cybersecurity suites|
