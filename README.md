@@ -64,5 +64,5 @@ scoop install zeldrisho/<app>
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
 |[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Enable Dark Mode for Zalo|
-|[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Messaging application providing fast, stable, convenient|
+|[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Messaging application|
 |[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Secure & Professional Business Email for your Organization|
