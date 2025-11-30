@@ -1,0 +1,43 @@
+{
+    "version": "1.2.78.409",
+    "description": "Music for everyone",
+    "homepage": "https://spotify.com",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-1.2.78.409.g6aead1f8-948.exe",
+            "hash": "8daa407ebb43806ac34313ca3eda2356ca6eb421e071036fd88dd3d2b7d1635e"
+        },
+        "arm64": {
+            "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-1.2.78.409.g6aead1f8-946.exe",
+            "hash": "20b24c64f8a60ee84c78772270a73477711d064e09a3454ce0968a566605729b"
+        }
+    },
+    "installer": {
+        "args": [
+            "/extract",
+            "$dir"
+        ]
+    },
+    "shortcuts": [
+        [
+            "Spotify.exe",
+            "Spotify"
+        ]
+    ],
+    "checkver": {
+        "url": "https://raw.githubusercontent.com/amd64fox/LoaderSpot/main/versions.json",
+        "jsonpath": "$..[?(@.buildType == 'Release')]",
+        "regex": "(?<version>[\\d.]+)\\.(?<build>[\\w]+)-(?<id>[\\d]+).exe"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-$matchVersion.$matchBuild-$matchId.exe"
+            },
+            "arm64": {
+                "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-$matchVersion.$matchBuild-$matchId.exe"
+            }
+        }
+    }
+}
