@@ -9,12 +9,12 @@ My personal [Scoop bucket](https://github.com/ScoopInstaller/Scoop/wiki/Buckets)
 [Scoop](https://scoop.sh) is a command-line installer for Windows
 
 Add this bucket:
-```powershell
+```pwsh
 scoop bucket add zeldrisho https://github.com/zeldrisho/scoop-bucket
 ```
 
 Install an app from this bucket:
-```powershell
+```pwsh
 scoop install zeldrisho/<app>
 ```
 
@@ -22,6 +22,7 @@ scoop install zeldrisho/<app>
 
 |Name|Description|
 |----|-----------|
+|[alacritty](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/alacritty.json)|A cross-platform, OpenGL terminal emulator|
 |[antigravity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/antigravity.json)|Experience liftoff with the next-generation IDE|
 |[blitz](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/blitz.json)|Personalized Stats and Insights Powered by Billions of Matches|
 |[canhcutteam-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/canhcutteam-launcher.json)|Download and manage Vietnamese localization patches for games|
