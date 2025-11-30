@@ -1,0 +1,38 @@
+{
+    "version": "0.16.1",
+    "description": "A cross-platform, OpenGL terminal emulator",
+    "homepage": "https://alacritty.org",
+    "notes": "Configuration: https://alacritty.org/config-alacritty",
+    "license": "Apache-2.0",
+    "suggest": {
+        "vcredist": "vcredist2022"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/alacritty/alacritty/releases/download/v0.16.1/Alacritty-v0.16.1-portable.exe#/alacritty.exe",
+            "hash": "f20c901a31792c3870ead962c60829f5406055729b2f0869c293886f39e86d3a"
+        }
+    },
+    "pre_install": [
+        "if (!(Test-Path \"$env:APPDATA\\alacritty\")) {",
+        "    New-Item \"$env:APPDATA\\alacritty\" -ItemType Directory | Out-Null",
+        "    New-Item \"$env:APPDATA\\alacritty\\alacritty.toml\" | Out-Null",
+        "}"
+    ],
+    "shortcuts": [
+        [
+            "alacritty.exe",
+            "Alacritty"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/alacritty/alacritty"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/alacritty/alacritty/releases/download/v$version/Alacritty-v$version-portable.exe#/alacritty.exe"
+            }
+        }
+    }
+}
