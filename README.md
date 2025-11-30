@@ -45,6 +45,7 @@ scoop install zeldrisho/<app>
 |[mumuplayer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/mumuplayer.json)|Best Android Emulator on PC for Running Mobile Games and Apps|
 |[netpad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/netpad.json)|A cross-platform C# editor and playground|
 |[odin-downloader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/odin-downloader.json)|ROM Flashing tool for SAMSUNG|
+|[onlyoffice](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/onlyoffice.json)|Free desktop office suite for document editing and collaboration|
 |[op.gg](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/op.gg.json)|The Best LoL Champion Builds and Player Stats|
 |[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|A cross platform automation suite powered by .NET core|
 |[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Vietnamese input method editor|
