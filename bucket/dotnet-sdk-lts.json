@@ -1,0 +1,45 @@
+{
+    "version": "10.0.100",
+    "description": "Build modern apps and powerful cloud services",
+    "homepage": "https://dotnet.microsoft.com",
+    "license": "MIT",
+    "suggest": {
+        "vcredist": "vcredist"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/10.0.100/dotnet-sdk-10.0.100-win-x64.zip",
+            "hash": "ce09b60637c525a5ccd3368962dc936df10141d397e305f5406318f61da66709"
+        },
+        "32bit": {
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/10.0.100/dotnet-sdk-10.0.100-win-x86.zip",
+            "hash": "7ab16c7bb2c42b720ce5aacc1c8032e8b9817b4c98b02da091bcb0c25b504270"
+        },
+        "arm64": {
+            "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/10.0.100/dotnet-sdk-10.0.100-win-arm64.zip",
+            "hash": "3d7c3b168c28a08f6503cfae1fe7ab85ae91f847cdbd38e76bb48acb16c35b6a"
+        }
+    },
+    "env_add_path": ".",
+    "env_set": {
+        "DOTNET_ROOT": "$dir",
+        "MSBuildSDKsPath": "$dir\\sdk\\$version\\Sdks"
+    },
+    "checkver": {
+        "url": "https://dotnetcli.blob.core.windows.net/dotnet/release-metadata/releases-index.json",
+        "jsonpath": "$..[?(@.release-type == 'lts' && @.support-phase == 'active')].latest-sdk"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x64.zip"
+            },
+            "32bit": {
+                "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-x86.zip"
+            },
+            "arm64": {
+                "url": "https://dotnetcli.azureedge.net/dotnet/Sdk/$version/dotnet-sdk-$version-win-arm64.zip"
+            }
+        }
+    }
+}
