@@ -1,0 +1,34 @@
+{
+    "version": "4.4.10",
+    "description": "Open source 2FA authenticator, with E2EE backups",
+    "homepage": "https://ente.io/auth",
+    "license": "AGPL-3.0",
+    "suggest": {
+        "vcredist": "vcredist"
+    },
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/ente-io/ente/releases/download/auth-v4.4.10/ente-auth-v4.4.10-windows.zip",
+            "hash": "5d68780cdaf6ebdf326b30c7a0acd11b01028d15b5bdd032cce496c1eed3463b"
+        }
+    },
+    "extract_dir": "ente-auth-v4.4.10-windows",
+    "shortcuts": [
+        [
+            "auth.exe",
+            "Ente Auth"
+        ]
+    ],
+    "checkver": {
+        "url": "https://github.com/ente-io/ente/releases",
+        "regex": "auth-v([\\d.]+)\""
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/ente-io/ente/releases/download/auth-v$version/ente-auth-v$version-windows.zip"
+            }
+        },
+        "extract_dir": "ente-auth-v$version-windows"
+    }
+}
