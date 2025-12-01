@@ -1,0 +1,41 @@
+{
+    "version": "0.96.1",
+    "description": "Windows Utilities for Power Users",
+    "homepage": "https://learn.microsoft.com/windows/powertoys",
+    "license": "MIT",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.96.1/PowerToysUserSetup-0.96.1-x64.exe",
+            "hash": "86ec5d7639ed3624ecd53193c0b0411174d17e72f8c7507e8206a52f78fa4a24"
+        },
+        "arm64": {
+            "url": "https://github.com/microsoft/PowerToys/releases/download/v0.96.1/PowerToysUserSetup-0.96.1-arm64.exe",
+            "hash": "8b1fede0f9e0ba9c24270dbf1d40f967168c83b3f10b26afc778286d560dffe6"
+        }
+    },
+    "pre_install": [
+        "Expand-DarkArchive \"$dir\\$fname\" \"$dir\\tmp\" -Removal",
+        "$msi = Get-ChildItem \"$dir\\tmp\\AttachedContainer\\*.msi\" | Select-Object -First 1",
+        "Expand-MsiArchive $msi -ExtractDir 'LocalApp\\PowerToys' -DestinationPath \"$dir\""
+    ],
+    "post_install": "Remove-Item \"$dir\\tmp\" -Recurse -Force",
+    "shortcuts": [
+        [
+            "PowerToys.exe",
+            "PowerToys"
+        ]
+    ],
+    "checkver": {
+        "github": "https://github.com/microsoft/PowerToys"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-x64.exe"
+            },
+            "arm64": {
+                "url": "https://github.com/microsoft/PowerToys/releases/download/v$version/PowerToysUserSetup-$version-arm64.exe"
+            }
+        }
+    }
+}
