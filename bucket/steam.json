@@ -1,0 +1,20 @@
+{
+    "version": "nightly",
+    "description": "The ultimate destination for playing, discussing, and creating games",
+    "homepage": "https://store.steampowered.com",
+    "license": "Proprietary",
+    "url": "https://steamcdn-a.akamaihd.net/client/installer/SteamSetup.exe#/dl.7z",
+    "post_install": "Remove-Item \"$dir\\uninstall.exe\"",
+    "shortcuts": [
+        [
+            "Steam.exe",
+            "Steam"
+        ]
+    ],
+    "persist": [
+        "skins",
+        "steamapps",
+        "userdata"
+    ],
+    "post_uninstall": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\" -Recurse -Force -ErrorAction SilentlyContinue"
+}
