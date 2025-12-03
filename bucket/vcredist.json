@@ -1,0 +1,45 @@
+{
+    "version": "14.50.35719.0",
+    "description": "Visual C++ Redistributable installs Microsoft C and C++ runtime libraries",
+    "homepage": "https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://aka.ms/vc14/vc_redist.x64.exe",
+            "hash": "8995548dfffcde7c49987029c764355612ba6850ee09a7b6f0fddc85bdc5c280"
+        },
+        "32bit": {
+            "url": "https://aka.ms/vc14/vc_redist.x86.exe",
+            "hash": "e7267c1bdf9237c0b4a28cf027c382b97aa909934f84f1c92d3fb9f04173b33e"
+        },
+        "arm64": {
+            "url": "https://aka.ms/vc14/vc_redist.arm64.exe",
+            "hash": "fcda7b24413f170bd456052f08ae49fb60ac1638f083aab7a35afeb957aeb1d6"
+        }
+    },
+    "installer": {
+        "args": [
+            "/fo",
+            "/quiet",
+            "/norestart"
+        ]
+    },
+    "checkver": {
+        "url": "https://api.github.com/repositories/197275551/contents/manifests/m/Microsoft/VCRedist/2015%2B/x64",
+        "jsonpath": "$..name",
+        "reverse": true
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://aka.ms/vc14/vc_redist.x64.exe"
+            },
+            "32bit": {
+                "url": "https://aka.ms/vc14/vc_redist.x86.exe"
+            },
+            "arm64": {
+                "url": "https://aka.ms/vc14/vc_redist.arm64.exe"
+            }
+        }
+    }
+}
