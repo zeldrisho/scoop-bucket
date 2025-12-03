@@ -1,20 +1,20 @@
 {
-    "version": "8.0.21",
+    "version": "10.0.0",
     "description": "Enables you to run existing Windows desktop applications",
     "homepage": "https://dotnet.microsoft.com/download/dotnet",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-x64.exe",
-            "hash": "f551625bad9adabba3269457240b8dc9448715bcdff0c7ac5e7f8c05cbc7de04"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.0/windowsdesktop-runtime-10.0.0-win-x64.exe",
+            "hash": "fc0494eaf529b15f74b10d920784cc618ff0845bebfdfd5d85d585e921157a5c"
         },
         "32bit": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-x86.exe",
-            "hash": "b24eedfab904688984639f8e55ee1826153a8487699b52ee04a58e1ba508b6f6"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.0/windowsdesktop-runtime-10.0.0-win-x86.exe",
+            "hash": "ac38c81fef78c565d6bfbddf49ac5bcca354616176c0108c5f0e23333c3d093a"
         },
         "arm64": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.21/windowsdesktop-runtime-8.0.21-win-arm64.exe",
-            "hash": "6b150427dceb9ee91c3cc69c3fd77a5ccdcaf216bb0389ddb3528c01df65fde1"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.0/windowsdesktop-runtime-10.0.0-win-arm64.exe",
+            "hash": "6ca0d692492d7d36651d577d1ec6166b7874bfa663241e4e61fa035869a23546"
         }
     },
     "pre_install": [
