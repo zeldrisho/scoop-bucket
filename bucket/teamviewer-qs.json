@@ -1,0 +1,21 @@
+{
+    "version": "15.72.3",
+    "description": "Receive tech support at a moment’s notice",
+    "homepage": "https://teamviewer.com/solutions/use-cases/quicksupport",
+    "license": "Proprietary",
+    "url": "https://download.teamviewer.com/download/version_15x/TeamViewerQS.exe",
+    "hash": "4cedb919702be780dab418b33cb844065d5d9463e1fe2606b0b6fc8d8e414f3f",
+    "shortcuts": [
+        [
+            "TeamViewerQS.exe",
+            "TeamViewer QS"
+        ]
+    ],
+    "checkver": {
+        "url": "https://community.teamviewer.com/categories/change-logs-en",
+        "regex": "\\[Windows\\] v([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://download.teamviewer.com/download/version_$majorVersionx/TeamViewerQS.exe"
+    }
+}
