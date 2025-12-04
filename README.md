@@ -67,7 +67,7 @@ scoop install zeldrisho/<app>
 |[pot](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/pot.json)|A powerful text selection translation and OCR software|
 |[powertoys](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/powertoys.json)|Windows Utilities for Power Users|
 |[process-explorer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/process-explorer.json)|Shows you information about which handles and DLLs processes have opened or loaded|
-|[proton-authenticator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/process-explorer.json)|Private, secure 2FA authenticator|
+|[proton-authenticator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-authenticator.json)|Private, secure 2FA authenticator|
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
 |[repak](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/repak.json)|CLI tool for working with Unreal Engine .pak files|
