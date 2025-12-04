@@ -33,10 +33,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-$matchVersion-$matchIdX64.exe"
+                "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-$matchVersion.$matchBuild-$matchIdX64.exe"
             },
             "arm64": {
-                "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-$matchVersion-$matchIdArm.exe"
+                "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-$matchVersion.$matchBuild-$matchIdArm.exe"
             }
         }
     }
