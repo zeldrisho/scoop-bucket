@@ -1,0 +1,30 @@
+{
+    "version": "1.1.4",
+    "description": "Private, secure 2FA authenticator",
+    "homepage": "https://proton.me/authenticator",
+    "license": "GPL-3.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://proton.me/download/authenticator/windows/ProtonAuthenticator_1.1.4_x64_en-US.msi#setup.msi",
+            "hash": "fd6503822f1d1f2897964d1401be3abb3ff7f0d19cd3ac69e8897badb38120de"
+        }
+    },
+    "extract_dir": "PFiles\\Proton Authenticator",
+    "shortcuts": [
+        [
+            "proton-authenticator.exe",
+            "Proton Authenticator"
+        ]
+    ],
+    "checkver": {
+        "url": "https://proton.me/download/authenticator/windows/version.json",
+        "jsonpath": "$..Version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://proton.me/download/authenticator/windows/ProtonAuthenticator_$version_x64_en-US.msi#setup.msi"
+            }
+        }
+    }
+}
