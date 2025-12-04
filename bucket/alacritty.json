@@ -1,11 +1,11 @@
 {
     "version": "0.16.1",
-    "description": "A cross-platform, OpenGL terminal emulator",
+    "description": "An OpenGL terminal emulator",
     "homepage": "https://alacritty.org",
     "notes": "Configuration: https://alacritty.org/config-alacritty",
     "license": "Apache-2.0",
     "suggest": {
-        "vcredist": "vcredist2022"
+        "vcredist": "vcredist"
     },
     "architecture": {
         "64bit": {

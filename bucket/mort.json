@@ -4,8 +4,8 @@
     "homepage": "https://blog.naver.com/killkimno/70179867557",
     "license": "MIT",
     "suggest": {
-        "dotnet runtime": "extras/windowsdesktop-runtime",
-        "vcredist": "extras/vcredist2022"
+        "windowsdesktop-runtime": "windowsdesktop-runtime-lts",
+        "vcredist": "vcredist"
     },
     "architecture": {
         "64bit": {
