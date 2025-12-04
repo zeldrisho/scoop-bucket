@@ -28,7 +28,7 @@
     "checkver": {
         "url": "https://raw.githubusercontent.com/amd64fox/LoaderSpot/main/versions.json",
         "jsonpath": "$..[?(@.buildType == 'Release')]",
-        "regex": "\"fullversion\":\\s*\"(?<version>[\\d.]+)\\.(?<build>[\\w]+)\".*?\"x64\":\\s*\"[^\"]*-(?<idX64>[\\d]+)\\.exe\".*?\"arm64\":\\s*\"[^\"]*-(?<idArm>[\\d]+)\\.exe\""
+        "regex": "\"fullversion\":\\s*\"(?<version>[\\d.]+)\\.(?<build>[\\w]+)\"[\\s\\S]*?\"x64\":\\s*\"[^\"]*-(?<idX64>\\d+)\\.exe\"[\\s\\S]*?\"arm64\":\\s*\"[^\"]*-(?<idArm>\\d+)\\.exe\""
     },
     "autoupdate": {
         "architecture": {
