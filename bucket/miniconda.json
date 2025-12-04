@@ -1,0 +1,52 @@
+{
+    "version": "25.9.1-3",
+    "description": "Free, miniature installation of Anaconda Distribution",
+    "homepage": "https://docs.anaconda.com/miniconda/",
+    "license": "BSD-3-Clause",
+    "notes": [
+        "From 4.6.0, conda has built the support for Cmd, Powershell or other shells.",
+        "Use \"conda init powershell\" or \"conda init __your_favorite_shell__\""
+    ],
+    "architecture": {
+        "64bit": {
+            "url": "https://repo.anaconda.com/miniconda/Miniconda3-py313_25.9.1-3-Windows-x86_64.exe",
+            "hash": "1ff9042360900be894efb7c11d6b2348b7a7a58c4ad4415c6ac2b60c58fff1c2"
+        }
+    },
+    "pre_install": [
+        "if ($dir -match ' ') { error 'The installation directory cannot include a space'; break}",
+        "Move-Item \"$dir\\$fname\" \"$dir\\..\\$fname\"",
+        "Start-Process \"$dir\\..\\$fname\" -ArgumentList @('/S', '/InstallationType=JustMe', '/RegisterPython=0', '/AddToPath=0', '/NoRegistry=1', \"/D=$dir\") -Wait"
+    ],
+    "post_install": "Remove-Item \"$dir\\..\\$fname\"",
+    "env_add_path": [
+        "scripts",
+        "Library\\bin"
+    ],
+    "bin": [
+        "python.exe",
+        "pythonw.exe",
+        [
+            "python.exe",
+            "python3"
+        ]
+    ],
+    "persist": "envs",
+    "pre_uninstall": [
+        "# Workaround for https://github.com/ScoopInstaller/Scoop/issues/4075#issuecomment-3010866414",
+        "Invoke-ExternalCommand cmd -ArgumentList @('/c', 'rmdir', '/s', '/q', \"`\"$dir\\envs`\"\")",
+        "Start-Process \"$dir\\Uninstall-Miniconda3.exe\" -ArgumentList '/S' -Wait",
+        "if (!(Test-Path \"$dir\\envs\")) { New-Item \"$dir\\envs\" -ItemType Directory | Out-Null }"
+    ],
+    "checkver": {
+        "url": "https://repo.anaconda.com/miniconda",
+        "regex": "Miniconda3-py(?<py>\\d{3})_([\\d.-]+)-Windows"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://repo.anaconda.com/miniconda/Miniconda3-py$matchPy_$version-Windows-x86_64.exe#/setup.exe"
+            }
+        }
+    }
+}
