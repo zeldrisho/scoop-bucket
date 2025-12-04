@@ -28,15 +28,15 @@
     "checkver": {
         "url": "https://raw.githubusercontent.com/amd64fox/LoaderSpot/main/versions.json",
         "jsonpath": "$..[?(@.buildType == 'Release')]",
-        "regex": "\"fullversion\":\\s*\"(?<version>[\\d.]+)\\.(?<build>\\w+)\"[\\s\\S]*?\"x64\":\\s*\"[^\"]*-(?<idX64>\\d+)\\.exe\"[\\s\\S]*?\"arm64\":\\s*\"[^\"]*-(?<idArm>\\d+)\\.exe\""
+        "regex": "\"fullversion\":\\s*\"(?<version>[\\d.]+)\\.(?<build>\\w+)\"[\\s\\S]*?\"x64\":\\s*\"[^\"]*-(?<idx64>\\d+)\\.exe\"[\\s\\S]*?\"arm64\":\\s*\"[^\"]*-(?<idarm>\\d+)\\.exe\""
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-$matchVersion.$matchBuild-$matchIdX64.exe"
+                "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-$matchVersion.$matchBuild-$matchIdx64.exe"
             },
             "arm64": {
-                "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-$matchVersion.$matchBuild-$matchIdArm.exe"
+                "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-$matchVersion.$matchBuild-$matchIdarm.exe"
             }
         }
     }
