@@ -21,8 +21,8 @@
     ],
     "persist": "teamviewer.ini",
     "checkver": {
-        "url": "https://teamviewer.com/download/portal/windows",
-        "regex": "([\\d.]+)</span>"
+        "url": "https://community.teamviewer.com/categories/change-logs-en",
+        "regex": "\\[Windows\\] v([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
