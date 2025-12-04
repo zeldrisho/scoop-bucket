@@ -26,8 +26,8 @@
         "MSBuildSDKsPath": "$dir\\sdk\\$version\\Sdks"
     },
     "checkver": {
-        "url": "https://builds.dotnet.microsoft.com/dotnet/release-metadata/releases-index.json",
-        "jsonpath": "$..[?(@.release-type == 'lts' && @.support-phase == 'active')].latest-sdk"
+        "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/LTS/latest.version",
+        "regex": "([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
