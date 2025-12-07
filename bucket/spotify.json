@@ -13,12 +13,18 @@
             "hash": "cf2d9f63e6c17ed2b44622cf0b1bbaefb98b5f895f899b7718d3103ac4fb58ad"
         }
     },
-    "installer": {
-        "args": [
-            "/extract",
-            "\"$dir\""
-        ]
-    },
+    "pre_install": [
+        "Start-Process \"$dir\\$fname\" -ArgumentList @('/extract', \"$dir\") -Wait",
+        "$update = \"$env:LOCALAPPDATA\\Spotify\\Update\"",
+        "Remove-Item $update -Recurse -Force -ErrorAction SilentlyContinue",
+        "New-Item $update | Out-Null",
+        "Set-ItemProperty $update -Name IsReadOnly -Value $true",
+        "$Ace = New-Object System.Security.AccessControl.FileSystemAccessRule(\"${env:USERNAME}\", \"Modify\", \"Deny\")",
+        "$Acl = New-Object System.Security.AccessControl.FileSecurity",
+        "$Acl.AddAccessRule($Ace)",
+        "Set-Acl $update -AclObject $Acl"
+    ],
+    "post_install": "Remove-Item \"$dir\\$fname\"",
     "shortcuts": [
         [
             "Spotify.exe",
@@ -28,15 +34,15 @@
     "checkver": {
         "url": "https://raw.githubusercontent.com/amd64fox/LoaderSpot/main/versions.json",
         "jsonpath": "$..[?(@.buildType == 'Release')]",
-        "regex": "\"fullversion\":\\s*\"(?<version>[\\d.]+)\\.(?<build>\\w+)\"[\\s\\S]*?\"x64\":\\s*\"[^\"]*-(?<idx64>\\d+)\\.exe\"[\\s\\S]*?\"arm64\":\\s*\"[^\"]*-(?<idarm>\\d+)\\.exe\""
+        "regex": "(?<version>[\\d.]+)\\.(?<build>[\\w]+)-(?<x64>[\\d]+).exe[\\s\\S]*?(?<arm>[\\d]+).exe"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-$matchVersion.$matchBuild-$matchIdx64.exe"
+                "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-$matchVersion.$matchBuild-$matchX64.exe"
             },
             "arm64": {
-                "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-$matchVersion.$matchBuild-$matchIdarm.exe"
+                "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-$matchVersion.$matchBuild-$matchArm.exe"
             }
         }
     }
