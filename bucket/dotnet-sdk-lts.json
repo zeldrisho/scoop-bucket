@@ -1,5 +1,5 @@
 {
-    "version": "10.0.100",
+    "version": "10.0.101",
     "description": "Build modern apps and powerful cloud services",
     "homepage": "https://dotnet.microsoft.com",
     "license": "MIT",
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.100/dotnet-sdk-10.0.100-win-x64.zip",
-            "hash": "ce09b60637c525a5ccd3368962dc936df10141d397e305f5406318f61da66709"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.101/dotnet-sdk-10.0.101-win-x64.zip",
+            "hash": "f63ab97973e38fa3b7f2c352e72b5afc603d428a61a4b1eba98f7d047ee6cf5e"
         },
         "32bit": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.100/dotnet-sdk-10.0.100-win-x86.zip",
-            "hash": "7ab16c7bb2c42b720ce5aacc1c8032e8b9817b4c98b02da091bcb0c25b504270"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.101/dotnet-sdk-10.0.101-win-x86.zip",
+            "hash": "c75e7ec4958b4406a373e0032b4ddb2710aae943fed39c84cd6379d257dcbed3"
         },
         "arm64": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.100/dotnet-sdk-10.0.100-win-arm64.zip",
-            "hash": "3d7c3b168c28a08f6503cfae1fe7ab85ae91f847cdbd38e76bb48acb16c35b6a"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.101/dotnet-sdk-10.0.101-win-arm64.zip",
+            "hash": "06e8040c881ed36cf8d5ae94f6bc8824135e5a3a552669e2b1a5bbfe5e3cb54c"
         }
     },
     "env_add_path": ".",
