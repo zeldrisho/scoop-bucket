@@ -1,12 +1,12 @@
 {
-    "version": "0.7.34",
+    "version": "0.7.45",
     "description": "The AI IDE for prototype to production",
     "homepage": "https://kiro.dev",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://prod.download.desktop.kiro.dev/releases/stable/win32-x64/signed/0.7.34/kiro-ide-0.7.34-stable-win32-x64.zip",
-            "hash": "0ec9832abb5ef9d4d73a9b3bf7f49443a50b4ecfee6390a289e3ea011704e795"
+            "url": "https://prod.download.desktop.kiro.dev/releases/stable/win32-x64/signed/0.7.45/kiro-ide-0.7.45-stable-win32-x64.zip",
+            "hash": "febbb677788a722d3baefe5fadbaeae1e7fa2f4bf39ac3bd461e30dd2031adb1"
         }
     },
     "bin": [
