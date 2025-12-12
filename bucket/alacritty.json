@@ -2,8 +2,8 @@
     "version": "0.16.1",
     "description": "An OpenGL terminal emulator",
     "homepage": "https://alacritty.org",
-    "notes": "Configuration: https://alacritty.org/config-alacritty",
     "license": "Apache-2.0",
+    "notes": "Configuration: https://alacritty.org/config-alacritty",
     "suggest": {
         "vcredist": "vcredist"
     },
