@@ -1,6 +1,6 @@
 {
     "version": "10.0.1",
-    "description": "Enables you to run existing Windows desktop applications",
+    "description": "The .NET Desktop Runtime enables you to run existing Windows desktop applications",
     "homepage": "https://dotnet.microsoft.com/download/dotnet",
     "license": "MIT",
     "architecture": {

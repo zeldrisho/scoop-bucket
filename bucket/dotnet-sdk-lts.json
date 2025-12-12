@@ -1,6 +1,6 @@
 {
     "version": "10.0.101",
-    "description": "Build modern apps and powerful cloud services",
+    "description": ".NET is the free, open-source framework for building modern apps and powerful cloud services",
     "homepage": "https://dotnet.microsoft.com",
     "license": "MIT",
     "suggest": {

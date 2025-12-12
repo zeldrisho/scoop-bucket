@@ -24,6 +24,7 @@ scoop install zeldrisho/<app>
 |----|-----------|
 |[alacritty](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/alacritty.json)|An OpenGL terminal emulator|
 |[antigravity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/antigravity.json)|Experience liftoff with the next-generation IDE|
+|[aspnetcore-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/aspnetcore-runtime-lts.json)|The ASP.NET Core Runtime enables you to run existing web/server applications|
 |[autoruns](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/autoruns.json)|Shows programs configured to run during bootup or login|
 |[bifrost](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/bifrost.json)|Samsung Firmware Downloader|
 |[blitz](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/blitz.json)|Personalized Stats and Insights Powered by Billions of Matches|
@@ -34,7 +35,7 @@ scoop install zeldrisho/<app>
 |[cloudflare-warp](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp.json)|The free app that makes your Internet faster|
 |[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|The AI browser that acts as a personal assistant|
 |[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json) / [discord-arm](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord-arm.json)|A voice, video and text communication platform|
-|[dotnet-sdk-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dotnet-sdk-lts.json)|Build modern apps and powerful cloud services|
+|[dotnet-sdk-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dotnet-sdk-lts.json)|.NET is the free, open-source framework for building modern apps and powerful cloud services|
 |[drawpen](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/drawpen.json)|Simple screen annotation|
 |[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
 |[ente-auth](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-auth.json)|Open source 2FA authenticator, with E2EE backups|
@@ -87,9 +88,9 @@ scoop install zeldrisho/<app>
 |[translumo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/translumo.json)|Advanced real-time screen translator|
 |[ubisoft-connect](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ubisoft-connect.json)|Multi-platform ecosystem of player services|
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
-|[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json)|Microsoft Visual C++ Redistributable|
+|[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json)|A Visual C++ Redistributable installs Microsoft C and C++ runtime libraries|
 |[vscode](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vscode.json)|The open source AI code editor|
-|[windowsdesktop-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/windowsdesktop-runtime-lts.json)|Enables you to run existing Windows desktop applications|
+|[windowsdesktop-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/windowsdesktop-runtime-lts.json)|The .NET Desktop Runtime enables you to run existing Windows desktop applications|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
 |[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Enable Dark Mode for Zalo|
 |[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Messaging application|
