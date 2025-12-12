@@ -22,8 +22,15 @@
         ]
     ],
     "checkver": {
-        "url": "https://api.github.com/repositories/197275551/contents/manifests/p/Perplexity/Comet",
-        "jsonpath": "$..name"
+        "url": "https://github.com/zeldrisho/scoop-bucket",
+        "script": [
+            "try {",
+            "    $Response = Invoke-WebRequest -Uri 'https://www.perplexity.ai/rest/browser/download?platform=win_x64&channel=stable' -MaximumRedirection 0",
+            "} catch {",
+            "    Write-Output $_.Exception.Response.Headers.Location",
+            "}"
+        ],
+        "regex": "([\\d.]+)/comet"
     },
     "autoupdate": {
         "architecture": {
