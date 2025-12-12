@@ -1,16 +1,16 @@
 {
-    "version": "142.1.7444.29693",
+    "version": "143.0.7499.33648",
     "description": "The AI browser that acts as a personal assistant",
     "homepage": "https://perplexity.ai/comet",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
             "url": "https://perplexity.ai/rest/browser/download?platform=win_x64&channel=stable#/dl.7z",
-            "hash": "1375f9fde06eb4a4e5eaab731810268033134c258da8c87741b866e8b71d930b"
+            "hash": "8159a96097280c2dc462ec6204d10a0634e931557604449349aa65f47571f9ef"
         },
         "arm64": {
             "url": "https://perplexity.ai/rest/browser/download?platform=win_arm64&channel=stable#/dl.7z",
-            "hash": "81ddc9093e75f8395f1d97057bd141c21cf34851e8925425181549afbc8520fe"
+            "hash": "18d55d834a03e99d3592a76cf8d78d1134f8c9bb66bad1552852951629d5dbce"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -DestinationPath \"$dir\" -Removal",
