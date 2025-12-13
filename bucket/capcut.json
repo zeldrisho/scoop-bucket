@@ -1,15 +1,15 @@
 {
-    "version": "7.5.0.3053",
+    "version": "7.7.0.3143",
     "description": "All-in-one video editor & graphic design tool driven by AI",
     "homepage": "https://capcut.com",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-sg/packages/CapCut_7_5_0_3053_capcutpc_0_creatortool.exe#/dl.7z",
-            "hash": "0945e64d68ac4be406a00ddc6430e6c4694b844bb452fc84f00b92b7cb54d891"
+            "url": "https://sf16-web-tos-buz.capcutcdn-us.com/obj/capcut-web-buz-tx/packages/CapCut_7_7_0_3143_capcutpc_0_creatortool.exe#/dl.7z",
+            "hash": "01e0a01a97c672b15b9a18f6ebae5c65fe100e87b04451f7e2a8f8c72747bbc9"
         }
     },
-    "extract_dir": "JYPacket/7.5.0.3053",
+    "extract_dir": "JYPacket/7.7.0.3143",
     "shortcuts": [
         [
             "CapCut.exe",
@@ -17,14 +17,14 @@
         ]
     ],
     "checkver": {
-        "url": "https://editor-api-sg.capcut.com/service/settings/v3/?device_platform=windows&os_version=10&aid=359289&iid=0&version_code=66304",
+        "url": "https://editor-api-sg.capcut.com/service/settings/v3/?device_platform=windows&aid=359289&version_code=66304",
         "regex": "(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_capcutpc",
         "replace": "${major}.${minor}.${patch}.${build}"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://lf16-capcut.faceulv.com/obj/capcutpc-packages-sg/packages/CapCut_$underscoreVersion_capcutpc_0_creatortool.exe#/dl.7z"
+                "url": "https://sf16-web-tos-buz.capcutcdn-us.com/obj/capcut-web-buz-tx/packages/CapCut_$underscoreVersion_capcutpc_0_creatortool.exe#/dl.7z"
             }
         },
         "extract_dir": "JYPacket/$version"
