@@ -5,7 +5,7 @@
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://proton.me/download/authenticator/windows/ProtonAuthenticator_1.1.4_x64_en-US.msi#setup.msi",
+            "url": "https://proton.me/download/authenticator/windows/ProtonAuthenticator_1.1.4_x64_en-US.msi",
             "hash": "fd6503822f1d1f2897964d1401be3abb3ff7f0d19cd3ac69e8897badb38120de"
         }
     },
@@ -23,7 +23,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://proton.me/download/authenticator/windows/ProtonAuthenticator_$version_x64_en-US.msi#setup.msi"
+                "url": "https://proton.me/download/authenticator/windows/ProtonAuthenticator_$version_x64_en-US.msi"
             }
         }
     }
