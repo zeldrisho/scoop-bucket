@@ -11,7 +11,7 @@
             "shortcuts": [
                 [
                     "Autoruns64.exe",
-                    "Sysinternals/Autoruns"
+                    "Sysinternals\\Autoruns"
                 ]
             ]
         },
@@ -20,7 +20,7 @@
             "shortcuts": [
                 [
                     "Autoruns.exe",
-                    "Sysinternals/Autoruns"
+                    "Sysinternals\\Autoruns"
                 ]
             ]
         },
@@ -29,7 +29,7 @@
             "shortcuts": [
                 [
                     "Autoruns64a.exe",
-                    "Sysinternals/Autoruns"
+                    "Sysinternals\\Autoruns"
                 ]
             ]
         }

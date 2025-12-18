@@ -13,12 +13,12 @@
     "shortcuts": [
         [
             "proton-authenticator.exe",
-            "Proton Authenticator"
+            "Proton\\Proton Authenticator"
         ]
     ],
     "checkver": {
         "url": "https://proton.me/download/authenticator/windows/version.json",
-        "jsonpath": "$..Version"
+        "jsonpath": "$..[?(@.CategoryName == 'Stable')].Version"
     },
     "autoupdate": {
         "architecture": {

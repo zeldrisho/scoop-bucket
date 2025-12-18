@@ -13,12 +13,12 @@
     "shortcuts": [
         [
             "ProtonPass.exe",
-            "Proton Pass"
+            "Proton\\Proton Pass"
         ]
     ],
     "checkver": {
         "url": "https://proton.me/download/pass/windows/version.json",
-        "jsonpath": "$..Version"
+        "jsonpath": "$..[?(@.CategoryName == 'Stable')].Version"
     },
     "autoupdate": {
         "architecture": {

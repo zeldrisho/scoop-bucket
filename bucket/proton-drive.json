@@ -22,12 +22,12 @@
     "shortcuts": [
         [
             "ProtonDrive.exe",
-            "Proton Drive"
+            "Proton\\Proton Drive"
         ]
     ],
     "checkver": {
         "url": "https://proton.me/download/drive/windows/version.json",
-        "jsonpath": "$..Version"
+        "jsonpath": "$..[?(@.CategoryName == 'Stable')].Version"
     },
     "autoupdate": {
         "architecture": {
