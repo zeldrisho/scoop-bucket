@@ -5,7 +5,7 @@
     "license": "GPL-3.0",
     "notes": [
         "Fix service by running this command as administrator:",
-        "New-Service 'ProtonVPN Service' -BinaryPathName \"$dir\\v$version\\ProtonVPNService.exe\" -StartupType Manual -DependsOn 'Tcpip' -ErrorAction SilentlyContinue"
+        "New-Service 'ProtonVPN Service' -BinaryPathName \"$dir\\v$version\\ProtonVPNService.exe\" -DependsOn 'Tcpip'; Start-Service 'ProtonVPN Service'"
     ],
     "architecture": {
         "64bit": {
