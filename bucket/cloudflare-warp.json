@@ -5,7 +5,7 @@
     "license": "Freeware",
     "notes": [
         "Fix service by running this command as administrator:",
-        "New-Service 'Cloudflare WARP' -BinaryPathName \"$dir\\warp-svc.exe\" -DependsOn 'WlanSvc' -ErrorAction SilentlyContinue; Start-Service 'Cloudflare WARP'"
+        "New-Service 'Cloudflare WARP' -BinaryPathName \"$dir\\warp-svc.exe\" -DependsOn 'WlanSvc'; Start-Service 'Cloudflare WARP'"
     ],
     "architecture": {
         "64bit": {
