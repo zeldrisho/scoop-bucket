@@ -71,7 +71,9 @@ scoop install zeldrisho/<app>
 |[process-explorer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/process-explorer.json)|Shows you information about which handles and DLLs processes have opened or loaded|
 |[proton-authenticator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-authenticator.json)|Private, secure 2FA authenticator|
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
+|[proton-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-mail.json)|A free and secure email service|
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
+|[proton-vpn](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-vpn.json)|Experience true freedom online|
 |[repak](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/repak.json)|CLI tool for working with Unreal Engine .pak files|
 |[rstgametranslation](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/rstgametranslation.json)|Real-time Game Screen Translation Software|
 |[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|
