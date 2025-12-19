@@ -2,7 +2,7 @@
 [![manifests](https://img.shields.io/github/directory-file-count/zeldrisho/scoop-bucket/bucket?type=file&extension=json&style=flat&label=manifests)](https://github.com/zeldrisho/scoop-bucket/tree/master/bucket)
 [![repo size](https://img.shields.io/github/repo-size/zeldrisho/scoop-bucket.svg?style=flat-square)](https://github.com/zeldrisho/scoop-bucket)
 
-My personal [Scoop bucket](https://github.com/ScoopInstaller/Scoop/wiki/Buckets) for Windows applications missing from [official buckets](https://github.com/ScoopInstaller/Scoop?tab=readme-ov-file#known-application-buckets), or alternate versions thereof
+My personal [Scoop bucket](https://github.com/ScoopInstaller/Scoop/wiki/Buckets) for manifests that don't fit the [Main criteria](https://github.com/ScoopInstaller/Scoop/wiki/Criteria-for-including-apps-in-the-main-bucket)
 
 ## Usage
 
