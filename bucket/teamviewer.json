@@ -1,12 +1,12 @@
 {
-    "version": "15.73.3",
+    "version": "15.73.5",
     "description": "Remote access and connectivity software focused on security",
     "homepage": "https://teamviewer.com",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
             "url": "https://download.teamviewer.com/download/version_15x/TeamViewerPortable_x64.zip",
-            "hash": "4af8dcef704db76080e6647910baa5e0ab33d932a6872a172423df11fead7df3"
+            "hash": "cd7599f582df6de05970a000f155d795e47d25e27fd591d3ec8d4d6dffa036d6"
         },
         "32bit": {
             "url": "https://download.teamviewer.com/download/version_15x/TeamViewerPortable.zip",
