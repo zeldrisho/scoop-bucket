@@ -12,6 +12,7 @@
         ]
     ],
     "persist": [
+        "config",
         "skins",
         "steamapps",
         "userdata"
