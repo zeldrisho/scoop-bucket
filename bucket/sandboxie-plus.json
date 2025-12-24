@@ -3,7 +3,6 @@
     "description": "A sandbox-based isolation software",
     "homepage": "https://sandboxie-plus.com",
     "license": "GPL-3.0",
-    "notes": "Open Options -> Global Settings -> Edit ini Section -> change FileRootPath to $dir\\Sandbox\\%SANDBOX%",
     "architecture": {
         "64bit": {
             "url": "https://github.com/sandboxie-plus/Sandboxie/releases/download/v1.16.8/Sandboxie-Plus-x64-v1.16.8.exe",
@@ -15,6 +14,14 @@
         }
     },
     "innosetup": true,
+    "post_install": [
+        "$ini_path = \"$dir\\Sandboxie.ini\"",
+        "if (Test-Path $ini_path) {",
+        "    (Get-Content $ini_path -Raw) -replace 'FileRootPath=.*', \"FileRootPath=$dir\\Sandbox\\%SANDBOX%\" | Set-Content $ini_path -NoNewline",
+        "} else {",
+        "    \"[GlobalSettings]`nFileRootPath=$dir\\Sandbox\\%SANDBOX%`nDefaultBox=DefaultBox`n`n[DefaultBox]\" | Set-Content $ini_path",
+        "}"
+    ],
     "shortcuts": [
         [
             "SandMan.exe",
