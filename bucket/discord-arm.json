@@ -18,9 +18,9 @@
         "Move-Item \"$dir\\app-$version\\installer.db\" \"$dir\"",
         "Move-Item \"$dir\\app-$version\\app.ico\" \"$dir\"",
         "New-Item \"$dir\\packages\" -ItemType Directory | Out-Null",
-        "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\""
+        "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\"",
+        "Copy-Item \"$bucketsdir\\$bucket\\scripts\\$app\\makelnk.ps1\" \"$dir\""
     ],
-    "post_install": "Move-Item \"$bucketsdir\\$bucket\\scripts\\$app\\makelnk.ps1\" \"$dir\"",
     "shortcuts": [
         [
             "Update.exe",
