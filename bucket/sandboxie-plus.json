@@ -14,14 +14,6 @@
         }
     },
     "innosetup": true,
-    "post_install": [
-        "$ini_path = \"$dir\\Sandboxie.ini\"",
-        "if (Test-Path $ini_path) {",
-        "    (Get-Content $ini_path -Raw) -replace 'FileRootPath=.*', \"FileRootPath=$dir\\Sandbox\\%SANDBOX%\" | Set-Content $ini_path -NoNewline",
-        "} else {",
-        "    \"[GlobalSettings]`nFileRootPath=$dir\\Sandbox\\%SANDBOX%`nDefaultBox=DefaultBox`n`n[DefaultBox]\" | Set-Content $ini_path",
-        "}"
-    ],
     "shortcuts": [
         [
             "SandMan.exe",
