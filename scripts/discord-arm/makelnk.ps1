@@ -1,22 +1,17 @@
 <#
 .SYNOPSIS
-    Creates a Shortcut (.lnk) with a specific AppUserModelID, custom icon, and arguments.
+    Creates a Discord Shortcut (.lnk) with a specific AppUserModelID, custom icon, and arguments.
 #>
 
-param (
-    [Parameter(Mandatory=$true)]
-    [string]$ShortcutPath,
+# Get the directory where this script is located (Discord installation directory)
+$dir = Split-Path -Parent $MyInvocation.MyCommand.Path
 
-    [Parameter(Mandatory=$true)]
-    [string]$TargetPath,
-
-    [string]$Arguments = "",
-
-    [string]$IconPath = "",
-
-    [Alias("AppId")]
-    [string]$AppUserModelID = ""
-)
+# Hardcoded parameters
+$ShortcutPath = "$env:APPDATA\Microsoft\Windows\Start Menu\Programs\Discord.lnk"
+$TargetPath = "$dir\Update.exe"
+$Arguments = "--processStart Discord.exe"
+$IconPath = "$dir\app.ico"
+$AppUserModelID = "com.squirrel.Discord.Discord"
 
 # --- C# Definition for IPropertyStore & IShellLink ---
 $code = @"
@@ -161,13 +156,20 @@ try {
 # --- Execution Logic ---
 
 # Ensure destination directory exists
-$dir = Split-Path $ShortcutPath
-if (-not (Test-Path $dir)) {
-    New-Item -ItemType Directory -Path $dir | Out-Null
+$destinationDir = Split-Path $ShortcutPath
+if (-not (Test-Path $destinationDir)) {
+    New-Item -ItemType Directory -Path $destinationDir | Out-Null
 }
+
+Write-Host "Creating Discord shortcut..." -ForegroundColor Cyan
+Write-Host "Target: $TargetPath"
+Write-Host "Arguments: $Arguments"
+Write-Host "Icon: $IconPath"
+Write-Host "AppUserModelID: $AppUserModelID"
 
 try {
     [ShellLinkHelper.ShortcutCreator]::Create($ShortcutPath, $TargetPath, $Arguments, $IconPath, $AppUserModelID)
+    Write-Host "Shortcut created successfully at: $ShortcutPath" -ForegroundColor Green
 }
 catch {
     Write-Error "Failed to create shortcut: $_"
