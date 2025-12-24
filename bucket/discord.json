@@ -5,7 +5,7 @@
     "license": "Freeware",
     "notes": [
         "Fix autostart: re-enable startup in Discord settings",
-        "Fix notifications by running this command: $bucketsdir\\$bucket\\scripts\\makelnk.ps1 -ShortcutPath \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Discord.lnk\" -TargetPath \"$dir\\Update.exe\" -Arguments \"--processStart Discord.exe\" -IconPath \"$dir\\app.ico\" -AppId \"com.squirrel.Discord.Discord\""
+        "Fix notifications by running: $dir\\makelnk.ps1"
     ],
     "architecture": {
         "64bit": {
@@ -20,6 +20,7 @@
         "New-Item \"$dir\\packages\" -ItemType Directory | Out-Null",
         "Move-Item \"$dir\\RELEASES\" \"$dir\\packages\""
     ],
+    "post_install": "Move-Item \"$bucketsdir\\$bucket\\scripts\\$app\\makelnk.ps1\" \"$dir\"",
     "shortcuts": [
         [
             "Update.exe",
