@@ -1,16 +1,16 @@
 {
-    "version": "1.2.80.354",
+    "version": "1.2.80.358",
     "description": "Music for everyone",
     "homepage": "https://spotify.com",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-1.2.80.354.gc3785978-1005.exe",
-            "hash": "d4335c752d2ff303edafeaf3108a09f926d9234d6eb36bf97a94073723328f87"
+            "url": "https://upgrade.scdn.co/upgrade/client/win32-x86_64/spotify_installer-1.2.80.358.g74e46c21-1087.exe",
+            "hash": "a96d96945b72f55bf1aae25b98b8d4057684df2387a49ece035de475418bc3f1"
         },
         "arm64": {
-            "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-1.2.80.354.gc3785978-992.exe",
-            "hash": "2c5895490f8e3d0c8ff37c7a31fd379aeaab641288bd09fdee09a049e12801a2"
+            "url": "https://upgrade.scdn.co/upgrade/client/win32-arm64/spotify_installer-1.2.80.358.g74e46c21-1074.exe",
+            "hash": "535f72b5fd76ac2e85587672b4652ac9fe5cbc35737f274a9c20488e09d86eb4"
         }
     },
     "pre_install": [
