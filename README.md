@@ -45,7 +45,7 @@ scoop install zeldrisho/<app>
 |[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Vietnamese input method editor|
 |[gemini-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gemini-cli.json)|Brings the power of Gemini directly into your terminal|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
-|[gonhanh](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Vietnamese input method editor|
+|[gonhanh](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gonhanh.json)|Vietnamese input method editor|
 |[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|
 |[gs-auto-clicker](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gs-auto-clicker.json)|Automatically clicks the mouse, saving time|
 |[itch](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/itch.json)|A simple way to find, download and distribute indie games online|
@@ -100,3 +100,4 @@ scoop install zeldrisho/<app>
 |[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Enable Dark Mode for Zalo|
 |[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Messaging application|
 |[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Secure & Professional Business Email for your Organization|
+
