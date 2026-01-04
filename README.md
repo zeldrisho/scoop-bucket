@@ -26,6 +26,7 @@ scoop install zeldrisho/<app>
 |[antigravity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/antigravity.json)|Experience liftoff with the next-generation IDE|
 |[aspnetcore-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/aspnetcore-runtime-lts.json)|The ASP.NET Core Runtime enables you to run existing web/server applications|
 |[autoruns](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/autoruns.json)|Shows programs configured to run during bootup or login|
+|[aya](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/aya.json)|Android ADB Desktop App|
 |[bifrost](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/bifrost.json)|Samsung Firmware Downloader|
 |[blitz](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/blitz.json)|Personalized Stats and Insights Powered by Billions of Matches|
 |[canhcutteam-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/canhcutteam-launcher.json)|Download and manage Vietnamese localization patches for games|
