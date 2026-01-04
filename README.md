@@ -103,4 +103,4 @@ scoop install zeldrisho/<app>
 |[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Enable Dark Mode for Zalo|
 |[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Messaging application|
 |[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Secure & Professional Business Email for your Organization|
-
+|[zoom](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoom.json)|One platform to connect|
