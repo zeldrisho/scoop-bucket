@@ -43,6 +43,7 @@ scoop install zeldrisho/<app>
 |[ente-auth](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-auth.json)|Open source 2FA authenticator, with E2EE backups|
 |[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
 |[epic-games-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/epic-games-launcher.json)|Streamline your gaming experience|
+|[foxit-reader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/foxit-reader.json)|The best free PDF reader & viewer|
 |[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Vietnamese input method editor|
 |[gemini-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gemini-cli.json)|Brings the power of Gemini directly into your terminal|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
