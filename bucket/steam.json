@@ -1,9 +1,14 @@
 {
-    "version": "nightly",
+    "version": "2.10.91.91",
     "description": "The ultimate destination for playing, discussing and creating games",
     "homepage": "https://store.steampowered.com",
     "license": "Proprietary",
-    "url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe#/dl.7z",
+    "architecture": {
+        "64bit": {
+            "url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe#/dl.7z",
+            "hash": "7d3654531c32d941b8cae81c4137fc542172bfa9635f169cb392f245a0a12bcb"
+        }
+    },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force",
     "shortcuts": [
         [
@@ -17,5 +22,23 @@
         "steamapps",
         "userdata"
     ],
-    "post_uninstall": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\" -Recurse -Force -ErrorAction SilentlyContinue"
+    "post_uninstall": "Remove-Item \"$env:APPDATA\\Microsoft\\Windows\\Start Menu\\Programs\\Steam\" -Recurse -Force -ErrorAction SilentlyContinue",
+    "checkver": {
+        "script": [
+            "$url = 'https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe'",
+            "$dl = cache_path 'steam' 'unknown' $url",
+            "Invoke-WebRequest $url -OutFile $dl",
+            "$ver = (Get-Item $dl).VersionInfo.FileVersion",
+            "Move-Item $dl (cache_path 'steam' $ver $url) -Force",
+            "$ver"
+        ],
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://cdn.akamai.steamstatic.com/client/installer/SteamSetup.exe#/dl.7z"
+            }
+        }
+    }
 }
