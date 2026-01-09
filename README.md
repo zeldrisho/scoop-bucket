@@ -62,6 +62,7 @@ scoop install zeldrisho/<app>
 |[mort](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/mort.json)|Real-time game translator with OCR|
 |[mumuplayer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/mumuplayer.json)|Best Android Emulator on PC for Running Mobile Games and Apps|
 |[netpad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/netpad.json)|A C# editor and playground|
+|[nextdns-gui](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/nextdns-gui.json)|The new firewall for the modern Internet|
 |[nilesoft-shell](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/nilesoft-shell.json)|Powerful, free, open source context menu manager|
 |[obsidian](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/obsidian.json)|The free and flexible app for your private thoughts|
 |[odin-downloader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/odin-downloader.json)|ROM Flashing tool for SAMSUNG|
