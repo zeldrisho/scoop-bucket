@@ -47,6 +47,7 @@ scoop install zeldrisho/<app>
 |[foxit-reader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/foxit-reader.json)|The best free PDF reader & viewer|
 |[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Vietnamese input method editor|
 |[gemini-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gemini-cli.json)|Brings the power of Gemini directly into your terminal|
+|[genymotion](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/genymotion.json)|Android Emulator|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
 |[gonhanh](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gonhanh.json)|Vietnamese input method editor|
 |[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|
