@@ -18,22 +18,84 @@ if (-not (Test-Path $servicePath)) {
     exit 1
 }
 
-# Check for driver INF file
-$driverPath = "$dir\Driver\NextDNSEngine.inf"
-if (-not (Test-Path $driverPath)) {
-    Write-Error "NextDNSEngine.inf not found at: $driverPath"
+# Check for driver files
+$driverFolder = "$dir\Driver"
+$driverInf = "$driverFolder\NextDNSEngine.inf"
+$driverCat = "$driverFolder\NextDNSEngine.cat"
+$driverSys = "$driverFolder\NextDNSEngine.sys"
+
+Write-Host "`nChecking driver files..." -ForegroundColor Cyan
+if (-not (Test-Path $driverInf)) {
+    Write-Error "NextDNSEngine.inf not found at: $driverInf"
     exit 1
 }
+if (-not (Test-Path $driverCat)) {
+    Write-Error "NextDNSEngine.cat not found at: $driverCat"
+    exit 1
+}
+if (-not (Test-Path $driverSys)) {
+    Write-Error "NextDNSEngine.sys not found at: $driverSys"
+    exit 1
+}
+Write-Host "All driver files found." -ForegroundColor Green
 
 # Install the driver
 Write-Host "`nInstalling NextDNS Driver..." -ForegroundColor Cyan
 try {
-    $pnpOutput = pnputil.exe /add-driver "$driverPath" /install
-    Write-Host $pnpOutput
-    Write-Host "Driver installed successfully." -ForegroundColor Green
+    $result = pnputil.exe /add-driver "$driverInf" /install 2>&1
+    Write-Host $result
+    
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "Driver installed successfully." -ForegroundColor Green
+    } else {
+        Write-Error "Failed to install driver. Exit code: $LASTEXITCODE"
+        exit 1
+    }
 } catch {
     Write-Error "Failed to install driver: $_"
     exit 1
+}
+
+# Copy driver to system32\drivers if not already there
+Write-Host "`nCopying driver to system directory..." -ForegroundColor Cyan
+$systemDriverPath = "$env:SystemRoot\System32\drivers\NextDNSEngine.sys"
+try {
+    if (-not (Test-Path $systemDriverPath)) {
+        Copy-Item -Path $driverSys -Destination $systemDriverPath -Force
+        Write-Host "Driver copied to: $systemDriverPath" -ForegroundColor Green
+    } else {
+        Write-Host "Driver already exists in system directory." -ForegroundColor Green
+    }
+} catch {
+    Write-Warning "Failed to copy driver to system directory: $_"
+}
+
+# Create/Start the driver service
+Write-Host "`nConfiguring NextDNS Driver Service..." -ForegroundColor Cyan
+$driverService = Get-Service -Name "NextDNSEngine" -ErrorAction SilentlyContinue
+if (-not $driverService) {
+    Write-Host "Creating NextDNS Driver Service..."
+    try {
+        sc.exe create NextDNSEngine type=kernel start=demand binPath="$systemDriverPath" | Out-Null
+        Write-Host "Driver service created successfully." -ForegroundColor Green
+    } catch {
+        Write-Warning "Failed to create driver service: $_"
+    }
+} else {
+    Write-Host "Driver service already exists." -ForegroundColor Green
+}
+
+# Start the driver
+Write-Host "Starting NextDNS Driver..."
+try {
+    sc.exe start NextDNSEngine | Out-Null
+    if ($LASTEXITCODE -eq 0) {
+        Write-Host "Driver started successfully." -ForegroundColor Green
+    } else {
+        Write-Warning "Driver start returned code: $LASTEXITCODE (may already be running)"
+    }
+} catch {
+    Write-Warning "Note: Driver may start automatically when needed by the service."
 }
 
 # Remove existing service if it exists
@@ -48,7 +110,7 @@ if ($existingService) {
 # Create new service
 Write-Host "Creating NextDNS Service..."
 try {
-    New-Service -Name "NextDNSService" -BinaryPathName "$servicePath" -DisplayName "NextDNS Service" -ErrorAction Stop | Out-Null
+    New-Service -Name "NextDNSService" -BinaryPathName "$servicePath" -DisplayName "NextDNS Service" -StartupType Automatic -ErrorAction Stop | Out-Null
     Write-Host "Service created successfully." -ForegroundColor Green
 } catch {
     Write-Error "Failed to create service: $_"
@@ -66,3 +128,4 @@ try {
 }
 
 Write-Host "`nNextDNS Service and Driver setup completed successfully!" -ForegroundColor Green
+Write-Host "`nYou can now run the NextDNS GUI application." -ForegroundColor Cyan
