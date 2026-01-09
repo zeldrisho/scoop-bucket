@@ -45,8 +45,13 @@ try {
     $result = pnputil.exe /add-driver "$driverInf" /install 2>&1
     Write-Host $result
     
-    if ($LASTEXITCODE -eq 0) {
-        Write-Host "Driver installed successfully." -ForegroundColor Green
+    # Exit codes: 0 = success, 259 = already exists (also success)
+    if ($LASTEXITCODE -eq 0 -or $LASTEXITCODE -eq 259) {
+        if ($LASTEXITCODE -eq 259) {
+            Write-Host "Driver already installed in system." -ForegroundColor Green
+        } else {
+            Write-Host "Driver installed successfully." -ForegroundColor Green
+        }
     } else {
         Write-Error "Failed to install driver. Exit code: $LASTEXITCODE"
         exit 1
@@ -88,11 +93,15 @@ if (-not $driverService) {
 # Start the driver
 Write-Host "Starting NextDNS Driver..."
 try {
-    sc.exe start NextDNSEngine | Out-Null
+    $startResult = sc.exe start NextDNSEngine 2>&1
     if ($LASTEXITCODE -eq 0) {
         Write-Host "Driver started successfully." -ForegroundColor Green
+    } elseif ($LASTEXITCODE -eq 1056) {
+        Write-Host "Driver is already running." -ForegroundColor Green
     } else {
-        Write-Warning "Driver start returned code: $LASTEXITCODE (may already be running)"
+        Write-Host $startResult
+        Write-Warning "Driver start returned code: $LASTEXITCODE"
+        Write-Host "Note: Driver may start automatically when needed by the service." -ForegroundColor Yellow
     }
 } catch {
     Write-Warning "Note: Driver may start automatically when needed by the service."
