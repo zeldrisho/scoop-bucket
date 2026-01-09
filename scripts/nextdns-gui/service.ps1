@@ -44,7 +44,7 @@ Write-Host "`nInstalling NextDNS Driver..." -ForegroundColor Cyan
 try {
     $result = pnputil.exe /add-driver "$driverInf" /install 2>&1
     Write-Host $result
-    
+
     # Exit codes: 0 = success, 259 = already exists (also success)
     if ($LASTEXITCODE -eq 0 -or $LASTEXITCODE -eq 259) {
         if ($LASTEXITCODE -eq 259) {
