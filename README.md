@@ -45,6 +45,7 @@ scoop install zeldrisho/<app>
 |[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
 |[epic-games-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/epic-games-launcher.json)|Streamline your gaming experience|
 |[foxit-reader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/foxit-reader.json)|The best free PDF reader & viewer|
+|[gamethuanviet-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gamethuanviet-launcher.json)|Download and manage Vietnamese localization patches for games|
 |[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Vietnamese input method editor|
 |[gemini-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gemini-cli.json)|Brings the power of Gemini directly into your terminal|
 |[genymotion](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/genymotion.json)|Android Emulator|
