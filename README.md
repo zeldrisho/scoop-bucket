@@ -89,6 +89,7 @@ scoop install zeldrisho/<app>
 |[seelen-ui](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/seelen-ui.json)|A powerful desktop environment for Windows|
 |[spotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/spotify.json)|Music for everyone|
 |[steam](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/steam.json)|The ultimate destination for playing, discussing and creating games|
+|[steamguard-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/steamguard-cli.json)|A utility for generating 2FA codes for Steam|
 |[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
 |[stremio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio.json)|Freedom to Stream|
 |[sublime-text](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sublime-text.json)|Text editor for code, markup and prose|
