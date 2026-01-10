@@ -30,7 +30,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.strem.io/stremio-shell-ng/v$version/StremioSetup-v$version.exe"
+                "url": "https://dl.strem.io/stremio-shell-ng/v$version/StremioSetup-v$version_x64.exe"
             },
             "arm64": {
                 "url": "https://dl.strem.io/stremio-shell-ng/v$version/StremioSetup-v$version_arm64.exe"
