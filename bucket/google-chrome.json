@@ -5,27 +5,19 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi#/dl.7z",
-            "hash": "1d53f419cc26288619a29797c03b168e2d5eef37db2f851261309c7d37c55d50"
+            "url": "https://dl.google.com/release2/chrome/bnrcmkp5cmhfsd5dxhwdykvx2e_143.0.7499.193/143.0.7499.193_chrome_installer_uncompressed.exe#/dl.7z",
+            "hash": "7489fe46b131c26ec7b69c39bc8794e83b5473b89d73c9061d684008cb95a951"
         },
         "32bit": {
-            "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi#/dl.7z",
-            "hash": "b7081d11fc79f7a581792eacb59bfe5093f7c57bb9d2bf5748e1dee5ba0d0d2a"
+            "url": "https://dl.google.com/release2/chrome/achiqmgd7mwzlld2suic4psiy5ra_143.0.7499.193/143.0.7499.193_chrome_installer_uncompressed.exe#/dl.7z",
+            "hash": "8d292458f5212e2d282f4b1d0c2bb054498ce3c64ddcfda14d6b645ff2d66fee"
         },
         "arm64": {
-            "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise_arm64.msi#/dl.7z",
-            "hash": "c7b86f8ac4e5806f62ef81da1f911d73defe65bb8a4760ab1d630c40ad8e022e"
+            "url": "https://dl.google.com/release2/chrome/dyz54qucblyptaes6d4sgkvea4_143.0.7499.193/143.0.7499.193_chrome_installer_uncompressed.exe#/dl.7z",
+            "hash": "aaf4e843984b38c842edd8b7e21a9528e40057812043e1db06287959f18a104c"
         }
     },
-    "extract_to": "tmp",
-    "pre_install": [
-        "Expand-7zipArchive \"$dir\\tmp\\Binary.GoogleChromeInstaller\" \"$dir\\tmp\"",
-        "Expand-7zipArchive \"$dir\\tmp\\updater.7z\" \"$dir\\tmp\"",
-        "$inst = Get-ChildItem \"$dir\\tmp\" -Filter '*_chrome_installer.exe' -File -Recurse | Select-Object -First 1 -ExpandProperty FullName",
-        "Expand-7zipArchive \"$inst\" \"$dir\\tmp\"",
-        "Expand-7zipArchive \"$dir\\tmp\\chrome.7z\" -ExtractDir 'Chrome-bin' -DestinationPath \"$dir\""
-    ],
-    "post_install": "Remove-Item \"$dir\\tmp\" -Recurse -Force",
+    "extract_dir": "Chrome-bin",
     "shortcuts": [
         [
             "chrome.exe",
@@ -34,22 +26,48 @@
     ],
     "checkver": {
         "script": [
-            "$Body = '<?xml version=\"1.0\" encoding=\"UTF-8\"?><request protocol=\"3.0\"><os platform=\"win\" version=\"10.0.22000\" /><app appid=\"{8A69D345-D564-463C-AFF1-A69D9E530F96}\" version=\"\"><updatecheck /></app></request>'",
-            "$Response = Invoke-RestMethod -Uri 'https://update.googleapis.com/service/update2' -Method Post -Body $Body",
-            "Write-Output $Response.response.app.updatecheck.manifest.version"
+            "$AppID = '{8A69D345-D564-463C-AFF1-A69D9E530F96}'",
+            "$ArchParams  = @{",
+            "    'x64'   ='x64-stable'",
+            "    'x86'   ='x86-stable'",
+            "    'arm64' ='arm64-stable'",
+            "}",
+            "$BodyTemplate = @(",
+            "    '<?xml version=\"1.0\" encoding=\"utf-8\"?>',",
+            "    '<request protocol=\"3.0\">',",
+            "    '  <os platform=\"win\" version=\"10.0.22000\" arch=\"{0}\"/>',",
+            "    '  <app appid=\"{1}\" ap=\"{2}\" version=\"\">',",
+            "    '    <updatecheck/>',",
+            "    '  </app>',",
+            "    '</request>'",
+            ") -join \"`n\"",
+            "$ArchURLs = @{}",
+            "$Version = $null",
+            "forEach ($Arch in $ArchParams.Keys) {",
+            "    $Body = $BodyTemplate -f $Arch, $AppID, $ArchParams[$Arch]",
+            "    $Response = Invoke-RestMethod -Uri 'https://update.googleapis.com/service/update2' -Method Post -Body $Body",
+            "    if ($Arch -eq 'x64') {",
+            "        $Version = $Response.response.app.updatecheck.manifest.version",
+            "    }",
+            "    $BaseURL = $Response.SelectSingleNode(\"//url[starts-with(@codebase, 'https://dl.google.com/release2/chrome/')]\")",
+            "    $BaseURL.GetAttribute('codebase') -match '^https://dl\\.google\\.com/release2/chrome/(?<URL>[^/]+)/'",
+            "    $FileName = $Response.SelectSingleNode('//package').GetAttribute('name')",
+            "    $ArchURLs[$Arch] = \"$($Matches['URL'])/$FileName\"",
+            "}",
+            "Write-Output \"$Version,$($ArchURLs['x64']),$($ArchURLs['x86']),$($ArchURLs['arm64'])\""
         ],
-        "regex": "([\\d.]+)"
+        "regex": "(?<version>[\\d.]+),(?<archx64>[^,]+),(?<archx86>[^,]+),(?<archarm64>[^,]+)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise64.msi#/dl.7z"
+                "url": "https://dl.google.com/release2/chrome/$matchArchx64#/dl.7z"
             },
             "32bit": {
-                "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise.msi#/dl.7z"
+                "url": "https://dl.google.com/release2/chrome/$matchArchx86#/dl.7z"
             },
             "arm64": {
-                "url": "https://dl.google.com/dl/chrome/install/googlechromestandaloneenterprise_arm64.msi#/dl.7z"
+                "url": "https://dl.google.com/release2/chrome/$matchArcharm64#/dl.7z"
             }
         }
     }
