@@ -22,15 +22,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/zeldrisho/scoop-bucket",
-        "script": [
-            "try {",
-            "    $Response = Invoke-WebRequest -Uri 'https://www.perplexity.ai/rest/browser/download?platform=win_x64&channel=stable' -MaximumRedirection 0",
-            "} catch {",
-            "    Write-Output $_.Exception.Response.Headers.Location",
-            "}"
-        ],
-        "regex": "([\\d.]+)/comet"
+        "url": "https://perplexity.ai/rest/browser/update?browser=1.1.1.1&platform=win_x64&channel=stable&machine=0",
+        "jsonpath": "$..browser_version"
     },
     "autoupdate": {
         "architecture": {
