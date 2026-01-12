@@ -10,7 +10,12 @@
         }
     },
     "extract_dir": "SMAPI 4.4.0 installer",
-    "bin": "install on Windows.bat",
+    "bin": [
+        [
+            "install on Windows.bat",
+            "smapi"
+        ]
+    ],
     "checkver": {
         "github": "https://github.com/Pathoschild/SMAPI"
     },
