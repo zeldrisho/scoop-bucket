@@ -103,7 +103,8 @@ scoop install zeldrisho/<app>
 |[ubisoft-connect](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ubisoft-connect.json)|Multi-platform ecosystem of player services|
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
 |[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json)|A Visual C++ Redistributable installs Microsoft C and C++ runtime libraries|
-|[vscode](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vscode.json)|The open source AI code editor|
+|[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json)|A Visual C++ Redistributable installs Microsoft C and C++ runtime libraries|
+|[vortex](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vortex.json)|Open-source mod manager from Nexus Mods|
 |[windowsdesktop-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/windowsdesktop-runtime-lts.json)|The .NET Desktop Runtime enables you to run existing Windows desktop applications|
 |[winrar](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/winrar.json)|A powerful archiver extractor tool|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
