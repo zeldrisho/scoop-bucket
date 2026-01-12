@@ -87,6 +87,7 @@ scoop install zeldrisho/<app>
 |[rstgametranslation](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/rstgametranslation.json)|Real-time Game Screen Translation Software|
 |[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|
 |[seelen-ui](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/seelen-ui.json)|A powerful desktop environment for Windows|
+|[smapi](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/smapi.json)|The modding API for Stardew Valley|
 |[spotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/spotify.json)|Music for everyone|
 |[steam](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/steam.json)|The ultimate destination for playing, discussing and creating games|
 |[steamguard-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/steamguard-cli.json)|A utility for generating 2FA codes for Steam|
