@@ -1,6 +1,6 @@
 {
     "version": "0.11.0",
-    "description": "A C# editor and playground",
+    "description": "C# editor and playground",
     "homepage": "https://github.com/tareqimbasher/NetPad",
     "license": "MIT",
     "suggest": {

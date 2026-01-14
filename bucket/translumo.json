@@ -1,6 +1,6 @@
 {
     "version": "1.0.2",
-    "description": "Advanced real-time screen translator",
+    "description": "Real-time screen translator",
     "homepage": "https://github.com/ramjke/Translumo",
     "license": "Apache-2.0",
     "architecture": {

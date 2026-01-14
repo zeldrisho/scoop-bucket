@@ -1,6 +1,6 @@
 {
     "version": "0.14.10",
-    "description": "A next generation AI assistant built by Anthropic",
+    "description": "Next generation AI assistant built by Anthropic",
     "homepage": "https://claude.ai",
     "license": "Proprietary",
     "architecture": {

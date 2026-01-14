@@ -1,6 +1,6 @@
 {
     "version": "0.16.1",
-    "description": "An OpenGL terminal emulator",
+    "description": "OpenGL terminal emulator",
     "homepage": "https://alacritty.org",
     "license": "Apache-2.0",
     "notes": "Configuration: https://alacritty.org/config-alacritty",
