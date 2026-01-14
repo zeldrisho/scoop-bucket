@@ -17,7 +17,9 @@
             "OpenCode Desktop"
         ]
     ],
-    "checkver": "github",
+    "checkver": {
+        "github": "https://github.com/anomalyco/opencode"
+    },
     "autoupdate": {
         "architecture": {
             "64bit": {
