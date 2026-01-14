@@ -1,6 +1,6 @@
 {
     "version": "4.4.15",
-    "description": "Open source 2FA authenticator, with E2EE backups",
+    "description": "Open source 2FA authenticator with E2EE backups",
     "homepage": "https://ente.io/auth",
     "license": "AGPL-3.0",
     "suggest": {

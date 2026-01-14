@@ -22,94 +22,94 @@ scoop install zeldrisho/<app>
 
 |Name|Description|
 |----|-----------|
-|[alacritty](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/alacritty.json)|An OpenGL terminal emulator|
-|[antigravity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/antigravity.json)|Experience liftoff with the next-generation IDE|
-|[aspnetcore-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/aspnetcore-runtime-lts.json)|The ASP.NET Core Runtime enables you to run existing web/server applications|
+|[alacritty](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/alacritty.json)|OpenGL terminal emulator|
+|[antigravity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/antigravity.json)|Next-generation IDE|
+|[aspnetcore-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/aspnetcore-runtime-lts.json)|ASP.NET Core Runtime enables you to run existing web/server applications|
 |[autoruns](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/autoruns.json)|Shows programs configured to run during bootup or login|
 |[aya](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/aya.json)|Android ADB Desktop App|
 |[bifrost](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/bifrost.json)|Samsung Firmware Downloader|
-|[blitz](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/blitz.json)|Personalized Stats and Insights Powered by Billions of Matches|
-|[canhcutteam-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/canhcutteam-launcher.json)|Download and manage Vietnamese localization patches for games|
+|[blitz](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/blitz.json)|Personalized Stats and Insights|
+|[canhcutteam-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/canhcutteam-launcher.json)|Manage Vietnamese localization patches for games|
 |[capcut](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/capcut.json)|All-in-one video editor & graphic design tool driven by AI|
-|[claude-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude-code.json)|An agentic coding tool that lives in your terminal|
-|[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|A next generation AI assistant built by Anthropic|
-|[cloudflare-warp](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp.json)|The free app that makes your Internet faster|
-|[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|The AI browser that acts as a personal assistant|
-|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json) / [discord-arm](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord-arm.json)|A voice, video and text communication platform|
-|[dot-bypasser](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dot-bypasser.json)|A easy to use and setup CVC bypasser that supports many gateways|
-|[dotnet-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dotnet-runtime-lts.json)|The .NET Runtime contains just the components needed to run a console app|
+|[claude-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude-code.json)|Agentic coding tool that lives in your terminal|
+|[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|Next generation AI assistant built by Anthropic|
+|[cloudflare-warp](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp.json)|Free app that makes your Internet faster|
+|[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|AI browser|
+|[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json) / [discord-arm](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord-arm.json)|Voice, video and text communication platform|
+|[dot-bypasser](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dot-bypasser.json)|CVC bypasser that supports many gateways|
+|[dotnet-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dotnet-runtime-lts.json)|.NET Runtime contains just the components needed to run a console app|
 |[dotnet-sdk-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dotnet-sdk-lts.json)|.NET is the free, open-source framework for building modern apps and powerful cloud services|
 |[drawpen](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/drawpen.json)|Simple screen annotation|
 |[dyad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dyad.json)|Free, local, open-source AI app builder|
-|[ente-auth](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-auth.json)|Open source 2FA authenticator, with E2EE backups|
-|[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|The private, secure photo storage app with end-to-end encryption|
-|[epic-games-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/epic-games-launcher.json)|Streamline your gaming experience|
-|[foxit-reader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/foxit-reader.json)|The best free PDF reader & viewer|
-|[gamethuanviet-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gamethuanviet-launcher.json)|Download and manage Vietnamese localization patches for games|
+|[ente-auth](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-auth.json)|Open source 2FA authenticator with E2EE backups|
+|[ente-photos](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ente-photos.json)|Private, secure photo storage app with end-to-end encryption|
+|[epic-games-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/epic-games-launcher.json)|Supports purchasing, downloading and playing games|
+|[foxit-reader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/foxit-reader.json)|Free PDF reader & viewer|
+|[gamethuanviet-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gamethuanviet-launcher.json)|Manage Vietnamese localization patches for games|
 |[evkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/evkey.json)|Vietnamese input method editor|
 |[gemini-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gemini-cli.json)|Brings the power of Gemini directly into your terminal|
 |[genymotion](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/genymotion.json)|Android Emulator|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
 |[gonhanh](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gonhanh.json)|Vietnamese input method editor|
 |[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|
-|[gs-auto-clicker](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gs-auto-clicker.json)|Automatically clicks the mouse, saving time|
-|[itch](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/itch.json)|A simple way to find, download and distribute indie games online|
-|[jetbrains-mono](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/jetbrains-mono.json)|A free and open source typeface for developers|
+|[gs-auto-clicker](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gs-auto-clicker.json)|Automatically clicks the mouse|
+|[itch](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/itch.json)|Find, download and distribute indie games online|
+|[jetbrains-mono](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/jetbrains-mono.json)|Free and open source typeface for developers|
 |[kdeconnect](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/kdeconnect.json)|Enabling communication between all your devices|
-|[kiro](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/kiro.json)|The AI IDE for prototype to production|
+|[kiro](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/kiro.json)|AI IDE for prototype to production|
 |[localsend](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/localsend.json)|Share files to nearby devices|
 |[makelnk](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/makelnk.json)|Creates Windows shortcuts (.lnk files) with AppUserModelId|
 |[miniconda](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/miniconda.json)|Free, miniature installation of Anaconda Distribution|
 |[minitool-partition-wizard](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/minitool-partition-wizard.json)|All-in-one Disk Partition Manager|
 |[mort](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/mort.json)|Real-time game translator with OCR|
-|[mumuplayer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/mumuplayer.json)|Best Android Emulator on PC for Running Mobile Games and Apps|
-|[netpad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/netpad.json)|A C# editor and playground|
+|[mumuplayer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/mumuplayer.json)|Android Emulator|
+|[netpad](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/netpad.json)|C# editor and playground|
 |[nextdns-gui](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/nextdns-gui.json)|The new firewall for the modern Internet|
-|[nilesoft-shell](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/nilesoft-shell.json)|Powerful, free, open source context menu manager|
-|[obsidian](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/obsidian.json)|The free and flexible app for your private thoughts|
+|[nilesoft-shell](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/nilesoft-shell.json)|Free, open source context menu manager|
+|[obsidian](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/obsidian.json)|Free and flexible app for your private thoughts|
 |[odin-downloader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/odin-downloader.json)|ROM Flashing tool for SAMSUNG|
 |[onlyoffice](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/onlyoffice.json)|Free desktop office suite for document editing and collaboration|
-|[op.gg](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/op.gg.json)|The Best LoL Champion Builds and Player Stats|
-|[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|An automation suite powered by .NET core|
+|[op.gg](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/op.gg.json)|LoL Champion Builds and Player Stats|
+|[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|Automation suite powered by .NET core|
 |[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Vietnamese input method editor|
-|[perplexity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/perplexity.json)|A free AI-powered answer engine|
-|[playtorrio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/playtorrio.json)|The Ultimate Entertainment Hub|
-|[pot](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/pot.json)|A powerful text selection translation and OCR software|
+|[perplexity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/perplexity.json)|Free AI-powered answer engine|
+|[playtorrio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/playtorrio.json)|Ultimate Entertainment Hub|
+|[pot](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/pot.json)|Text selection translation and OCR software|
 |[powertoys](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/powertoys.json)|Windows Utilities for Power Users|
 |[process-explorer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/process-explorer.json)|Shows you information about which handles and DLLs processes have opened or loaded|
 |[proton-authenticator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-authenticator.json)|Private, secure 2FA authenticator|
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
-|[proton-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-mail.json)|A free and secure email service|
+|[proton-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-mail.json)|Free and secure email service|
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
-|[proton-vpn](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-vpn.json)|Experience true freedom online|
+|[proton-vpn](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-vpn.json)|Fast and secure VPN|
 |[proxyman](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proxyman.json)|Debug, intercept & mock HTTP|
 |[repak](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/repak.json)|CLI tool for working with Unreal Engine .pak files|
 |[rstgametranslation](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/rstgametranslation.json)|Real-time Game Screen Translation Software|
-|[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|A sandbox-based isolation software|
-|[seelen-ui](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/seelen-ui.json)|A powerful desktop environment for Windows|
-|[smapi](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/smapi.json)|The modding API for Stardew Valley|
-|[spotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/spotify.json)|Music for everyone|
+|[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|Sandbox-based isolation software|
+|[seelen-ui](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/seelen-ui.json)|Desktop environment for Windows|
+|[smapi](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/smapi.json)|Modding API for Stardew Valley|
+|[spotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/spotify.json)|Play millions of songs and podcasts on your device|
 |[stardrop](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stardrop.json)|Open-source mod manager for Stardew Valley|
-|[steam](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/steam.json)|The ultimate destination for playing, discussing and creating games|
-|[steamguard-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/steamguard-cli.json)|A utility for generating 2FA codes for Steam|
-|[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|A companion app for Stremio Web|
-|[stremio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio.json)|Freedom to Stream|
+|[steam](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/steam.json)|Ultimate destination for playing, discussing and creating games|
+|[steamguard-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/steamguard-cli.json)|Utility for generating 2FA codes for Steam|
+|[stremio-service](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio-service.json)|Companion app for Stremio Web|
+|[stremio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio.json)|Next generation media center|
 |[sublime-text](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sublime-text.json)|Text editor for code, markup and prose|
 |[surfshark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/surfshark.json)|VPN & all-in-one cybersecurity suites|
-|[teamviewer-qs](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/teamviewer-qs.json)|Receive tech support at a moment’s notice|
-|[teamviewer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/teamviewer.json)|Remote access and connectivity software focused on security|
-|[telegram](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/telegram.json)|Messaging app with a focus on speed and security|
-|[topnotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/topnotify.json)|The Ultimate Notification Customization Tool For Windows|
-|[translumo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/translumo.json)|Advanced real-time screen translator|
+|[teamviewer-qs](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/teamviewer-qs.json)|Receive tech support|
+|[teamviewer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/teamviewer.json)|Remote access and connectivity software|
+|[telegram](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/telegram.json)|Messaging application|
+|[topnotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/topnotify.json)|Ultimate Notification Customization Tool|
+|[translumo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/translumo.json)|Real-time screen translator|
 |[ubisoft-connect](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ubisoft-connect.json)|Multi-platform ecosystem of player services|
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
-|[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json)|A Visual C++ Redistributable installs Microsoft C and C++ runtime libraries|
-|[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json)|A Visual C++ Redistributable installs Microsoft C and C++ runtime libraries|
+|[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json)|Visual C++ Redistributable installs Microsoft C and C++ runtime libraries|
 |[vortex](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vortex.json)|Open-source mod manager from Nexus Mods|
-|[windowsdesktop-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/windowsdesktop-runtime-lts.json)|The .NET Desktop Runtime enables you to run existing Windows desktop applications|
-|[winrar](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/winrar.json)|A powerful archiver extractor tool|
+|[vscode](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vortex.json)|Open source AI code editor|
+|[windowsdesktop-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/windowsdesktop-runtime-lts.json)|.NET Desktop Runtime enables you to run existing Windows desktop applications|
+|[winrar](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/winrar.json)|Archiver extractor tool|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
 |[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Enable Dark Mode for Zalo|
 |[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Messaging application|
-|[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Secure & Professional Business Email for your Organization|
-|[zoom](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoom.json)|One platform to connect|
+|[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Host your business email|
+|[zoom](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoom.json)|Modernize workflows with Zoom's trusted collaboration tools|

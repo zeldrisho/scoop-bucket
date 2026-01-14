@@ -1,6 +1,6 @@
 {
     "version": "1.16.9",
-    "description": "A sandbox-based isolation software",
+    "description": "Sandbox-based isolation software",
     "homepage": "https://sandboxie-plus.com",
     "license": "GPL-3.0",
     "architecture": {

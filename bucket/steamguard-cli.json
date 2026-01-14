@@ -1,6 +1,6 @@
 {
     "version": "0.17.1",
-    "description": "A utility for generating 2FA codes for Steam",
+    "description": "Utility for generating 2FA codes for Steam",
     "homepage": "https://github.com/dyc3/steamguard-cli",
     "license": "GPL-3.0",
     "architecture": {

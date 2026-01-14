@@ -1,6 +1,6 @@
 {
     "version": "6.4.2",
-    "description": "Messaging app with a focus on speed and security",
+    "description": "Messaging app",
     "homepage": "https://telegram.org",
     "license": "GPL-3.0",
     "architecture": {

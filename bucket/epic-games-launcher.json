@@ -1,6 +1,6 @@
 {
     "version": "19.0.0",
-    "description": "Streamline your gaming experience",
+    "description": "Supports purchasing, downloading and playing games",
     "homepage": "https://store.epicgames.com",
     "license": "Proprietary",
     "architecture": {
