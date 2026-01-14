@@ -1,7 +1,7 @@
 {
     "version": "1.0.3218",
     "description": "Next generation AI assistant built by Anthropic",
-    "homepage": "https://claude.com",
+    "homepage": "https://claude.com/download",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
