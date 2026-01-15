@@ -1,7 +1,7 @@
 {
     "version": "1.308",
     "description": "Real-time game translator with OCR",
-    "homepage": "https://blog.naver.com/killkimno/70179867557",
+    "homepage": "https://github.com/killkimno/MORT",
     "license": "MIT",
     "suggest": {
         "vcredist": "vcredist",

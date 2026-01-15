@@ -1,7 +1,7 @@
 {
     "version": "4.6-rc.2",
     "description": "Vietnamese input method editor",
-    "homepage": "https://unikey.org",
+    "homepage": "https://unikey.org/en",
     "license": "GPL-2.0",
     "architecture": {
         "64bit": {
