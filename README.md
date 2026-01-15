@@ -104,6 +104,7 @@ scoop install zeldrisho/<app>
 |[topnotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/topnotify.json)|Ultimate Notification Customization Tool|
 |[translumo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/translumo.json)|Real-time screen translator|
 |[ubisoft-connect](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ubisoft-connect.json)|Multi-platform ecosystem of player services|
+|[ultraviewer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ubisoft-connect.json)|Free Remote Desktop Software|
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
 |[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json)|Visual C++ Redistributable installs Microsoft C and C++ runtime libraries|
 |[vortex](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vortex.json)|Open-source mod manager from Nexus Mods|
