@@ -52,6 +52,7 @@ scoop install zeldrisho/<app>
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
 |[gonhanh](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gonhanh.json)|Vietnamese input method editor|
 |[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|
+|[gpmlogin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gpmlogin.json)|Antidetect browser|
 |[gs-auto-clicker](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gs-auto-clicker.json)|Automatically clicks the mouse|
 |[itch](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/itch.json)|Find, download and distribute indie games online|
 |[jetbrains-mono](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/jetbrains-mono.json)|Free and open source typeface for developers|
