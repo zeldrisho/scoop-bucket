@@ -17,7 +17,7 @@
         ]
     ],
     "checkver": {
-        "url": "https://editor-api-sg.capcut.com/service/settings/v3/?device_platform=windows&aid=359289&version_code=66304",
+        "url": "https://editor-api-sg.capcut.com/service/settings/v3/?app=1&aid=562354&device_platform=windows&from_aid=562354&from_channel=capcutpc_0",
         "regex": "(?<major>[\\d]+)_(?<minor>[\\d]+)_(?<patch>[\\d]+)_(?<build>[\\d]+)_capcutpc",
         "replace": "${major}.${minor}.${patch}.${build}"
     },
