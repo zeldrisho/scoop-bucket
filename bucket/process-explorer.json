@@ -7,7 +7,6 @@
     "hash": "b335da33330a7bc3a888ed04cc505daa95cfaef911563d9d5033e1e3dfd4150e",
     "architecture": {
         "64bit": {
-            "post_install": "Remove-Item \"$dir\\procexp.exe\", \"$dir\\procexp64a.exe\"",
             "shortcuts": [
                 [
                     "procexp64.exe",
@@ -16,7 +15,6 @@
             ]
         },
         "32bit": {
-            "post_install": "Remove-Item \"$dir\\procexp64.exe\", \"$dir\\procexp64a.exe\"",
             "shortcuts": [
                 [
                     "procexp.exe",
@@ -25,7 +23,6 @@
             ]
         },
         "arm64": {
-            "post_install": "Remove-Item \"$dir\\procexp64.exe\", \"$dir\\procexp.exe\"",
             "shortcuts": [
                 [
                     "procexp64a.exe",
