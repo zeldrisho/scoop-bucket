@@ -4,8 +4,8 @@
     "homepage": "https://discord.com",
     "license": "Freeware",
     "notes": [
-        "Fix autostart: re-enable startup in Discord settings",
-        "Fix notifications by running: $dir\\makelnk.ps1"
+        "Register autostart: re-enable startup in Discord settings",
+        "Register notification by running: $dir\\makelnk.ps1"
     ],
     "architecture": {
         "64bit": {
