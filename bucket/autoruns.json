@@ -7,7 +7,6 @@
     "hash": "b04d2ac6dcc287a4b01a9cdc5bd9580a38df8a3379e03698cf7b888cdab7ea0f",
     "architecture": {
         "64bit": {
-            "post_install": "Remove-Item \"$dir\\Autoruns.exe\", \"$dir\\Autoruns64a.exe\"",
             "shortcuts": [
                 [
                     "Autoruns64.exe",
@@ -16,7 +15,6 @@
             ]
         },
         "32bit": {
-            "post_install": "Remove-Item \"$dir\\Autoruns64.exe\", \"$dir\\Autoruns64a.exe\"",
             "shortcuts": [
                 [
                     "Autoruns.exe",
@@ -25,7 +23,6 @@
             ]
         },
         "arm64": {
-            "post_install": "Remove-Item \"$dir\\Autoruns.exe\", \"$dir\\Autoruns64.exe\"",
             "shortcuts": [
                 [
                     "Autoruns64a.exe",
