@@ -1,12 +1,12 @@
 {
-    "version": "2.5.2",
+    "version": "2.5.3",
     "description": "Entertainment Hub",
     "homepage": "https://playtorrio.pages.dev",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/ayman708-ux/PlayTorrio/releases/download/v2.5.2/PlayTorrio-installer.exe#/dl.7z",
-            "hash": "932b7fbb1247dad7493d48f2ffacc8c22c0e9b041afd6259192e2e0729adc58e"
+            "url": "https://github.com/ayman708-ux/PlayTorrio/releases/download/v2.5.3/PlayTorrio-installer.exe#/dl.7z",
+            "hash": "e83ada1d98a77d8428082b06e7fa1dbebab865935f9828dde1b02a546f3dd3f6"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\`$PLUGINSDIR\\app-64.7z\" \"$dir\"",
