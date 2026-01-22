@@ -23,6 +23,7 @@ scoop install zeldrisho/<app>
 |Name|Description|
 |----|-----------|
 |[alacritty](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/alacritty.json)|OpenGL terminal emulator|
+|[antigravity-tools](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/alacritty.json)|Antigravity Account Manager & Switcher|
 |[antigravity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/antigravity.json)|Next-generation IDE|
 |[aspnetcore-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/aspnetcore-runtime-lts.json)|ASP.NET Core Runtime enables you to run existing web/server applications|
 |[autoruns](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/autoruns.json)|Shows programs configured to run during bootup or login|
