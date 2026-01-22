@@ -1,12 +1,12 @@
 {
-    "version": "25.08.3",
+    "version": "25.12.1",
     "description": "Enabling communication between all your devices",
     "homepage": "https://kdeconnect.kde.org",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.kde.org/stable/release-service/25.08.3/windows/kdeconnect-kde-windows-cl-msvc2022-x86_64.7z",
-            "hash": "dc2b5e96351d5bd2bb8d15152a039225a6b7068c432c1c37f13250945aa3de31"
+            "url": "https://download.kde.org/stable/release-service/25.12.1/windows/kdeconnect-kde-release_25.12-5778-windows-cl-msvc2022-x86_64.7z",
+            "hash": "016172eaf00f879b818f96cfec0b92138be0614da78825d9b1eb5e74c21b4795"
         }
     },
     "shortcuts": [
@@ -17,12 +17,12 @@
     ],
     "checkver": {
         "url": "https://kdeconnect.kde.org/download.html",
-        "regex": "(?<version>[\\d.]+)/windows/kdeconnect-kde-windows-cl-(?<lib>[\\w]+)"
+        "regex": "(?<version>[\\d.]+)/windows/(?<fname>[^/\"\\s]+\\.7z)"
     },
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.kde.org/stable/release-service/$matchVersion/windows/kdeconnect-kde-windows-cl-$matchLib-x86_64.7z"
+                "url": "https://download.kde.org/stable/release-service/$matchVersion/windows/$matchFname"
             }
         }
     }
