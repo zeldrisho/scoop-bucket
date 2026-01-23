@@ -83,6 +83,7 @@ scoop install zeldrisho/<app>
 |[proton-authenticator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-authenticator.json)|Private, secure 2FA authenticator|
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
 |[proton-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-mail.json)|Free and secure email service|
+|[proton-pass-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass-cli.json)|Command-line interface for managing your Proton Pass vaults, items, and secrets|
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
 |[proton-vpn](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-vpn.json)|Fast and secure VPN|
 |[proxyman](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proxyman.json)|Debug, intercept & mock HTTP|
@@ -109,7 +110,7 @@ scoop install zeldrisho/<app>
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
 |[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json)|Visual C++ Redistributable installs Microsoft C and C++ runtime libraries|
 |[vortex](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vortex.json)|Open-source mod manager from Nexus Mods|
-|[vscode](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vortex.json)|Open source AI code editor|
+|[vscode](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vscode.json)|Open source AI code editor|
 |[windowsdesktop-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/windowsdesktop-runtime-lts.json)|.NET Desktop Runtime enables you to run existing Windows desktop applications|
 |[winrar](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/winrar.json)|Archiver extractor tool|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
