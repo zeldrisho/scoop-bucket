@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://download.kde.org/stable/release-service/$matchVersion/windows/$matchFname"
+                "url": "https://download.kde.org/stable/release-service/$matchVersion/windows/$matchFname.7z"
             }
         }
     }
