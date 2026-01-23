@@ -1,0 +1,24 @@
+{
+    "version": "1.4.1",
+    "description": "Command-line interface for managing your Proton Pass vaults, items, and secrets",
+    "homepage": "https://protonpass.github.io/pass-cli",
+    "license": "Proprietary",
+    "architecture": {
+        "64bit": {
+            "url": "https://proton.me/download/pass-cli/1.4.1/pass-cli-windows-x86_64.zip",
+            "hash": "5ff415330223cfe8aa90943f9802b055a3ed005b3bc850cb093231fa62ad9d17"
+        }
+    },
+    "bin": "pass-cli.exe",
+    "checkver": {
+        "url": "https://proton.me/download/pass-cli/versions.json",
+        "jsonpath": "$..version"
+    },
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://proton.me/download/pass-cli/$version/pass-cli-windows-x86_64.zip"
+            }
+        }
+    }
+}
