@@ -10,11 +10,16 @@
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force",
-    "bin": "opencode-cli.exe",
+    "bin": [
+        [
+            "opencode-cli.exe",
+            "opencode"
+        ]
+    ],
     "shortcuts": [
         [
             "OpenCode.exe",
-            "OpenCode Desktop"
+            "OpenCode"
         ]
     ],
     "checkver": {
