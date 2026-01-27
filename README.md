@@ -32,7 +32,6 @@ scoop install zeldrisho/<app>
 |[blitz](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/blitz.json)|Personalized Stats and Insights|
 |[canhcutteam-launcher](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/canhcutteam-launcher.json)|Manage Vietnamese localization patches for games|
 |[capcut](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/capcut.json)|All-in-one video editor & graphic design tool driven by AI|
-|[claude-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude-code.json)|Agentic coding tool that lives in your terminal|
 |[claude](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/claude.json)|Next generation AI assistant built by Anthropic|
 |[cloudflare-warp](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp.json)|Free app that makes your Internet faster|
 |[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|AI browser|
