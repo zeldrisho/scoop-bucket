@@ -72,6 +72,7 @@ scoop install zeldrisho/<app>
 |[odin-downloader](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/odin-downloader.json)|ROM Flashing tool for SAMSUNG|
 |[onlyoffice](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/onlyoffice.json)|Free desktop office suite for document editing and collaboration|
 |[op.gg](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/op.gg.json)|LoL Champion Builds and Player Stats|
+|[openandroidinstaller](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openandroidinstaller.json)|Makes installing alternative Android distributions nice and easy|
 |[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|Automation suite powered by .NET core|
 |[opencode-desktop](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/opencode-desktop.json)|Open source AI coding agent|
 |[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Vietnamese input method editor|
