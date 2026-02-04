@@ -119,7 +119,7 @@ if ($existingService) {
 # Create new service
 Write-Host "Creating NextDNS Service..."
 try {
-    New-Service -Name "NextDNSService" -BinaryPathName "$servicePath" -DisplayName "NextDNS Service" -StartupType Automatic -ErrorAction Stop | Out-Null
+    New-Service -Name "NextDNSService" -BinaryPathName "$servicePath" -DisplayName "NextDNS Service" -ErrorAction Stop | Out-Null
     Write-Host "Service created successfully." -ForegroundColor Green
 } catch {
     Write-Error "Failed to create service: $_"

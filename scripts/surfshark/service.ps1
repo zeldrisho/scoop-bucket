@@ -32,7 +32,7 @@ if ($existingService) {
 # Create new service
 Write-Host "Creating Surfshark Service..."
 try {
-    New-Service -Name "Surfshark Service" -BinaryPathName "$servicePath" -StartupType Manual -DisplayName "Surfshark Service" -ErrorAction Stop | Out-Null
+    New-Service -Name "Surfshark Service" -BinaryPathName "$servicePath" -DisplayName "Surfshark Service" -ErrorAction Stop | Out-Null
     Write-Host "Service created successfully." -ForegroundColor Green
 } catch {
     Write-Error "Failed to create service: $_"
