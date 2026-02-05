@@ -1,10 +1,10 @@
 {
-    "version": "15.74.3",
+    "version": "15.74.5",
     "description": "Receive tech support",
     "homepage": "https://teamviewer.com/solutions/use-cases/quicksupport",
     "license": "Proprietary",
     "url": "https://download.teamviewer.com/download/version_15x/TeamViewerQS.exe",
-    "hash": "e86c31843f2218e771d09e47fcce8671f265ec941629036c992e2b4cbc8b4623",
+    "hash": "c5badb18b2e4a010e1c905bb8a9e8474c2430341bcbf347c6fd5d9bd7c93613f",
     "shortcuts": [
         [
             "TeamViewerQS.exe",
