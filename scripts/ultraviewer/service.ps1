@@ -32,11 +32,21 @@ if ($existingService) {
 # Create new service
 Write-Host "Creating UltraViewer Service..."
 try {
-    New-Service -Name "UltraViewer Service" -BinaryPathName "$servicePath" -StartupType Manual -DisplayName "UltraViewer Service" -ErrorAction Stop | Out-Null
+    New-Service -Name "UltraViewer Service" -BinaryPathName "$servicePath" -DisplayName "UltraViewer Service" -ErrorAction Stop | Out-Null
     Write-Host "Service created successfully." -ForegroundColor Green
 } catch {
     Write-Error "Failed to create service: $_"
     exit 1
+}
+
+# Start the service
+Write-Host "Starting UltraViewer Service..."
+try {
+    Start-Service -Name "UltraViewer Service" -ErrorAction Stop
+    Write-Host "Service started successfully." -ForegroundColor Green
+} catch {
+    Write-Warning "Failed to start service: $_"
+    Write-Host "You can manually start the service later." -ForegroundColor Yellow
 }
 
 Write-Host "`nUltraViewer Service setup completed successfully!" -ForegroundColor Green
