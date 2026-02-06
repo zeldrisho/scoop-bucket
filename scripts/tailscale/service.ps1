@@ -29,17 +29,14 @@ if ($existingService) {
     Start-Sleep -Seconds 2
 }
 
-# Create new service with dependencies
-# Dependencies: Dnscache (DNS Client), iphlpsvc (IP Helper), netprofm (Network List Service), WinHttpAutoProxySvc (WinHTTP Web Proxy)
-Write-Host "Creating Tailscale Service with dependencies..."
+# Create new service
+Write-Host "Creating Tailscale Service..."
 try {
     $dependencies = @('Dnscache', 'iphlpsvc', 'netprofm', 'WinHttpAutoProxySvc')
     New-Service -Name "Tailscale" `
                 -BinaryPathName "$servicePath" `
                 -DependsOn $dependencies `
                 -DisplayName "Tailscale" `
-                -Description "Tailscale VPN service" `
-                -StartupType Automatic `
                 -ErrorAction Stop | Out-Null
     Write-Host "Service created successfully." -ForegroundColor Green
 } catch {
