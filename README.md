@@ -100,6 +100,7 @@ scoop install zeldrisho/<app>
 |[stremio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stremio.json)|Next generation media center|
 |[sublime-text](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sublime-text.json)|Text editor for code, markup and prose|
 |[surfshark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/surfshark.json)|VPN & all-in-one cybersecurity suites|
+|[tailscale](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/tailscale.json)|Secure Connectivity for AI, IoT & Multi-Cloud|
 |[teamviewer-qs](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/teamviewer-qs.json)|Receive tech support|
 |[teamviewer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/teamviewer.json)|Remote access and connectivity software|
 |[telegram](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/telegram.json)|Messaging application|
