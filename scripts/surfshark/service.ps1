@@ -39,4 +39,14 @@ try {
     exit 1
 }
 
+# Start the service
+Write-Host "Starting Surfshark Service..."
+try {
+    Start-Service -Name "Surfshark Service" -ErrorAction Stop
+    Write-Host "Service started successfully." -ForegroundColor Green
+} catch {
+    Write-Warning "Failed to start service: $_"
+    Write-Host "You can manually start the service later." -ForegroundColor Yellow
+}
+
 Write-Host "`nSurfshark Service setup completed successfully!" -ForegroundColor Green
