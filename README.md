@@ -76,6 +76,7 @@ scoop install zeldrisho/<app>
 |[openbullet2](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openbullet2.json)|Automation suite powered by .NET core|
 |[opencode-desktop](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/opencode-desktop.json)|Open source AI coding agent|
 |[openkey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openkey.json)|Vietnamese input method editor|
+|[owocr](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/owocr.json)|Text recognition tool|
 |[perplexity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/perplexity.json)|Free AI-powered answer engine|
 |[playtorrio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/playtorrio.json)|Ultimate Entertainment Hub|
 |[pot](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/pot.json)|Text selection translation and OCR software|
