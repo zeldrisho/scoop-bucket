@@ -4,7 +4,7 @@
     "homepage": "https://glassechidna.com.au/heimdall",
     "license": "MIT",
     "suggest": {
-        "vcredist": "vcredist"
+        "vcredist": "vcredist2012"
     },
     "url": "https://bitbucket.org/benjamin_dobell/heimdall/downloads/heimdall-suite-1.4.0-win32.zip",
     "hash": "5a117709470ca5b54b53142fee0b29708ab84174eee226fe90b1184a5787173a",
