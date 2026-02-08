@@ -50,7 +50,6 @@ scoop install zeldrisho/<app>
 |[gemini-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gemini-cli.json)|Brings the power of Gemini directly into your terminal|
 |[genymotion](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/genymotion.json)|Android Emulator|
 |[gologin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gologin.json)|Antidetect browser|
-|[gonhanh](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gonhanh.json)|Vietnamese input method editor|
 |[google-chrome](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/google-chrome.json)|The Fast & Secure Web Browser Built to be Yours|
 |[gpmlogin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gpmlogin.json)|Antidetect browser|
 |[gs-auto-clicker](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gs-auto-clicker.json)|Automatically clicks the mouse|
