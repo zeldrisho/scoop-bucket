@@ -22,7 +22,7 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://broth.itch.zone/itch/windows-amd64/$version/archive/default#/itch-windows-amd64.zip"
+                "url": "https://broth.itch.zone/itch/windows-amd64/$version/archive/default#/dl.7z"
             }
         }
     }
