@@ -1,12 +1,12 @@
 {
-    "version": "26.1.9",
+    "version": "26.6.0",
     "description": "Find, download and distribute indie games online",
     "homepage": "https://itch.io",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://broth.itch.zone/itch/windows-amd64/26.1.9/archive/default#/dl.7z",
-            "hash": "cc8e966e113b300b29acbdb3b3010db797e5e6d6c7703f7ab1416334763c328a"
+            "url": "https://broth.itch.zone/itch/windows-amd64/26.6.0/archive/default#/dl.7z",
+            "hash": "89945c58cd6600d86dcf52f8771ebed44c28fa92ef9189474d3c6efb7a1a29be"
         }
     },
     "shortcuts": [
