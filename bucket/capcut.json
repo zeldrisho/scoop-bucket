@@ -1,15 +1,15 @@
 {
-    "version": "8.0.1.3366",
+    "version": "8.1.1.3417",
     "description": "All-in-one video editor & graphic design tool driven by AI",
     "homepage": "https://capcut.com",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://sf16-web-tos-buz.capcutcdn-us.com/obj/capcut-web-buz-tx/packages/CapCut_8_0_1_3366_capcutpc_0_creatortool.exe#/dl.7z",
-            "hash": "27325f87416d3466aae54ca446c18a4b52803687c447e371d12b048024ebe7a8"
+            "url": "https://sf16-web-tos-buz.capcutcdn-us.com/obj/capcut-web-buz-tx/packages/CapCut_8_1_1_3417_capcutpc_0_creatortool.exe#/dl.7z",
+            "hash": "30f1440fef5c37cf4a59233be6358cbbb8742de5e1af1207ace34732341e9db8"
         }
     },
-    "extract_dir": "JYPacket/8.0.1.3366",
+    "extract_dir": "JYPacket/8.1.1.3417",
     "shortcuts": [
         [
             "CapCut.exe",
