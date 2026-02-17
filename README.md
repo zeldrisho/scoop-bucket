@@ -36,6 +36,7 @@ scoop install zeldrisho/<app>
 |[cloudflare-warp](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp.json)|Free app that makes your Internet faster|
 |[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|AI browser|
 |[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json) / [discord-arm](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord-arm.json)|Voice, video and text communication platform|
+|[donut](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/donut.json)|Simple Yet Powerful Anti-Detect Browser|
 |[dot-bypasser](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dot-bypasser.json)|CVC bypasser that supports many gateways|
 |[dotnet-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dotnet-runtime-lts.json)|.NET Runtime contains just the components needed to run a console app|
 |[dotnet-sdk-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dotnet-sdk-lts.json)|.NET is the free, open-source framework for building modern apps and powerful cloud services|
