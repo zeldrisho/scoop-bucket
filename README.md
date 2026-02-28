@@ -55,6 +55,7 @@ scoop install zeldrisho/<app>
 |[gpmlogin](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gpmlogin.json)|Antidetect browser|
 |[gs-auto-clicker](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/gs-auto-clicker.json)|Automatically clicks the mouse|
 |[heimdall-suite](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/heimdall-suite.json)|Open-source suite used to flash firmware (aka ROMs) onto Samsung mobile devices|
+|[hydra](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/hydra.json)|Open-source gaming platform|
 |[itch](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/itch.json)|Find, download and distribute indie games online|
 |[jetbrains-mono](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/jetbrains-mono.json)|Free and open source typeface for developers|
 |[kdeconnect](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/kdeconnect.json)|Enabling communication between all your devices|
