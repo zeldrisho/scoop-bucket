@@ -36,7 +36,7 @@ scoop install zeldrisho/<app>
 |[cloudflare-warp](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/cloudflare-warp.json)|Free app that makes your Internet faster|
 |[comet](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/comet.json)|AI browser|
 |[discord](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord.json) / [discord-arm](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/discord-arm.json)|Voice, video and text communication platform|
-|[donut](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/donut.json)|Simple Yet Powerful Anti-Detect Browser|
+|[donut](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/donut.json)|Anti-Detect Browser|
 |[dot-bypasser](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dot-bypasser.json)|CVC bypasser that supports many gateways|
 |[dotnet-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dotnet-runtime-lts.json)|.NET Runtime contains just the components needed to run a console app|
 |[dotnet-sdk-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/dotnet-sdk-lts.json)|.NET is the free, open-source framework for building modern apps and powerful cloud services|
@@ -84,7 +84,7 @@ scoop install zeldrisho/<app>
 |[process-explorer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/process-explorer.json)|Shows you information about which handles and DLLs processes have opened or loaded|
 |[proton-authenticator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-authenticator.json)|Private, secure 2FA authenticator|
 |[proton-drive](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-drive.json)|Free end-to-end encrypted cloud storage made by Proton AG|
-|[proton-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-mail.json)|Free and secure email service|
+|[proton-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-mail.json)|Secure email that protects your privacy|
 |[proton-pass-cli](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass-cli.json)|Command-line interface for managing your Proton Pass vaults, items, and secrets|
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
 |[proton-vpn](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-vpn.json)|Fast and secure VPN|
