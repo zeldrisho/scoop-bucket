@@ -60,7 +60,6 @@ scoop install zeldrisho/<app>
 |[jetbrains-mono](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/jetbrains-mono.json)|Free and open source typeface for developers|
 |[kdeconnect](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/kdeconnect.json)|Enabling communication between all your devices|
 |[kiro](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/kiro.json)|AI IDE for prototype to production|
-|[llmfit](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/llmfit.json)|Find what models run on your hardware|
 |[localsend](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/localsend.json)|Share files to nearby devices|
 |[makelnk](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/makelnk.json)|Creates Windows shortcuts (.lnk files) with AppUserModelId|
 |[miniconda](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/miniconda.json)|Free, miniature installation of Anaconda Distribution|
