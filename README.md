@@ -118,7 +118,7 @@ scoop install zeldrisho/<app>
 |[windowsdesktop-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/windowsdesktop-runtime-lts.json)|.NET Desktop Runtime enables you to run existing Windows desktop applications|
 |[winrar](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/winrar.json)|Archiver extractor tool|
 |[xunity.autotranslator](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/xunity.autotranslator.json)|Translate Unity-based games|
-|[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Enable Dark Mode for Zalo|
+|[zadark](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zadark.json)|Utilities for Zalo|
 |[zalo](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zalo.json)|Messaging application|
 |[zoho-mail](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoho-mail.json)|Host your business email|
 |[zoom](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/zoom.json)|Modernize workflows with Zoom's trusted collaboration tools|
