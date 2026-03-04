@@ -20,6 +20,7 @@
             "Visual Studio Code"
         ]
     ],
+    "persist": "data",
     "checkver": {
         "url": "https://update.code.visualstudio.com/api/update/win32-x64-archive/stable/latest",
         "jsonpath": "$.name"
