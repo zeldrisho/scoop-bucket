@@ -112,6 +112,7 @@ scoop install zeldrisho/<app>
 |[ultraviewer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/ultraviewer.json)|Free Remote Desktop Software|
 |[unikey](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/unikey.json)|Vietnamese input method editor|
 |[vcredist](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist.json) / [vcredist2012](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vcredist2012.json)|Visual C++ Redistributable installs Microsoft C and C++ runtime libraries|
+|[vesktop](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vesktop.json)|Customizable and privacy friendly Discord desktop app|
 |[vortex](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vortex.json)|Open-source mod manager from Nexus Mods|
 |[vscode](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/vscode.json)|Open source AI code editor|
 |[windowsdesktop-runtime-lts](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/windowsdesktop-runtime-lts.json)|.NET Desktop Runtime enables you to run existing Windows desktop applications|
