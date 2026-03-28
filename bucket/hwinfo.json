@@ -1,0 +1,41 @@
+{
+    "version": "8.44",
+    "description": "Free System Information, Monitoring and Diagnostics",
+    "homepage": "https://hwinfo.com",
+    "license": "Proprietary",
+    "url": "https://www.sac.sk/download/utildiag/hwi_844.zip",
+    "hash": "b295a8dacbf32378f6c290f85752ed2a32a8eaf84ad958540f4c1a604a5f67a6",
+    "architecture": {
+        "64bit": {
+            "shortcuts": [
+                [
+                    "HWiNFO64.exe",
+                    "HWiNFO"
+                ]
+            ]
+        },
+        "32bit": {
+            "shortcuts": [
+                [
+                    "HWiNFO32.exe",
+                    "HWiNFO"
+                ]
+            ]
+        },
+        "arm64": {
+            "shortcuts": [
+                [
+                    "HWiNFO_ARM64.exe",
+                    "HWiNFO"
+                ]
+            ]
+        }
+    },
+    "checkver": {
+        "url": "https://hwinfo.com/ver.txt",
+        "regex": "([\\d.]+)"
+    },
+    "autoupdate": {
+        "url": "https://www.sac.sk/download/utildiag/hwi_$majorVersion$minorVersion.zip"
+    }
+}
