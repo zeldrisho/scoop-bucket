@@ -29,7 +29,7 @@
             "Proton\\Proton VPN"
         ]
     ],
-    "persist": "ServiceData",
+    "persist": "version\\ServiceData",
     "checkver": {
         "url": "https://protonvpn.com/download/windows/x64/v1/version.json",
         "jsonpath": "$..[?(@.CategoryName == 'Stable')].Version"
