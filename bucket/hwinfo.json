@@ -31,6 +31,11 @@
             ]
         }
     },
+    "persist": [
+        "HWiNFO64.INI",
+        "HWiNFO32.INI",
+        "HWiNFO_ARM64.INI"
+    ],
     "checkver": {
         "url": "https://hwinfo.com/ver.txt",
         "regex": "([\\d.]+)"
