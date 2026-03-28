@@ -70,8 +70,6 @@ try {
 
 # ---------------------------------------------------------------------------
 # 2. ProtonVPN WireGuard Service
-#    Binary path format expected by WireGuard tunnel services:
-#      "<exe>" "<conf>" <protocol>
 # ---------------------------------------------------------------------------
 Remove-ServiceIfExists -Name "ProtonVPN WireGuard"
 
@@ -89,24 +87,6 @@ try {
 } catch {
     Write-Error "Failed to create ProtonVPN WireGuard service: $_"
     exit 1
-}
-
-# ---------------------------------------------------------------------------
-# 3. Modify Start Menu shortcut to run as administrator
-# ---------------------------------------------------------------------------
-$shortcut = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\Scoop Apps\Proton\Proton VPN.lnk"
-if (Test-Path $shortcut) {
-    Write-Host "Modifying shortcut to run as administrator..."
-    try {
-        $bytes = [System.IO.File]::ReadAllBytes($shortcut)
-        $bytes[0x15] = $bytes[0x15] -bor 0x20
-        [System.IO.File]::WriteAllBytes($shortcut, $bytes)
-        Write-Host "Shortcut modified successfully." -ForegroundColor Green
-    } catch {
-        Write-Warning "Failed to modify shortcut: $_"
-    }
-} else {
-    Write-Warning "Shortcut not found at: $shortcut"
 }
 
 Write-Host "`nProtonVPN Service setup completed successfully!" -ForegroundColor Green
