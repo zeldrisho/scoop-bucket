@@ -8,26 +8,52 @@ if (-not $isAdmin) {
 }
 
 $dir = $PSScriptRoot
-$servicePath = "$dir\version\ProtonVPNService.exe"
+$servicePath   = "$dir\version\ProtonVPNService.exe"
+$wgServicePath = "$dir\version\ProtonVPN.WireGuardService.exe"
+$wgConfPath    = "$dir\version\ServiceData\WireGuard\ProtonVPN.conf"
 
-Write-Host "Setting up ProtonVPN Service..." -ForegroundColor Cyan
-Write-Host "Service exe: $servicePath"
+Write-Host "Setting up ProtonVPN Services..." -ForegroundColor Cyan
+Write-Host "Main service exe : $servicePath"
+Write-Host "WireGuard service: $wgServicePath"
+Write-Host "WireGuard config : $wgConfPath"
 
+# ---------------------------------------------------------------------------
+# Validate paths
+# ---------------------------------------------------------------------------
 if (-not (Test-Path $servicePath)) {
     Write-Error "ProtonVPNService.exe not found at: $servicePath"
     exit 1
 }
 
-# Remove existing service if it exists
-$existingService = Get-Service -Name "ProtonVPN Service" -ErrorAction SilentlyContinue
-if ($existingService) {
-    Write-Host "Removing existing ProtonVPN Service..."
-    Stop-Service -Name "ProtonVPN Service" -Force -ErrorAction SilentlyContinue
-    sc.exe delete "ProtonVPN Service" | Out-Null
-    Start-Sleep -Seconds 2
+if (-not (Test-Path $wgServicePath)) {
+    Write-Error "ProtonVPN.WireGuardService.exe not found at: $wgServicePath"
+    exit 1
 }
 
-# Create new service
+if (-not (Test-Path $wgConfPath)) {
+    Write-Error "WireGuard config not found at: $wgConfPath"
+    exit 1
+}
+
+# ---------------------------------------------------------------------------
+# Helper: remove a service cleanly if it already exists
+# ---------------------------------------------------------------------------
+function Remove-ServiceIfExists {
+    param([string]$Name)
+    $svc = Get-Service -Name $Name -ErrorAction SilentlyContinue
+    if ($svc) {
+        Write-Host "Removing existing '$Name' service..."
+        Stop-Service -Name $Name -Force -ErrorAction SilentlyContinue
+        sc.exe delete $Name | Out-Null
+        Start-Sleep -Seconds 2
+    }
+}
+
+# ---------------------------------------------------------------------------
+# 1. ProtonVPN Service (main)
+# ---------------------------------------------------------------------------
+Remove-ServiceIfExists -Name "ProtonVPN Service"
+
 Write-Host "Creating ProtonVPN Service..."
 try {
     New-Service -Name "ProtonVPN Service" `
@@ -36,13 +62,38 @@ try {
         -DependsOn 'Tcpip' `
         -DisplayName "ProtonVPN Service" `
         -ErrorAction Stop | Out-Null
-    Write-Host "Service created successfully." -ForegroundColor Green
+    Write-Host "ProtonVPN Service created successfully." -ForegroundColor Green
 } catch {
-    Write-Error "Failed to create service: $_"
+    Write-Error "Failed to create ProtonVPN Service: $_"
     exit 1
 }
 
-# Modify shortcut to run as administrator
+# ---------------------------------------------------------------------------
+# 2. ProtonVPN WireGuard Service
+#    Binary path format expected by WireGuard tunnel services:
+#      "<exe>" "<conf>" <protocol>
+# ---------------------------------------------------------------------------
+Remove-ServiceIfExists -Name "ProtonVPN WireGuard"
+
+Write-Host "Creating ProtonVPN WireGuard service..."
+try {
+    $wgBinaryPath = "`"$wgServicePath`" `"$wgConfPath`" udp"
+
+    New-Service -Name "ProtonVPN WireGuard" `
+        -BinaryPathName $wgBinaryPath `
+        -StartupType Manual `
+        -DependsOn @('Nsi', 'Tcpip') `
+        -DisplayName "ProtonVPN WireGuard" `
+        -ErrorAction Stop | Out-Null
+    Write-Host "ProtonVPN WireGuard service created successfully." -ForegroundColor Green
+} catch {
+    Write-Error "Failed to create ProtonVPN WireGuard service: $_"
+    exit 1
+}
+
+# ---------------------------------------------------------------------------
+# 3. Modify Start Menu shortcut to run as administrator
+# ---------------------------------------------------------------------------
 $shortcut = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\Scoop Apps\Proton\Proton VPN.lnk"
 if (Test-Path $shortcut) {
     Write-Host "Modifying shortcut to run as administrator..."
