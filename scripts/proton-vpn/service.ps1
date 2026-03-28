@@ -7,86 +7,61 @@ if (-not $isAdmin) {
     exit 1
 }
 
+# Get current directory
 $dir = $PSScriptRoot
-$servicePath   = "$dir\version\ProtonVPNService.exe"
-$wgServicePath = "$dir\version\ProtonVPN.WireGuardService.exe"
-$wgConfPath    = "$dir\version\ServiceData\WireGuard\ProtonVPN.conf"
 
-Write-Host "Setting up ProtonVPN Services..." -ForegroundColor Cyan
-Write-Host "Main service exe : $servicePath"
-Write-Host "WireGuard service: $wgServicePath"
-Write-Host "WireGuard config : $wgConfPath"
+# Get version from subdirectory name (e.g., "v4.3.11")
+$versionDir = Get-ChildItem -Path $dir -Directory | Where-Object { $_.Name -match '^v([\d.]+)$' } | Select-Object -First 1
+if (-not $versionDir) {
+    Write-Error "Version directory not found in $dir"
+    exit 1
+}
+$version = $versionDir.Name.TrimStart('v')
 
-# ---------------------------------------------------------------------------
-# Validate paths
-# ---------------------------------------------------------------------------
+Write-Host "Setting up ProtonVPN Service..." -ForegroundColor Cyan
+Write-Host "Directory: $dir"
+Write-Host "Version: $version"
+
+# Create the service
+$servicePath = "$dir\$($versionDir.Name)\ProtonVPNService.exe"
 if (-not (Test-Path $servicePath)) {
     Write-Error "ProtonVPNService.exe not found at: $servicePath"
     exit 1
 }
 
-if (-not (Test-Path $wgServicePath)) {
-    Write-Error "ProtonVPN.WireGuardService.exe not found at: $wgServicePath"
-    exit 1
+# Remove existing service if it exists
+$existingService = Get-Service -Name "ProtonVPN Service" -ErrorAction SilentlyContinue
+if ($existingService) {
+    Write-Host "Removing existing ProtonVPN Service..."
+    Stop-Service -Name "ProtonVPN Service" -Force -ErrorAction SilentlyContinue
+    sc.exe delete "ProtonVPN Service" | Out-Null
+    Start-Sleep -Seconds 2
 }
 
-if (-not (Test-Path $wgConfPath)) {
-    Write-Error "WireGuard config not found at: $wgConfPath"
-    exit 1
-}
-
-# ---------------------------------------------------------------------------
-# Helper: remove a service cleanly if it already exists
-# ---------------------------------------------------------------------------
-function Remove-ServiceIfExists {
-    param([string]$Name)
-    $svc = Get-Service -Name $Name -ErrorAction SilentlyContinue
-    if ($svc) {
-        Write-Host "Removing existing '$Name' service..."
-        Stop-Service -Name $Name -Force -ErrorAction SilentlyContinue
-        sc.exe delete $Name | Out-Null
-        Start-Sleep -Seconds 2
-    }
-}
-
-# ---------------------------------------------------------------------------
-# 1. ProtonVPN Service (main)
-# ---------------------------------------------------------------------------
-Remove-ServiceIfExists -Name "ProtonVPN Service"
-
+# Create new service
 Write-Host "Creating ProtonVPN Service..."
 try {
-    New-Service -Name "ProtonVPN Service" `
-        -BinaryPathName "`"$servicePath`"" `
-        -StartupType Manual `
-        -DependsOn 'Tcpip' `
-        -DisplayName "ProtonVPN Service" `
-        -ErrorAction Stop | Out-Null
-    Write-Host "ProtonVPN Service created successfully." -ForegroundColor Green
+    New-Service -Name "ProtonVPN Service" -BinaryPathName "$servicePath" -StartupType Manual -DependsOn 'Tcpip' -DisplayName "ProtonVPN Service" -ErrorAction Stop | Out-Null
+    Write-Host "Service created successfully." -ForegroundColor Green
 } catch {
-    Write-Error "Failed to create ProtonVPN Service: $_"
+    Write-Error "Failed to create service: $_"
     exit 1
 }
 
-# ---------------------------------------------------------------------------
-# 2. ProtonVPN WireGuard Service
-# ---------------------------------------------------------------------------
-Remove-ServiceIfExists -Name "ProtonVPN WireGuard"
-
-Write-Host "Creating ProtonVPN WireGuard service..."
-try {
-    $wgBinaryPath = "`"$wgServicePath`" `"$wgConfPath`" udp"
-
-    New-Service -Name "ProtonVPN WireGuard" `
-        -BinaryPathName $wgBinaryPath `
-        -StartupType Manual `
-        -DependsOn @('Nsi', 'Tcpip') `
-        -DisplayName "ProtonVPN WireGuard" `
-        -ErrorAction Stop | Out-Null
-    Write-Host "ProtonVPN WireGuard service created successfully." -ForegroundColor Green
-} catch {
-    Write-Error "Failed to create ProtonVPN WireGuard service: $_"
-    exit 1
+# Modify shortcut to run as administrator
+$shortcut = Join-Path $env:APPDATA "Microsoft\Windows\Start Menu\Programs\Scoop Apps\Proton\Proton VPN.lnk"
+if (Test-Path $shortcut) {
+    Write-Host "Modifying shortcut to run as administrator..."
+    try {
+        $bytes = [System.IO.File]::ReadAllBytes($shortcut)
+        $bytes[0x15] = $bytes[0x15] -bor 0x20
+        [System.IO.File]::WriteAllBytes($shortcut, $bytes)
+        Write-Host "Shortcut modified successfully." -ForegroundColor Green
+    } catch {
+        Write-Warning "Failed to modify shortcut: $_"
+    }
+} else {
+    Write-Warning "Shortcut not found at: $shortcut"
 }
 
 Write-Host "`nProtonVPN Service setup completed successfully!" -ForegroundColor Green
