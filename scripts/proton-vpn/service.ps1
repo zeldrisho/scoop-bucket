@@ -7,23 +7,12 @@ if (-not $isAdmin) {
     exit 1
 }
 
-# Get current directory
 $dir = $PSScriptRoot
-
-# Get version from subdirectory name (e.g., "v4.3.11")
-$versionDir = Get-ChildItem -Path $dir -Directory | Where-Object { $_.Name -match '^v([\d.]+)$' } | Select-Object -First 1
-if (-not $versionDir) {
-    Write-Error "Version directory not found in $dir"
-    exit 1
-}
-$version = $versionDir.Name.TrimStart('v')
+$servicePath = "$dir\version\ProtonVPNService.exe"
 
 Write-Host "Setting up ProtonVPN Service..." -ForegroundColor Cyan
-Write-Host "Directory: $dir"
-Write-Host "Version: $version"
+Write-Host "Service exe: $servicePath"
 
-# Create the service
-$servicePath = "$dir\$($versionDir.Name)\ProtonVPNService.exe"
 if (-not (Test-Path $servicePath)) {
     Write-Error "ProtonVPNService.exe not found at: $servicePath"
     exit 1
@@ -41,7 +30,12 @@ if ($existingService) {
 # Create new service
 Write-Host "Creating ProtonVPN Service..."
 try {
-    New-Service -Name "ProtonVPN Service" -BinaryPathName "$servicePath" -StartupType Manual -DependsOn 'Tcpip' -DisplayName "ProtonVPN Service" -ErrorAction Stop | Out-Null
+    New-Service -Name "ProtonVPN Service" `
+        -BinaryPathName "`"$servicePath`"" `
+        -StartupType Manual `
+        -DependsOn 'Tcpip' `
+        -DisplayName "ProtonVPN Service" `
+        -ErrorAction Stop | Out-Null
     Write-Host "Service created successfully." -ForegroundColor Green
 } catch {
     Write-Error "Failed to create service: $_"
