@@ -1,16 +1,16 @@
 {
-    "version": "7.0.0.33767",
+    "version": "7.0.1.34140",
     "description": "Modernize workflows with Zoom's trusted collaboration tools",
     "homepage": "https://zoom.us",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://zoom.us/client/7.0.0.33767/ZoomInstallerFull.msi?archType=x64#/setup.msi",
-            "hash": "d558408bb652dbe234d14e734759019da935e49fb9f4fa2bfadaa6804253d7fe"
+            "url": "https://zoom.us/client/7.0.1.34140/ZoomInstallerFull.msi?archType=x64#/setup.msi",
+            "hash": "9e7476d9ddeb844a7717a88f2559dda37693772fdd72b39b7091a33b17343793"
         },
         "arm64": {
-            "url": "https://zoom.us/client/7.0.0.33767/ZoomInstallerFull.msi?archType=winarm64#/setup.msi",
-            "hash": "0a7abe0953973d3642e1d7b6b9f540c3c28a6fa88a1c6fd8d0b6536127f321c0"
+            "url": "https://zoom.us/client/7.0.1.34140/ZoomInstallerFull.msi?archType=winarm64#/setup.msi",
+            "hash": "4b9dc8f5ebdd38320d68cb5735cd214361b16689edc9873292c41af3a19b90dc"
         }
     },
     "extract_dir": "Program Files (64-bit) Folder\\Zoom\\bin",
