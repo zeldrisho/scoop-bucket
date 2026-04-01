@@ -91,6 +91,7 @@ scoop install zeldrisho/<app>
 |[proton-pass](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-pass.json)|Free password manager with identity protection|
 |[proton-vpn](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proton-vpn.json)|Fast and secure VPN|
 |[proxyman](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/proxyman.json)|Debug, intercept & mock HTTP|
+|[qwen-code](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/qwen-code.json)|Coding agent that lives in the digital world|
 |[repak](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/repak.json)|CLI tool for working with Unreal Engine .pak files|
 |[rstgametranslation](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/rstgametranslation.json)|Real-time Game Screen Translation Software|
 |[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|Sandbox-based isolation software|
