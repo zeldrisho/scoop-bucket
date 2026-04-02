@@ -1,16 +1,16 @@
 {
-    "version": "145.1.7632.3200",
+    "version": "145.2.7632.4583",
     "description": "AI browser",
     "homepage": "https://perplexity.ai/comet",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
             "url": "https://perplexity.ai/rest/browser/download?platform=win_x64&channel=stable#/dl.7z",
-            "hash": "5ce5b2c5ee81930d5dabb65415245e3f09e0ce74c6e8ab39f22a5511cd8a860a"
+            "hash": "f2c3c519c349291d9106693034883f7c74b7f26c42c88637de8c17a426106dc8"
         },
         "arm64": {
             "url": "https://perplexity.ai/rest/browser/download?platform=win_arm64&channel=stable#/dl.7z",
-            "hash": "cdd162188fa59be45f32ec3299c7303df8083afaabed15ad7b92b34a32f81077"
+            "hash": "81bdd16d1a41c66d64c6aa032bab3a6bc608a719994fda12972a6d4ac0006b49"
         }
     },
     "pre_install": "Expand-7zipArchive \"$dir\\chrome.7z\" -ExtractDir 'Chrome-bin' -DestinationPath \"$dir\" -Removal",
