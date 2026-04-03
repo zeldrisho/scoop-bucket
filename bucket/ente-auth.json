@@ -20,8 +20,8 @@
         ]
     ],
     "checkver": {
-        "url": "https://github.com/ente-io/ente/releases",
-        "regex": "auth-v([\\d.]+)\""
+        "url": "https://github.com/ente-io/ente/releases?q=auth",
+        "regex": "v([\\d.]+)\""
     },
     "autoupdate": {
         "architecture": {
