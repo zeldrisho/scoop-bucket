@@ -22,6 +22,7 @@ scoop install zeldrisho/<app>
 
 |Name|Description|
 |----|-----------|
+|[agent-browser](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/agent-browser.json)|Browser automation CLI for AI agents|
 |[alacritty](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/alacritty.json)|OpenGL terminal emulator|
 |[antigravity-tools](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/alacritty.json)|Antigravity Account Manager & Switcher|
 |[antigravity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/antigravity.json)|Next-generation IDE|
