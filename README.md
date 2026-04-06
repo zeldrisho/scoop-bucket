@@ -96,7 +96,6 @@ scoop install zeldrisho/<app>
 |[rstgametranslation](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/rstgametranslation.json)|Real-time Game Screen Translation Software|
 |[sandboxie-plus](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/sandboxie-plus.json)|Sandbox-based isolation software|
 |[seelen-ui](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/seelen-ui.json)|Desktop environment for Windows|
-|[skills](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/skills.json)|The Agent Skills Directory|
 |[smapi](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/smapi.json)|Modding API for Stardew Valley|
 |[spotify](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/spotify.json)|Play millions of songs and podcasts on your device|
 |[stardrop](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/stardrop.json)|Open-source mod manager for Stardew Valley|
