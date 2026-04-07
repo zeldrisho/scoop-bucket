@@ -5,12 +5,12 @@
     "license": "Freeware",
     "architecture": {
         "64bit": {
-            "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2026.1.0/FoxitPDFReader20261_L10N_Setup_Prom_x64.exe",
-            "hash": "190503fa044aed47b9f4b610dce25831cf12549eba20302ad35a152807c4e0ec"
+            "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2026.1.0/FoxitPDFReader20261_L10N_Setup_x64.exe",
+            "hash": "d0b784bc77b4f228c8f5328a0c52a69017bae227535eb3bb720f83c6d62b5dd4"
         },
         "32bit": {
-            "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2026.1.0/FoxitPDFReader20261_L10N_Setup_Prom_x86.exe",
-            "hash": "26126bbdd229a2df047f5f9c5071ef118601375e6d82d8fd17e3847c3349ee4a"
+            "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/2026.1.0/FoxitPDFReader20261_L10N_Setup_x86.exe",
+            "hash": "471b75d8e34ea8fe8181bfa6c56dc12399112ee76cdf5e11facdb38e750fdc7b"
         }
     },
     "pre_install": [
@@ -36,10 +36,10 @@
     "autoupdate": {
         "architecture": {
             "64bit": {
-                "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/$matchHead/FoxitPDFReader$majorVersion$minorVersion_L10N_Setup_Prom_x64.exe"
+                "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/$matchHead/FoxitPDFReader$majorVersion$minorVersion_L10N_Setup_x64.exe"
             },
             "32bit": {
-                "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/$matchHead/FoxitPDFReader$majorVersion$minorVersion_L10N_Setup_Prom_x86.exe"
+                "url": "https://cdn01.foxitsoftware.com/product/reader/desktop/win/$matchHead/FoxitPDFReader$majorVersion$minorVersion_L10N_Setup_x86.exe"
             }
         }
     }
