@@ -81,7 +81,6 @@ scoop install zeldrisho/<app>
 |[openscreen](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/openscreen.json)|Open-source tool for creating beautiful screen recordings|
 |[owocr](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/owocr.json)|Text recognition tool|
 |[perplexity](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/perplexity.json)|Free AI-powered answer engine|
-|[playtorrio](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/playtorrio.json)|Ultimate Entertainment Hub|
 |[pot](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/pot.json)|Text selection translation and OCR software|
 |[powertoys](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/powertoys.json)|Windows Utilities for Power Users|
 |[process-explorer](https://github.com/zeldrisho/scoop-bucket/blob/master/bucket/process-explorer.json)|Shows you information about which handles and DLLs processes have opened or loaded|
