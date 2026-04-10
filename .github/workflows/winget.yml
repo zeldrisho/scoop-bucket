@@ -82,7 +82,13 @@ jobs:
                 old_version=""
               fi
 
-              if [ -z "$old_version" ] || [ "$old_version" = "$new_version" ]; then
+              if [ -z "$old_version" ]; then
+                continue
+              fi
+
+              latest=$(printf '%s\n%s\n' "$old_version" "$new_version" | sort -V | tail -n1)
+              if [ "$latest" != "$new_version" ] || [ "$old_version" = "$new_version" ]; then
+                echo "Skipping $manifest_path: version did not increase ($old_version -> $new_version)"
                 continue
               fi
             fi
@@ -151,16 +157,11 @@ jobs:
         id: token
         env:
           WINGET_TOKEN: ${{ secrets.WINGET_TOKEN }}
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         shell: bash
         run: |
           set -euo pipefail
 
           token="${WINGET_TOKEN:-}"
-
-          if [ -z "$token" ]; then
-            token="$(gh auth token 2>/dev/null || true)"
-          fi
 
           if [ -z "$token" ]; then
             echo "has_token=false" >> "$GITHUB_OUTPUT"
@@ -173,7 +174,7 @@ jobs:
 
       - name: Skip Komac update when token is missing
         if: steps.token.outputs.has_token != 'true'
-        run: echo "::warning::Skipping Komac submission because no token was resolved from WINGET_TOKEN or gh auth token"
+        run: echo "::warning::Skipping Komac submission because WINGET_TOKEN is not set"
 
       - name: Run Komac update
         if: steps.token.outputs.has_token == 'true'
