@@ -28,6 +28,57 @@ jobs:
         run: |
           set -euo pipefail
 
+          apply_checkver_replace() {
+            local version="$1"
+            local replace_template="$2"
+
+            jq -r -n --arg version "$version" --arg tpl "$replace_template" '
+              ($version | split(".")) as $parts
+              | $tpl
+              | gsub("\\$\\{major\\}"; ($parts[0] // ""))
+              | gsub("\\$\\{minor\\}"; ($parts[1] // ""))
+              | gsub("\\$\\{patch\\}"; ($parts[2] // ""))
+              | gsub("\\$\\{build\\}"; ($parts[3] // ""))
+              | gsub("\\$\\{revision\\}"; ($parts[4] // ""))
+            '
+          }
+
+          build_version_pairs() {
+            local old_version="$1"
+            local new_version="$2"
+            local checkver_replace="$3"
+            local old_transformed=""
+            local new_transformed=""
+
+            if [ -n "$checkver_replace" ]; then
+              old_transformed="$(apply_checkver_replace "$old_version" "$checkver_replace")"
+              new_transformed="$(apply_checkver_replace "$new_version" "$checkver_replace")"
+            fi
+
+            jq -c -n --arg old "$old_version" --arg new "$new_version" --arg old_transformed "$old_transformed" --arg new_transformed "$new_transformed" '
+              ($old | split(".")) as $o
+              | ($new | split(".")) as $n
+              | [
+                  {old: $old, new: $new},
+                  {old: (if ($old | startswith("v")) then ($old | ltrimstr("v")) else empty end), new: (if ($new | startswith("v")) then ($new | ltrimstr("v")) else empty end)},
+                  {old: (if ($old | startswith("v")) then $old else ("v" + $old) end), new: (if ($new | startswith("v")) then $new else ("v" + $new) end)},
+                  {old: ($old | gsub("\\."; "-")), new: ($new | gsub("\\."; "-"))},
+                  {old: ($old | gsub("\\."; "_")), new: ($new | gsub("\\."; "_"))},
+                  {old: ($old | gsub("\\."; "")), new: ($new | gsub("\\."; ""))},
+                  {old: ($o[0] // empty), new: ($n[0] // empty)},
+                  {old: (if ($o | length) >= 2 then ($o[0] + "." + $o[1]) else empty end), new: (if ($n | length) >= 2 then ($n[0] + "." + $n[1]) else empty end)},
+                  {old: (if ($o | length) >= 3 then ($o[0] + "." + $o[1] + "." + $o[2]) else empty end), new: (if ($n | length) >= 3 then ($n[0] + "." + $n[1] + "." + $n[2]) else empty end)},
+                  {old: (if ($o | length) >= 2 then ($o[0] + "_" + $o[1]) else empty end), new: (if ($n | length) >= 2 then ($n[0] + "_" + $n[1]) else empty end)},
+                  {old: (if ($o | length) >= 3 then ($o[0] + "_" + $o[1] + "_" + $o[2]) else empty end), new: (if ($n | length) >= 3 then ($n[0] + "_" + $n[1] + "_" + $n[2]) else empty end)},
+                  {old: (if ($o | length) >= 2 then ($o[0] + "-" + $o[1]) else empty end), new: (if ($n | length) >= 2 then ($n[0] + "-" + $n[1]) else empty end)},
+                  {old: (if ($o | length) >= 3 then ($o[0] + "-" + $o[1] + "-" + $o[2]) else empty end), new: (if ($n | length) >= 3 then ($n[0] + "-" + $n[1] + "-" + $n[2]) else empty end)},
+                  {old: $old_transformed, new: $new_transformed}
+                ]
+              | map(select((.old | length) > 0 and (.new | length) > 0 and .old != .new))
+              | unique_by(.old)
+            '
+          }
+
           before="${{ github.event.before }}"
           head_sha="${{ github.sha }}"
           map_file="winget/package-map.json"
@@ -91,7 +142,11 @@ jobs:
                 echo "Skipping $manifest_path: version did not increase ($old_version -> $new_version)"
                 continue
               fi
+            else
+              old_version=""
             fi
+
+            checkver_replace=$(jq -r 'if (.checkver | type) == "object" then (.checkver.replace // empty) else empty end' "$manifest_path")
 
             winget_first_char="$(printf '%s' "$winget_id" | cut -c1 | tr '[:upper:]' '[:lower:]')"
             winget_manifest_base="manifests/${winget_first_char}/${winget_id//./\/}"
@@ -130,9 +185,31 @@ jobs:
             fi
 
             # Winget manifest URLs usually embed the previous version.
-            # Rewrite them to the new Scoop version before sending to Komac.
-            urls_json=$(jq -c --arg old "$winget_version" --arg new "$new_version" \
-              'map(if contains($old) then (split($old) | join($new)) else . end)' <<< "$urls_json")
+            # Rewrite URL version tokens using manifest-aware candidates first,
+            # then fall back to raw Winget/Scoop versions.
+            version_pairs_json=$(build_version_pairs "$winget_version" "$new_version" "$checkver_replace")
+            if [ -n "$old_version" ]; then
+              version_pairs_json=$(jq -c --argjson pairs "$version_pairs_json" --arg old "$old_version" --arg new "$new_version" '
+                ($pairs + [{old: $old, new: $new}])
+                | map(select((.old | length) > 0 and (.new | length) > 0 and .old != .new))
+                | unique_by(.old)
+              ' <<< '{}')
+            fi
+
+            urls_json=$(jq -c --argjson pairs "$version_pairs_json" '
+              def replace_first_match($pairs):
+                reduce $pairs[] as $pair
+                  ({value: ., done: false};
+                    if .done then .
+                    elif (.value | contains($pair.old))
+                      then {value: (.value | split($pair.old) | join($pair.new)), done: true}
+                      else .
+                    end
+                  )
+                | .value;
+
+              map(replace_first_match($pairs))
+            ' <<< "$urls_json")
 
             updates_json=$(jq -c --arg id "$winget_id" --arg version "$new_version" --argjson urls "$urls_json" \
               '. + [{identifier: $id, version: $version, urls: $urls}]' <<< "$updates_json")

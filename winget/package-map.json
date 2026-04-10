@@ -11,7 +11,7 @@
     "ente-photos": "ente-io.photos-desktop",
     "evkey": "lamquangminh.EVKey",
     "foxit-reader": "Foxit.FoxitReader",
-    "genimotion": "Genymobile.Genymotion",
+    "genymotion": "Genymobile.Genymotion",
     "itch": "ItchIo.Itch",
     "kdeconnect": "KDE.KDEConnect",
     "localsend": "LocalSend.LocalSend",
@@ -27,7 +27,6 @@
     "teamviewer": "TeamViewer.TeamViewer",
     "telegram": "Telegram.TelegramDesktop",
     "ultraviewer": "DucFabulous.UltraViewer",
-    "vcredist": "Microsoft.VCRedist.2015+.x64",
     "zalo": "VNGCorp.Zalo",
     "zoho-mail": "Zoho.Mail"
 }
