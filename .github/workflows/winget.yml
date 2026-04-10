@@ -108,7 +108,7 @@ jobs:
             }
 
             urls_json=$(printf '%s\n' "$installer_manifest" \
-              | sed -nE 's/^[[:space:]]*InstallerUrl:[[:space:]]*(.+)$/\1/p' \
+              | sed -nE 's/^[[:space:]]*(-[[:space:]]*)?InstallerUrl:[[:space:]]*(.+)$/\2/p' \
               | sed -E 's/[[:space:]]+$//' \
               | jq -R -s 'split("\n") | map(select(length > 0))')
 
@@ -147,11 +147,36 @@ jobs:
       - name: Checkout bucket
         uses: actions/checkout@main
 
-      - name: Get GitHub token
+      - name: Resolve Komac token
         id: token
-        run: echo "gh_token=$(gh auth token)" >> "$GITHUB_OUTPUT"
+        env:
+          WINGET_TOKEN: ${{ secrets.WINGET_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          token="${WINGET_TOKEN:-}"
+
+          if [ -z "$token" ]; then
+            token="$(gh auth token 2>/dev/null || true)"
+          fi
+
+          if [ -z "$token" ]; then
+            echo "has_token=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          echo "::add-mask::$token"
+          echo "has_token=true" >> "$GITHUB_OUTPUT"
+          echo "token=$token" >> "$GITHUB_OUTPUT"
+
+      - name: Skip Komac update when token is missing
+        if: steps.token.outputs.has_token != 'true'
+        run: echo "::warning::Skipping Komac submission because no token was resolved from WINGET_TOKEN or gh auth token"
 
       - name: Run Komac update
+        if: steps.token.outputs.has_token == 'true'
         uses: michidk/run-komac@v2
         with:
           args: >-
@@ -159,4 +184,4 @@ jobs:
             --version ${{ matrix.package.version }}
             --urls ${{ join(matrix.package.urls, ' ') }}
             --submit
-            --token ${{ steps.token.outputs.gh_token }}
+            --token ${{ steps.token.outputs.token }}
