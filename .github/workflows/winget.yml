@@ -129,6 +129,11 @@ jobs:
               continue
             fi
 
+            # Winget manifest URLs usually embed the previous version.
+            # Rewrite them to the new Scoop version before sending to Komac.
+            urls_json=$(jq -c --arg old "$winget_version" --arg new "$new_version" \
+              'map(if contains($old) then (split($old) | join($new)) else . end)' <<< "$urls_json")
+
             updates_json=$(jq -c --arg id "$winget_id" --arg version "$new_version" --argjson urls "$urls_json" \
               '. + [{identifier: $id, version: $version, urls: $urls}]' <<< "$updates_json")
           done <<< "$changed_files"
