@@ -107,6 +107,12 @@ jobs:
               continue
             fi
 
+            latest_remote_or_local=$(printf '%s\n%s\n' "$winget_version" "$new_version" | sort -V | tail -n1)
+            if [ "$latest_remote_or_local" != "$new_version" ] || [ "$winget_version" = "$new_version" ]; then
+              echo "Skipping $manifest_path: Scoop version is not newer than Winget ($new_version <= $winget_version)"
+              continue
+            fi
+
             installer_manifest_path="${winget_manifest_base}/${winget_version}/${winget_id}.installer.yaml"
             installer_manifest=$(curl -fsSL "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/${installer_manifest_path}") || {
               echo "Skipping $manifest_path: cannot read $installer_manifest_path"
