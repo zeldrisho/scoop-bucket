@@ -31,6 +31,7 @@ jobs:
           before="${{ github.event.before }}"
           head_sha="${{ github.sha }}"
           map_file="winget/package-map.json"
+          event_name="${{ github.event_name }}"
 
           if [ ! -f "$map_file" ]; then
             echo "has_updates=false" >> "$GITHUB_OUTPUT"
@@ -38,11 +39,15 @@ jobs:
             exit 0
           fi
 
-          if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
-            before="$(git rev-list --max-count=1 HEAD^)"
-          fi
+          if [ "$event_name" = "workflow_dispatch" ]; then
+            changed_files=$(find bucket -maxdepth 1 -type f -name '*.json' | sort)
+          else
+            if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
+              before="$(git rev-list --max-count=1 HEAD^)"
+            fi
 
-          changed_files=$(git diff --name-only "$before" "$head_sha" -- 'bucket/*.json' || true)
+            changed_files=$(git diff --name-only "$before" "$head_sha" -- 'bucket/*.json' || true)
+          fi
 
           if [ -z "$changed_files" ]; then
             echo "has_updates=false" >> "$GITHUB_OUTPUT"
@@ -62,16 +67,24 @@ jobs:
             fi
 
             new_version=$(jq -r '.version // empty' "$manifest_path")
-            [ -z "$new_version" ] && continue
-
-            if git cat-file -e "$before:$manifest_path" 2>/dev/null; then
-              old_version=$(git show "$before:$manifest_path" | jq -r '.version // empty' || true)
-            else
-              old_version=""
+            if [ -z "$new_version" ]; then
+              if [ "$event_name" = "workflow_dispatch" ]; then
+                echo "::error::Manifest '$manifest_path' is missing a version field"
+                exit 1
+              fi
+              continue
             fi
 
-            if [ -z "$old_version" ] || [ "$old_version" = "$new_version" ]; then
-              continue
+            if [ "$event_name" != "workflow_dispatch" ]; then
+              if git cat-file -e "$before:$manifest_path" 2>/dev/null; then
+                old_version=$(git show "$before:$manifest_path" | jq -r '.version // empty' || true)
+              else
+                old_version=""
+              fi
+
+              if [ -z "$old_version" ] || [ "$old_version" = "$new_version" ]; then
+                continue
+              fi
             fi
 
             winget_first_char="$(printf '%s' "$winget_id" | cut -c1 | tr '[:upper:]' '[:lower:]')"
