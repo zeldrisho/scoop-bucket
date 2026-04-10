@@ -1,13 +1,12 @@
 name: Sync Winget
 
 on:
-  push:
-    branches:
-      - main
-      - master
-    paths:
-      - 'bucket/*.json'
   workflow_dispatch:
+    inputs:
+      manifests:
+        description: 'Comma or whitespace separated manifest names to process (without bucket/ and .json)'
+        required: false
+        type: string
 
 jobs:
   detect:
@@ -83,6 +82,7 @@ jobs:
           head_sha="${{ github.sha }}"
           map_file="winget/package-map.json"
           event_name="${{ github.event_name }}"
+          dispatch_manifests="${{ github.event.inputs.manifests || '' }}"
 
           if [ ! -f "$map_file" ]; then
             echo "has_updates=false" >> "$GITHUB_OUTPUT"
@@ -91,7 +91,22 @@ jobs:
           fi
 
           if [ "$event_name" = "workflow_dispatch" ]; then
-            changed_files=$(find bucket -maxdepth 1 -type f -name '*.json' | sort)
+            if [ -n "$dispatch_manifests" ]; then
+              changed_files=$(printf '%s\n' "$dispatch_manifests" \
+                | tr ',\t ' '\n\n\n' \
+                | sed -E 's/\r$//' \
+                | sed -E 's#^bucket/##; s#\.json$##' \
+                | sed '/^$/d' \
+                | sort -u \
+                | while IFS= read -r name; do
+                    candidate="bucket/${name}.json"
+                    if [ -f "$candidate" ]; then
+                      printf '%s\n' "$candidate"
+                    fi
+                  done)
+            else
+              changed_files=$(find bucket -maxdepth 1 -type f -name '*.json' | sort)
+            fi
           else
             if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
               before="$(git rev-list --max-count=1 HEAD^)"
