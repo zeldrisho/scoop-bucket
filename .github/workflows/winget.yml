@@ -74,19 +74,38 @@ jobs:
               continue
             fi
 
-            first_url=$(jq -r '[.url, (.architecture // {} | to_entries[]?.value.url)]
-              | flatten
-              | map(select(type == "string" and length > 0))
-              | map(split("#")[0])
-              | .[0] // empty' "$manifest_path")
+            winget_first_char="$(printf '%s' "$winget_id" | cut -c1 | tr '[:upper:]' '[:lower:]')"
+            winget_manifest_base="manifests/${winget_first_char}/${winget_id//./\/}"
 
-            if [ -z "$first_url" ]; then
-              echo "Skipping $manifest_path: no installer URL found"
+            versions_json=$(curl -fsSL "https://api.github.com/repos/microsoft/winget-pkgs/contents/${winget_manifest_base}") || {
+              echo "Skipping $manifest_path: cannot read Winget package path for $winget_id"
+              continue
+            }
+
+            winget_version=$(jq -r '[.[] | select(.type == "dir") | .name] | sort_by(split(".") | map(tonumber? // .)) | last // empty' <<< "$versions_json")
+            if [ -z "$winget_version" ]; then
+              echo "Skipping $manifest_path: no Winget versions found for $winget_id"
               continue
             fi
 
-            updates_json=$(jq -c --arg id "$winget_id" --arg version "$new_version" --arg url "$first_url" \
-              '. + [{identifier: $id, version: $version, url: $url}]' <<< "$updates_json")
+            installer_manifest_path="${winget_manifest_base}/${winget_version}/${winget_id}.installer.yaml"
+            installer_manifest=$(curl -fsSL "https://raw.githubusercontent.com/microsoft/winget-pkgs/master/${installer_manifest_path}") || {
+              echo "Skipping $manifest_path: cannot read $installer_manifest_path"
+              continue
+            }
+
+            urls_json=$(printf '%s\n' "$installer_manifest" \
+              | sed -nE 's/^[[:space:]]*InstallerUrl:[[:space:]]*(.+)$/\1/p' \
+              | sed -E 's/[[:space:]]+$//' \
+              | jq -R -s 'split("\n") | map(select(length > 0))')
+
+            if [ "$(jq length <<< "$urls_json")" -eq 0 ]; then
+              echo "Skipping $manifest_path: no InstallerUrl entries found in Winget manifest"
+              continue
+            fi
+
+            updates_json=$(jq -c --arg id "$winget_id" --arg version "$new_version" --argjson urls "$urls_json" \
+              '. + [{identifier: $id, version: $version, urls: $urls}]' <<< "$updates_json")
           done <<< "$changed_files"
 
           if [ "$(jq length <<< "$updates_json")" -eq 0 ]; then
@@ -121,6 +140,6 @@ jobs:
           args: >-
             update ${{ matrix.package.identifier }}
             --version ${{ matrix.package.version }}
-            --urls ${{ matrix.package.url }}
+            --urls ${{ join(matrix.package.urls, ' ') }}
             --submit
             --token ${{ github.token }}
