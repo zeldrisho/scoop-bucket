@@ -95,7 +95,7 @@ jobs:
               continue
             }
 
-            winget_version=$(jq -r '[.[] | select(.type == "dir") | .name] | sort_by(split(".") | map(tonumber? // .)) | last // empty' <<< "$versions_json")
+            winget_version=$(jq -r '[.[] | select(.type == "dir" and (.name | test("^[0-9]"))) | .name] | sort_by(split(".") | map(tonumber? // .)) | last // empty' <<< "$versions_json")
             if [ -z "$winget_version" ]; then
               echo "Skipping $manifest_path: no Winget versions found for $winget_id"
               continue
@@ -147,6 +147,10 @@ jobs:
       - name: Checkout bucket
         uses: actions/checkout@main
 
+      - name: Get GitHub token
+        id: token
+        run: echo "gh_token=$(gh auth token)" >> "$GITHUB_OUTPUT"
+
       - name: Run Komac update
         uses: michidk/run-komac@v2
         with:
@@ -155,4 +159,4 @@ jobs:
             --version ${{ matrix.package.version }}
             --urls ${{ join(matrix.package.urls, ' ') }}
             --submit
-            --token ${{ github.token }}
+            --token ${{ steps.token.outputs.gh_token }}
