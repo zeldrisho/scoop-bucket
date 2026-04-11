@@ -50,7 +50,7 @@ jobs:
                   {old: (if ($o | length) >= 3 then ($o[0] + "-" + $o[1] + "-" + $o[2]) else empty end), new: (if ($n | length) >= 3 then ($n[0] + "-" + $n[1] + "-" + $n[2]) else empty end)}
                 ]
               | map(select((.old | length) > 0 and (.new | length) > 0 and .old != .new))
-              | unique_by(.old)
+              | reduce .[] as $item ([]; if any(.[]; .old == $item.old) then . else . + [$item] end)
             '
           }
 
@@ -178,7 +178,7 @@ jobs:
               version_pairs_json=$(jq -c --argjson pairs "$version_pairs_json" --arg old "$old_version" --arg new "$new_version" '
                 ($pairs + [{old: $old, new: $new}])
                 | map(select((.old | length) > 0 and (.new | length) > 0 and .old != .new))
-                | unique_by(.old)
+                | reduce .[] as $item ([]; if any(.[]; .old == $item.old) then . else . + [$item] end)
               ' <<< '{}')
             fi
 
