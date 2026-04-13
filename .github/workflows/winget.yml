@@ -1,6 +1,9 @@
 name: Sync Winget
 
 on:
+  push:
+    paths:
+      - 'bucket/*.json'
   workflow_dispatch:
     inputs:
       manifests:
@@ -12,6 +15,7 @@ jobs:
   detect:
     name: Detect manifest version changes
     runs-on: ubuntu-latest
+    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
     outputs:
       has_updates: ${{ steps.collect.outputs.has_updates }}
       packages: ${{ steps.collect.outputs.packages }}
@@ -26,6 +30,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
+          write_empty_output() {
+            echo "has_updates=false" >> "$GITHUB_OUTPUT"
+            echo "packages=[]" >> "$GITHUB_OUTPUT"
+          }
+
+          version_increased() {
+            local old_version="$1"
+            local new_version="$2"
+
+            [ -n "$old_version" ] \
+              && [ "$old_version" != "$new_version" ] \
+              && [ "$(printf '%s\n%s\n' "$old_version" "$new_version" | sort -V | tail -n1)" = "$new_version" ]
+          }
 
           build_version_pairs() {
             local old_version="$1"
@@ -54,6 +72,29 @@ jobs:
             '
           }
 
+          collect_changed_files() {
+            if [ "$event_name" = "workflow_dispatch" ]; then
+              if [ -n "$dispatch_manifests" ]; then
+                printf '%s\n' "$dispatch_manifests" \
+                  | tr ',\t ' '\n\n\n' \
+                  | sed -E 's/\r$//' \
+                  | sed -E 's#^bucket/##; s#\.json$##' \
+                  | sed '/^$/d' \
+                  | sort -u \
+                  | while IFS= read -r manifest_name; do
+                      manifest_path="bucket/${manifest_name}.json"
+                      [ -f "$manifest_path" ] && printf '%s\n' "$manifest_path"
+                    done
+              else
+                find bucket -maxdepth 1 -type f -name '*.json' | sort
+              fi
+              return
+            fi
+
+            [ -n "$before" ] || return 0
+            git diff --name-only "$before" "$head_sha" -- 'bucket/*.json' | sort -u || true
+          }
+
           before="${{ github.event.before }}"
           head_sha="${{ github.sha }}"
           map_file="winget/package-map.json"
@@ -61,46 +102,23 @@ jobs:
           dispatch_manifests="${{ github.event.inputs.manifests || '' }}"
 
           if [ ! -f "$map_file" ]; then
-            echo "has_updates=false" >> "$GITHUB_OUTPUT"
-            echo "packages=[]" >> "$GITHUB_OUTPUT"
+            write_empty_output
             exit 0
           fi
 
-          if [ "$event_name" = "workflow_dispatch" ]; then
-            if [ -n "$dispatch_manifests" ]; then
-              changed_files=$(printf '%s\n' "$dispatch_manifests" \
-                | tr ',\t ' '\n\n\n' \
-                | sed -E 's/\r$//' \
-                | sed -E 's#^bucket/##; s#\.json$##' \
-                | sed '/^$/d' \
-                | sort -u \
-                | while IFS= read -r name; do
-                    candidate="bucket/${name}.json"
-                    if [ -f "$candidate" ]; then
-                      printf '%s\n' "$candidate"
-                    fi
-                  done)
-            else
-              changed_files=$(find bucket -maxdepth 1 -type f -name '*.json' | sort)
-            fi
-          else
-            if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
-              before="$(git rev-list --max-count=1 HEAD^)"
-            fi
-
-            changed_files=$(git diff --name-only "$before" "$head_sha" -- 'bucket/*.json' || true)
+          if [ "$event_name" != "workflow_dispatch" ] && { [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; }; then
+            before="$(git rev-list --max-count=1 HEAD^ 2>/dev/null || true)"
           fi
 
-          if [ -z "$changed_files" ]; then
-            echo "has_updates=false" >> "$GITHUB_OUTPUT"
-            echo "packages=[]" >> "$GITHUB_OUTPUT"
+          mapfile -t changed_files < <(collect_changed_files)
+          if [ "${#changed_files[@]}" -eq 0 ]; then
+            write_empty_output
             exit 0
           fi
 
           updates_json='[]'
 
-          while IFS= read -r manifest_path; do
-            [ -z "$manifest_path" ] && continue
+          for manifest_path in "${changed_files[@]}"; do
             manifest_name="$(basename "$manifest_path" .json)"
 
             winget_id=$(jq -r --arg name "$manifest_name" '.[$name] // empty' "$map_file")
@@ -117,24 +135,20 @@ jobs:
               continue
             fi
 
-            if [ "$event_name" != "workflow_dispatch" ]; then
-              if git cat-file -e "$before:$manifest_path" 2>/dev/null; then
-                old_version=$(git show "$before:$manifest_path" | jq -r '.version // empty' || true)
-              else
-                old_version=""
-              fi
+            old_version=""
+            if [ "$event_name" != "workflow_dispatch" ] && git cat-file -e "$before:$manifest_path" 2>/dev/null; then
+              old_version=$(git show "$before:$manifest_path" | jq -r '.version // empty' || true)
+            fi
 
+            if [ "$event_name" != "workflow_dispatch" ]; then
               if [ -z "$old_version" ]; then
                 continue
               fi
 
-              latest=$(printf '%s\n%s\n' "$old_version" "$new_version" | sort -V | tail -n1)
-              if [ "$latest" != "$new_version" ] || [ "$old_version" = "$new_version" ]; then
+              if ! version_increased "$old_version" "$new_version"; then
                 echo "Skipping $manifest_path: version did not increase ($old_version -> $new_version)"
                 continue
               fi
-            else
-              old_version=""
             fi
 
             winget_first_char="$(printf '%s' "$winget_id" | cut -c1 | tr '[:upper:]' '[:lower:]')"
@@ -151,8 +165,7 @@ jobs:
               continue
             fi
 
-            latest_remote_or_local=$(printf '%s\n%s\n' "$winget_version" "$new_version" | sort -V | tail -n1)
-            if [ "$latest_remote_or_local" != "$new_version" ] || [ "$winget_version" = "$new_version" ]; then
+            if ! version_increased "$winget_version" "$new_version"; then
               echo "Skipping $manifest_path: Scoop version is not newer than Winget ($new_version <= $winget_version)"
               continue
             fi
@@ -175,11 +188,11 @@ jobs:
 
             version_pairs_json=$(build_version_pairs "$winget_version" "$new_version")
             if [ -n "$old_version" ]; then
-              version_pairs_json=$(jq -c --argjson pairs "$version_pairs_json" --arg old "$old_version" --arg new "$new_version" '
+              version_pairs_json=$(jq -cn --argjson pairs "$version_pairs_json" --arg old "$old_version" --arg new "$new_version" '
                 ($pairs + [{old: $old, new: $new}])
                 | map(select((.old | length) > 0 and (.new | length) > 0 and .old != .new))
                 | reduce .[] as $item ([]; if any(.[]; .old == $item.old) then . else . + [$item] end)
-              ' <<< '{}')
+              ')
             fi
 
             urls_json=$(jq -c --argjson pairs "$version_pairs_json" '
@@ -199,11 +212,10 @@ jobs:
 
             updates_json=$(jq -c --arg id "$winget_id" --arg version "$new_version" --argjson urls "$urls_json" \
               '. + [{identifier: $id, version: $version, urls: $urls}]' <<< "$updates_json")
-          done <<< "$changed_files"
+          done
 
           if [ "$(jq length <<< "$updates_json")" -eq 0 ]; then
-            echo "has_updates=false" >> "$GITHUB_OUTPUT"
-            echo "packages=[]" >> "$GITHUB_OUTPUT"
+            write_empty_output
             exit 0
           fi
 
@@ -224,9 +236,6 @@ jobs:
       matrix:
         package: ${{ fromJson(needs.detect.outputs.packages) }}
     steps:
-      - name: Checkout bucket
-        uses: actions/checkout@main
-
       - name: Resolve Komac token
         id: token
         env:

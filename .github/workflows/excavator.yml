@@ -26,9 +26,9 @@ jobs:
           REF_NAME: ${{ github.ref_name }}
           START_SHA: ${{ github.sha }}
         run: |
-          $branch = $env:REF_NAME
+          $branchName = $env:REF_NAME
           $startSha = $env:START_SHA
-          $remoteRef = "refs/heads/$branch"
+          $remoteRef = "refs/heads/$branchName"
 
           $remoteLine = git ls-remote origin $remoteRef | Select-Object -First 1
           if (-not $remoteLine) {
@@ -55,40 +55,40 @@ jobs:
           $compareUrl = "https://api.github.com/repos/$($env:REPOSITORY)/compare/$startSha...$remoteSha"
           $compare = Invoke-RestMethod -Method Get -Headers $headers -Uri $compareUrl
 
-          $changedManifests = @(
+          $changedManifestNames = @(
             $compare.files |
               Where-Object { $_.filename -match '^bucket/[^/]+\.json$' } |
               ForEach-Object { [System.IO.Path]::GetFileNameWithoutExtension($_.filename) } |
               Sort-Object -Unique
           )
 
-          if ($changedManifests.Count -eq 0) {
+          if ($changedManifestNames.Count -eq 0) {
             Write-Host "No bucket manifest updates detected."
             exit 0
           }
 
           $packageMap = Get-Content "winget/package-map.json" -Raw | ConvertFrom-Json
-          $mappedNames = @($packageMap.PSObject.Properties.Name)
+          $mappedManifestNames = @($packageMap.PSObject.Properties.Name)
 
-          $dispatchManifests = @(
-            $changedManifests |
-              Where-Object { $mappedNames -contains $_ } |
+          $manifestsToDispatch = @(
+            $changedManifestNames |
+              Where-Object { $mappedManifestNames -contains $_ } |
               Sort-Object -Unique
           )
 
-          if ($dispatchManifests.Count -eq 0) {
+          if ($manifestsToDispatch.Count -eq 0) {
             Write-Host "No changed manifests found in package-map.json."
             exit 0
           }
 
-          $joined = $dispatchManifests -join ','
-          Write-Host "Dispatching Winget workflow for manifests: $joined"
+          $dispatchInput = $manifestsToDispatch -join ','
+          Write-Host "Dispatching Winget workflow for manifests: $dispatchInput"
 
           $dispatchUrl = "https://api.github.com/repos/$($env:REPOSITORY)/actions/workflows/winget.yml/dispatches"
           $payload = @{
-            ref = $branch
+            ref = $branchName
             inputs = @{
-              manifests = $joined
+              manifests = $dispatchInput
             }
           } | ConvertTo-Json -Depth 10
 
