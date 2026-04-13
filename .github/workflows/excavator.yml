@@ -26,24 +26,17 @@ jobs:
           REF_NAME: ${{ github.ref_name }}
           START_SHA: ${{ github.sha }}
         run: |
-          $branchName = $env:REF_NAME
-          $startSha = $env:START_SHA
-          $remoteRef = "refs/heads/$branchName"
-
-          $remoteLine = git ls-remote origin $remoteRef | Select-Object -First 1
-          if (-not $remoteLine) {
-            Write-Host "No remote ref found for $remoteRef."
+          $remoteSha = (git ls-remote origin "refs/heads/$($env:REF_NAME)" | Select-Object -First 1) -split '\s+' | Select-Object -First 1
+          if (-not $remoteSha) {
+            Write-Host "No remote ref found."
             exit 0
           }
-
-          $remoteSha = ($remoteLine -split '\s+')[0]
-          if ($remoteSha -eq $startSha) {
+          if ($remoteSha -eq $env:START_SHA) {
             Write-Host "No new commit was pushed by Excavator."
             exit 0
           }
-
-          if (-not (Test-Path "winget/package-map.json")) {
-            Write-Host "winget/package-map.json not found."
+          if (-not (Test-Path winget/package-map.json)) {
+            Write-Host "package map not found."
             exit 0
           }
 
@@ -51,45 +44,24 @@ jobs:
             Authorization = "Bearer $env:GITHUB_TOKEN"
             Accept        = "application/vnd.github+json"
           }
-
-          $compareUrl = "https://api.github.com/repos/$($env:REPOSITORY)/compare/$startSha...$remoteSha"
-          $compare = Invoke-RestMethod -Method Get -Headers $headers -Uri $compareUrl
-
-          $changedManifestNames = @(
-            $compare.files |
-              Where-Object { $_.filename -match '^bucket/[^/]+\.json$' } |
-              ForEach-Object { [System.IO.Path]::GetFileNameWithoutExtension($_.filename) } |
+          $mapped = @((Get-Content winget/package-map.json -Raw | ConvertFrom-Json).PSObject.Properties.Name)
+          $manifests = @(
+            (Invoke-RestMethod -Method Get -Headers $headers -Uri "https://api.github.com/repos/$($env:REPOSITORY)/compare/$($env:START_SHA)...$remoteSha").files |
+              Where-Object filename -Match '^bucket/[^/]+\.json$' |
+              ForEach-Object { [IO.Path]::GetFileNameWithoutExtension($_.filename) } |
+              Where-Object { $mapped -contains $_ } |
               Sort-Object -Unique
           )
-
-          if ($changedManifestNames.Count -eq 0) {
-            Write-Host "No bucket manifest updates detected."
+          if ($manifests.Count -eq 0) {
+            Write-Host "No mapped manifest updates detected."
             exit 0
           }
-
-          $packageMap = Get-Content "winget/package-map.json" -Raw | ConvertFrom-Json
-          $mappedManifestNames = @($packageMap.PSObject.Properties.Name)
-
-          $manifestsToDispatch = @(
-            $changedManifestNames |
-              Where-Object { $mappedManifestNames -contains $_ } |
-              Sort-Object -Unique
-          )
-
-          if ($manifestsToDispatch.Count -eq 0) {
-            Write-Host "No changed manifests found in package-map.json."
-            exit 0
-          }
-
-          $dispatchInput = $manifestsToDispatch -join ','
+          $dispatchInput = $manifests -join ','
           Write-Host "Dispatching Winget workflow for manifests: $dispatchInput"
-
-          $dispatchUrl = "https://api.github.com/repos/$($env:REPOSITORY)/actions/workflows/winget.yml/dispatches"
           $payload = @{
-            ref = $branchName
+            ref = $env:REF_NAME
             inputs = @{
               manifests = $dispatchInput
             }
           } | ConvertTo-Json -Depth 10
-
-          Invoke-RestMethod -Method Post -Headers $headers -Uri $dispatchUrl -ContentType "application/json" -Body $payload
+          Invoke-RestMethod -Method Post -Headers $headers -Uri "https://api.github.com/repos/$($env:REPOSITORY)/actions/workflows/winget.yml/dispatches" -ContentType "application/json" -Body $payload

@@ -31,50 +31,29 @@ jobs:
         run: |
           set -euo pipefail
 
-          write_empty_output() {
+          before="${{ github.event.before }}"
+          head_sha="${{ github.sha }}"
+          map_file="winget/package-map.json"
+          event_name="${{ github.event_name }}"
+          dispatch_manifests="${{ github.event.inputs.manifests || '' }}"
+
+          emit_empty() {
             echo "has_updates=false" >> "$GITHUB_OUTPUT"
             echo "packages=[]" >> "$GITHUB_OUTPUT"
           }
 
-          version_increased() {
-            local old_version="$1"
-            local new_version="$2"
+          if [ "$event_name" != "workflow_dispatch" ] && { [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; }; then
+            before="$(git rev-list --max-count=1 HEAD^ 2>/dev/null || true)"
+          fi
 
-            [ -n "$old_version" ] \
-              && [ "$old_version" != "$new_version" ] \
-              && [ "$(printf '%s\n%s\n' "$old_version" "$new_version" | sort -V | tail -n1)" = "$new_version" ]
-          }
+          if [ ! -f "$map_file" ]; then
+            emit_empty
+            exit 0
+          fi
 
-          build_version_pairs() {
-            local old_version="$1"
-            local new_version="$2"
-
-            jq -c -n --arg old "$old_version" --arg new "$new_version" '
-              ($old | split(".")) as $o
-              | ($new | split(".")) as $n
-              | [
-                  {old: $old, new: $new},
-                  {old: (if ($old | startswith("v")) then ($old | ltrimstr("v")) else empty end), new: (if ($new | startswith("v")) then ($new | ltrimstr("v")) else empty end)},
-                  {old: (if ($old | startswith("v")) then $old else ("v" + $old) end), new: (if ($new | startswith("v")) then $new else ("v" + $new) end)},
-                  {old: ($old | gsub("\\."; "-")), new: ($new | gsub("\\."; "-"))},
-                  {old: ($old | gsub("\\."; "_")), new: ($new | gsub("\\."; "_"))},
-                  {old: ($old | gsub("\\."; "")), new: ($new | gsub("\\."; ""))},
-                  {old: ($o[0] // empty), new: ($n[0] // empty)},
-                  {old: (if ($o | length) >= 2 then ($o[0] + "." + $o[1]) else empty end), new: (if ($n | length) >= 2 then ($n[0] + "." + $n[1]) else empty end)},
-                  {old: (if ($o | length) >= 3 then ($o[0] + "." + $o[1] + "." + $o[2]) else empty end), new: (if ($n | length) >= 3 then ($n[0] + "." + $n[1] + "." + $n[2]) else empty end)},
-                  {old: (if ($o | length) >= 2 then ($o[0] + "_" + $o[1]) else empty end), new: (if ($n | length) >= 2 then ($n[0] + "_" + $n[1]) else empty end)},
-                  {old: (if ($o | length) >= 3 then ($o[0] + "_" + $o[1] + "_" + $o[2]) else empty end), new: (if ($n | length) >= 3 then ($n[0] + "_" + $n[1] + "_" + $n[2]) else empty end)},
-                  {old: (if ($o | length) >= 2 then ($o[0] + "-" + $o[1]) else empty end), new: (if ($n | length) >= 2 then ($n[0] + "-" + $n[1]) else empty end)},
-                  {old: (if ($o | length) >= 3 then ($o[0] + "-" + $o[1] + "-" + $o[2]) else empty end), new: (if ($n | length) >= 3 then ($n[0] + "-" + $n[1] + "-" + $n[2]) else empty end)}
-                ]
-              | map(select((.old | length) > 0 and (.new | length) > 0 and .old != .new))
-              | reduce .[] as $item ([]; if any(.[]; .old == $item.old) then . else . + [$item] end)
-            '
-          }
-
-          collect_changed_files() {
-            if [ "$event_name" = "workflow_dispatch" ]; then
-              if [ -n "$dispatch_manifests" ]; then
+          if [ "$event_name" = "workflow_dispatch" ]; then
+            if [ -n "$dispatch_manifests" ]; then
+              mapfile -t changed_files < <(
                 printf '%s\n' "$dispatch_manifests" \
                   | tr ',\t ' '\n\n\n' \
                   | sed -E 's/\r$//' \
@@ -85,34 +64,18 @@ jobs:
                       manifest_path="bucket/${manifest_name}.json"
                       [ -f "$manifest_path" ] && printf '%s\n' "$manifest_path"
                     done
-              else
-                find bucket -maxdepth 1 -type f -name '*.json' | sort
-              fi
-              return
+              )
+            else
+              mapfile -t changed_files < <(find bucket -maxdepth 1 -type f -name '*.json' | sort)
             fi
-
-            [ -n "$before" ] || return 0
-            git diff --name-only "$before" "$head_sha" -- 'bucket/*.json' | sort -u || true
-          }
-
-          before="${{ github.event.before }}"
-          head_sha="${{ github.sha }}"
-          map_file="winget/package-map.json"
-          event_name="${{ github.event_name }}"
-          dispatch_manifests="${{ github.event.inputs.manifests || '' }}"
-
-          if [ ! -f "$map_file" ]; then
-            write_empty_output
-            exit 0
+          else
+            mapfile -t changed_files < <(
+              [ -n "$before" ] && git diff --name-only "$before" "$head_sha" -- 'bucket/*.json' | sort -u || true
+            )
           fi
 
-          if [ "$event_name" != "workflow_dispatch" ] && { [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; }; then
-            before="$(git rev-list --max-count=1 HEAD^ 2>/dev/null || true)"
-          fi
-
-          mapfile -t changed_files < <(collect_changed_files)
           if [ "${#changed_files[@]}" -eq 0 ]; then
-            write_empty_output
+            emit_empty
             exit 0
           fi
 
@@ -141,11 +104,7 @@ jobs:
             fi
 
             if [ "$event_name" != "workflow_dispatch" ]; then
-              if [ -z "$old_version" ]; then
-                continue
-              fi
-
-              if ! version_increased "$old_version" "$new_version"; then
+              if [ -z "$old_version" ] || [ "$old_version" = "$new_version" ] || [ "$(printf '%s\n%s\n' "$old_version" "$new_version" | sort -V | tail -n1)" != "$new_version" ]; then
                 echo "Skipping $manifest_path: version did not increase ($old_version -> $new_version)"
                 continue
               fi
@@ -165,7 +124,7 @@ jobs:
               continue
             fi
 
-            if ! version_increased "$winget_version" "$new_version"; then
+            if [ "$winget_version" = "$new_version" ] || [ "$(printf '%s\n%s\n' "$winget_version" "$new_version" | sort -V | tail -n1)" != "$new_version" ]; then
               echo "Skipping $manifest_path: Scoop version is not newer than Winget ($new_version <= $winget_version)"
               continue
             fi
@@ -186,28 +145,8 @@ jobs:
               continue
             fi
 
-            version_pairs_json=$(build_version_pairs "$winget_version" "$new_version")
-            if [ -n "$old_version" ]; then
-              version_pairs_json=$(jq -cn --argjson pairs "$version_pairs_json" --arg old "$old_version" --arg new "$new_version" '
-                ($pairs + [{old: $old, new: $new}])
-                | map(select((.old | length) > 0 and (.new | length) > 0 and .old != .new))
-                | reduce .[] as $item ([]; if any(.[]; .old == $item.old) then . else . + [$item] end)
-              ')
-            fi
-
-            urls_json=$(jq -c --argjson pairs "$version_pairs_json" '
-              def replace_first_match($pairs):
-                reduce $pairs[] as $pair
-                  ({value: ., done: false};
-                    if .done then .
-                    elif (.value | contains($pair.old))
-                      then {value: (.value | split($pair.old) | join($pair.new)), done: true}
-                      else .
-                    end
-                  )
-                | .value;
-
-              map(replace_first_match($pairs))
+            urls_json=$(jq -c --arg old "$winget_version" --arg new "$new_version" '
+              map(if contains($old) then split($old) | join($new) else . end)
             ' <<< "$urls_json")
 
             updates_json=$(jq -c --arg id "$winget_id" --arg version "$new_version" --argjson urls "$urls_json" \
@@ -215,7 +154,7 @@ jobs:
           done
 
           if [ "$(jq length <<< "$updates_json")" -eq 0 ]; then
-            write_empty_output
+            emit_empty
             exit 0
           fi
 
