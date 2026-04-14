@@ -198,6 +198,47 @@ jobs:
         if: steps.token.outputs.has_token != 'true'
         run: echo "::warning::Skipping Komac submission because WINGET_TOKEN is not set"
 
+      - name: Validate Komac token permissions
+        if: steps.token.outputs.has_token == 'true'
+        env:
+          GH_TOKEN: ${{ steps.token.outputs.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          api() {
+            curl -fsSL \
+              -H "Authorization: Bearer $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              "$1"
+          }
+
+          viewer=$(api "https://api.github.com/user")
+          login=$(jq -r '.login // empty' <<< "$viewer")
+          if [ -z "$login" ]; then
+            echo "::error::WINGET_TOKEN can authenticate, but GitHub did not return an account login."
+            exit 1
+          fi
+
+          fork_repo=$(api "https://api.github.com/repos/${login}/winget-pkgs" 2>/dev/null || true)
+          if [ -z "$fork_repo" ]; then
+            echo "::error::WINGET_TOKEN belongs to '${login}', but https://github.com/${login}/winget-pkgs is missing or not accessible."
+            echo "::error::Create a fork of microsoft/winget-pkgs under '${login}' and grant the token repository contents write access."
+            exit 1
+          fi
+
+          if [ "$(jq -r '.fork // false' <<< "$fork_repo")" != "true" ]; then
+            echo "::error::${login}/winget-pkgs exists, but GitHub does not report it as a fork."
+            echo "::error::Komac submits through a fork of microsoft/winget-pkgs; recreate the fork before rerunning."
+            exit 1
+          fi
+
+          if [ "$(jq -r '.permissions.push // false' <<< "$fork_repo")" != "true" ]; then
+            echo "::error::WINGET_TOKEN for '${login}' can read ${login}/winget-pkgs but cannot push branches to it."
+            echo "::error::Grant repository contents write access to the token, or replace it with a token that can create refs in the fork."
+            exit 1
+          fi
+
       - name: Run Komac update
         if: steps.token.outputs.has_token == 'true'
         uses: michidk/run-komac@v2

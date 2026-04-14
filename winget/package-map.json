@@ -5,7 +5,6 @@
     "autoruns": "Microsoft.Sysinternals.Autoruns",
     "aya": "LiriLiri.AYA",
     "blitz": "Blitz.Blitz",
-    "claude": "Anthropic.Claude",
     "discord-arm": "Discord.Discord.arm64",
     "discord": "Discord.Discord",
     "dyad": "Dyad.Dyad",
