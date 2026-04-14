@@ -1,10 +1,10 @@
 {
-    "version": "8.44",
+    "version": "8.46",
     "description": "Free System Information, Monitoring and Diagnostics",
     "homepage": "https://hwinfo.com",
     "license": "Proprietary",
-    "url": "https://www.sac.sk/download/utildiag/hwi_844.zip",
-    "hash": "b295a8dacbf32378f6c290f85752ed2a32a8eaf84ad958540f4c1a604a5f67a6",
+    "url": "https://www.sac.sk/download/utildiag/hwi_846.zip",
+    "hash": "af88b25070605f2d32b336381de70afabf8dac1e72adad1820dbe9ef1fb3f12d",
     "architecture": {
         "64bit": {
             "shortcuts": [
