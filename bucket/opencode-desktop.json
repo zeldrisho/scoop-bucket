@@ -1,12 +1,12 @@
 {
-    "version": "1.14.18",
+    "version": "1.14.19",
     "description": "Open source AI coding agent",
     "homepage": "https://opencode.ai/download",
     "license": "MIT",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/anomalyco/opencode/releases/download/v1.14.18/opencode-desktop-windows-x64.exe#/dl.7z",
-            "hash": "8da7ad957d803e8a9ca3940264f6747b48f357f8dbf7196259f58fd5999f936f"
+            "url": "https://github.com/anomalyco/opencode/releases/download/v1.14.19/opencode-desktop-windows-x64.exe#/dl.7z",
+            "hash": "828b02f8ff87233b5cf165108b3f98d432040abf9417dc7a221dc4cbc9ef0d6c"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\", \"$dir\\uninstall.exe\" -Recurse -Force",
