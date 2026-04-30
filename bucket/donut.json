@@ -1,12 +1,12 @@
 {
-    "version": "0.22.4",
+    "version": "0.22.5",
     "description": "Anti-Detect Browser",
     "homepage": "https://donutbrowser.com",
     "license": "AGPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/zhom/donutbrowser/releases/download/v0.22.4/Donut_0.22.4_x64-portable.zip",
-            "hash": "0228c7d973fec84b85d3570055af6c70b3d8214aa20b189b72cf7c6773b4dd49"
+            "url": "https://github.com/zhom/donutbrowser/releases/download/v0.22.5/Donut_0.22.5_x64-portable.zip",
+            "hash": "a7f7f22e7cdecd64175e7cc892f5e09ae47dbdc81e7208b466da6134d5f25b17"
         }
     },
     "extract_dir": "Donut-Portable",
