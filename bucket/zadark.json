@@ -12,7 +12,8 @@
     "pre_install": "Rename-Item \"$dir\\zadark$version-windows.exe\" \"zadark.exe\"",
     "bin": "zadark.exe",
     "checkver": {
-        "github": "https://github.com/quaric/zadark"
+        "url": "https://zadark.com/blog/changelog",
+        "regex": "ZaDark ([\\d.]+)"
     },
     "autoupdate": {
         "architecture": {
