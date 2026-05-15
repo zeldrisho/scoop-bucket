@@ -1,16 +1,16 @@
 {
-    "version": "1.7196.0",
+    "version": "1.7196.1",
     "description": "Next generation AI assistant built by Anthropic",
     "homepage": "https://claude.com/download",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://downloads.claude.ai/releases/win32/x64/AnthropicClaude-1.7196.0-full.nupkg",
-            "hash": "d181bbed3634d973f33375c550d2c1248061df49028357cb7785fb003052bd01"
+            "url": "https://downloads.claude.ai/releases/win32/x64/AnthropicClaude-1.7196.1-full.nupkg",
+            "hash": "6e8a2fdfad969b88bebb14fe00161cbd77f290f4d0d42bbd1578410af6a8207d"
         },
         "arm64": {
-            "url": "https://downloads.claude.ai/releases/win32/arm64/AnthropicClaude-1.7196.0-full.nupkg",
-            "hash": "7df34e692e73b2445837909b0e0c3c4350c247da20b153ae73aade4215ebf4a8"
+            "url": "https://downloads.claude.ai/releases/win32/arm64/AnthropicClaude-1.7196.1-full.nupkg",
+            "hash": "dbfc11114efcaf2beb8c71ae41fec12a014d346658a8a3e1a5fa707815a5cdd3"
         }
     },
     "extract_dir": "lib\\net45",
