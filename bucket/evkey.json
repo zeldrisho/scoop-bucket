@@ -1,10 +1,10 @@
 {
-    "version": "5.0.1",
+    "version": "6.0.4",
     "description": "Vietnamese input method editor",
     "homepage": "https://evkeyvn.com",
     "license": "Freeware",
     "url": "https://github.com/lamquangminh/EVKey/releases/download/Release/EVKey.zip",
-    "hash": "9671472133e5561eeff67ad7237c927d2acaa779e158c02c97d1504deee46734",
+    "hash": "92e05fd67079740fc500720da940ab7e845712560fed8372c6d15e6839460bb1",
     "architecture": {
         "64bit": {
             "shortcuts": [
