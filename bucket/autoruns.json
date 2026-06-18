@@ -1,10 +1,10 @@
 {
-    "version": "14.2",
+    "version": "14.3",
     "description": "Shows programs configured to run during bootup or login",
     "homepage": "https://learn.microsoft.com/sysinternals/downloads/autoruns",
     "license": "Proprietary",
     "url": "https://download.sysinternals.com/files/Autoruns.zip",
-    "hash": "bbb5c1126a0a0600ff09a9517141378e4df573260264351000f65163123c134a",
+    "hash": "7b3a8eed819f732a3e4c134aecaeaebb8d643a46490ccddb82cc8a1a745c4cf7",
     "architecture": {
         "64bit": {
             "shortcuts": [
