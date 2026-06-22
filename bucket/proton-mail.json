@@ -1,12 +1,12 @@
 {
-    "version": "1.12.1",
+    "version": "1.13.3",
     "description": "Secure email that protects your privacy",
     "homepage": "https://proton.me/mail",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://proton.me/download/mail/windows/1.12.1/proton_mail-1.12.1-full.nupkg",
-            "hash": "6cef717cba49a475ad4df85a8db9c600709265a8d18d474c9267e457ba5d8826"
+            "url": "https://proton.me/download/mail/windows/1.13.3/proton_mail-1.13.3-full.nupkg",
+            "hash": "883056c5f7a56cafa522d830340ffd7a156e344cd8a99d350ca3f46e68081b00"
         }
     },
     "extract_dir": "lib\\net45",
