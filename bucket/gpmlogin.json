@@ -1,5 +1,5 @@
 {
-    "version": "0.4.6",
+    "version": "0.4.7",
     "description": "Antidetect browser",
     "homepage": "https://gpmloginapp.com",
     "license": "Proprietary",
@@ -7,7 +7,7 @@
     "architecture": {
         "64bit": {
             "url": "https://assets.giaiphapmmo.net/gpmloginglobal/GPMLoginGlobal_full_setup_latest.exe",
-            "hash": "0011417f30b6c2ff816b2cc62cc1a370f97324466bc9140196ed15f6b728fd60"
+            "hash": "ce8cd9f0d90c3b5814ec99e22591398cc84ad461c5768a50b8b8b76a78113239"
         }
     },
     "pre_install": [
