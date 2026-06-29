@@ -1,13 +1,13 @@
 {
-    "version": "1.0.9243",
+    "version": "1.0.9244",
     "description": "Voice, video and text communication platform",
     "homepage": "https://discord.com",
     "license": "Freeware",
     "notes": "Register notification by running: $dir\\makelnk.ps1",
     "architecture": {
         "64bit": {
-            "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9243/DiscordSetup.exe#/dl.7z",
-            "hash": "7fdd1c416efdb090942c22e3e5ab16aeb1d3f2b1f881690d7336af083d4303de"
+            "url": "https://stable.dl2.discordapp.net/distro/app/stable/win/x64/1.0.9244/DiscordSetup.exe#/dl.7z",
+            "hash": "7872a4f9fba2483fbfe0e2e08ee23f03558a7c45fed26e077429363e83176ff9"
         }
     },
     "pre_install": [
