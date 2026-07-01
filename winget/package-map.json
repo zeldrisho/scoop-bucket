@@ -40,7 +40,6 @@
     "proxyman": "Proxyman.Proxyman",
     "sandboxie-plus": "Sandboxie.Plus",
     "stremio-service": "Stremio.StremioService",
-    "stremio": "Stremio.Stremio.Beta",
     "tailscale": "Tailscale.Tailscale",
     "teamviewer-qs": "TeamViewer.TeamViewer.QuickSupport",
     "teamviewer": "TeamViewer.TeamViewer",
