@@ -1,5 +1,5 @@
 {
-    "version": "13.6",
+    "version": "13.9",
     "description": "All-in-one Disk Partition Manager",
     "homepage": "https://partitionwizard.com",
     "license": "Proprietary",
@@ -11,7 +11,7 @@
         },
         "32bit": {
             "url": "https://cdn2.minitool.com/?p=pw&e=pwfree-32bit-portable#/dl.7z",
-            "hash": "3631aebc63e12772d32079f148b998d43bebe806926a4feb3798217f0dad5e3a",
+            "hash": "42b3bb1cf23a7fcdc133a1bcb5e331844748d478ff963ce3c1b0fec054bcf660",
             "extract_dir": "pwfree-32bit-portable"
         }
     },
