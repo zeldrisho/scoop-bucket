@@ -1,5 +1,5 @@
 {
-    "version": "10.0.301",
+    "version": "10.0.302",
     "description": ".NET is the free, open-source framework for building modern apps and powerful cloud services",
     "homepage": "https://dotnet.microsoft.com",
     "license": "MIT",
@@ -8,16 +8,16 @@
     },
     "architecture": {
         "64bit": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.301/dotnet-sdk-10.0.301-win-x64.zip",
-            "hash": "65304992343d12461f4369b65a1e78a38737899a240ad42e942ada0bad4fbdec"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.302/dotnet-sdk-10.0.302-win-x64.zip",
+            "hash": "2cb9d5d98aeda0582ec02a1e429a613df6d97a1ce0f06b361f7def9b7e7c1a6b"
         },
         "32bit": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.301/dotnet-sdk-10.0.301-win-x86.zip",
-            "hash": "19cfaae8dfb9b8c2d026b4b9340766a79ab9f884309fbb93baec0fb9ac3be47c"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.302/dotnet-sdk-10.0.302-win-x86.zip",
+            "hash": "3896bcd682a068701b2f463abca4c00e4343390a05f323fd02bd8c6206085fd6"
         },
         "arm64": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.301/dotnet-sdk-10.0.301-win-arm64.zip",
-            "hash": "cc9a8b15112f079b585586d51125d5ab1c59095735c278021da3168e3fc17614"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/Sdk/10.0.302/dotnet-sdk-10.0.302-win-arm64.zip",
+            "hash": "ae2ec2bfe5e9789b666ee404351a639c7df9da8fd06536d606aeb554ccb1874a"
         }
     },
     "env_add_path": ".",
