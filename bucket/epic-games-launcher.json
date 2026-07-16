@@ -1,12 +1,12 @@
 {
-    "version": "20.1.0",
+    "version": "20.1.4",
     "description": "Supports purchasing, downloading and playing games",
     "homepage": "https://store.epicgames.com",
     "license": "Proprietary",
     "architecture": {
         "64bit": {
-            "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Windows/EpicInstaller-20.1.0.msi",
-            "hash": "632dfd8f07279dfdaf862d0a1e1118143c94a795adaf7c85eeed026e11ff069b"
+            "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Windows/EpicInstaller-20.1.4.msi",
+            "hash": "1513d6cc2afda0367c8375b6f25f490c162da5607ce4b4adbb41906a2d742236"
         }
     },
     "extract_dir": "Epic Games\\Launcher",
