@@ -1,11 +1,11 @@
 {
-    "version": "0.21.6",
+    "version": "0.21.7",
     "description": "Coding agent that lives in the digital world",
     "homepage": "https://qwenlm.github.io/qwen-code-docs",
     "license": "Apache-2.0",
     "depends": "nodejs-lts",
-    "url": "https://github.com/QwenLM/qwen-code/releases/download/v0.21.6/cli.js",
-    "hash": "de72cf05e8694f10eb3b7d50567e232ff1eb8912d6276d21fa8d7d79311d5d91",
+    "url": "https://github.com/QwenLM/qwen-code/releases/download/v0.21.7/cli.js",
+    "hash": "ed719041e25a3c48119239576149868042cd68b4904dfa0e8e46e17e906efa81",
     "bin": [
         [
             "node",
