@@ -1,21 +1,21 @@
 {
-    "version": "10.0.10",
+    "version": "10.0.11",
     "description": ".NET Desktop Runtime enables you to run existing Windows desktop applications",
     "homepage": "https://dotnet.microsoft.com/download/dotnet",
     "license": "MIT",
     "notes": "You can now remove this installer by running: scoop uninstall windowsdesktop-runtime-lts",
     "architecture": {
         "64bit": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.10/windowsdesktop-runtime-10.0.10-win-x64.exe",
-            "hash": "e82fc901c8f52d716293b2bc0830ce0dd254a06268c457a19e8fc503560a84d1"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.11/windowsdesktop-runtime-10.0.11-win-x64.exe",
+            "hash": "61d2e1447b185d6f99c0d5799896240b48246f5440648bc031ebdb159a3bf3d1"
         },
         "32bit": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.10/windowsdesktop-runtime-10.0.10-win-x86.exe",
-            "hash": "9c174f8df1624a3c33c4e2bbcf99bb7c7166d1a319a2b624a8b84ae4ec692675"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.11/windowsdesktop-runtime-10.0.11-win-x86.exe",
+            "hash": "28df04d05f7735abd201373effce57b439796bb102a659f09652ba53f4a7584a"
         },
         "arm64": {
-            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.10/windowsdesktop-runtime-10.0.10-win-arm64.exe",
-            "hash": "9891cfe6747583fc809f647fea500c9f424f90ef9fa776f40d7b5ae2bab69e02"
+            "url": "https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.11/windowsdesktop-runtime-10.0.11-win-arm64.exe",
+            "hash": "6a0494deb85e65f1f2b8c636cc0d17c772908984eb39761f8811a99890e40e59"
         }
     },
     "pre_install": [
