@@ -1,12 +1,12 @@
 {
-    "version": "4.6.5",
+    "version": "4.6.6",
     "description": "Antigravity Account Manager & Switcher",
     "homepage": "https://github.com/lbjlaq/Antigravity-Manager",
     "license": "CC-BY-NC-SA-4.0",
     "architecture": {
         "64bit": {
-            "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v4.6.5/Antigravity.Tools_4.6.5_x64-setup.exe#/dl.7z",
-            "hash": "cc2a4493ba184f8b15ce6abc6e7956be83acaf7b94207677c8d009f11f04d142"
+            "url": "https://github.com/lbjlaq/Antigravity-Manager/releases/download/v4.6.6/Antigravity.Tools_4.6.6_x64-setup.exe#/dl.7z",
+            "hash": "b53883b5e47c7e0209f8967e4dc212eb19ead3dfaf8ed9e1cbeb7d05c731bb5f"
         }
     },
     "post_install": "Remove-Item \"$dir\\`$PLUGINSDIR\" -Recurse -Force",
