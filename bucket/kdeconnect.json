@@ -1,12 +1,12 @@
 {
-    "version": "26.04.2",
+    "version": "26.08.1",
     "description": "Enabling communication between all your devices",
     "homepage": "https://kdeconnect.kde.org",
     "license": "GPL-3.0",
     "architecture": {
         "64bit": {
-            "url": "https://download.kde.org/stable/release-service/26.04.2/windows/kdeconnect-kde-windows-cl-msvc2022-x86_64.7z",
-            "hash": "0fc7c8eecdff189af3d2b9aee3a1188b03c8a7c83b4d3a3ef416712703a9828b"
+            "url": "https://download.kde.org/stable/release-service/26.08.1/windows/kdeconnect-kde-26.08-windows-cl-msvc2022-x86_64.7z",
+            "hash": "f6386a3622edec73d819506c981ff7e540b0999d2911fc1bc4505f472ab7c4d0"
         }
     },
     "shortcuts": [
