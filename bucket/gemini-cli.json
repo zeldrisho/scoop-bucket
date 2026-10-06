@@ -1,11 +1,11 @@
 {
-    "version": "0.62.0",
+    "version": "0.63.0",
     "description": "Brings the power of Gemini directly into your terminal",
     "homepage": "https://geminicli.com",
     "license": "Apache-2.0",
     "depends": "nodejs-lts",
-    "url": "https://github.com/google-gemini/gemini-cli/releases/download/v0.62.0/gemini-cli-bundle.zip",
-    "hash": "68c199ca0c352ee3107e33d121faea24486f4416534224994357b567576e431c",
+    "url": "https://github.com/google-gemini/gemini-cli/releases/download/v0.63.0/gemini-cli-bundle.zip",
+    "hash": "c9d66e50a0fe098a32486360308e558c472809da276caf2aac2769d8f10571c2",
     "bin": [
         [
             "node",
