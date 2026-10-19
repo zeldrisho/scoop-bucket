@@ -1,12 +1,12 @@
 {
-    "version": "26.2.1",
+    "version": "26.3",
     "description": "Utilities for Zalo",
     "homepage": "https://zadark.com",
     "license": "MPL-2.0",
     "architecture": {
         "64bit": {
-            "url": "https://storage.zadark.com/zadark26.2.1-windows.zip",
-            "hash": "bc5afba8c75c8e8cb5ee8f023cb36e0bdbbb814c543eba44ea1219647ff8fb09"
+            "url": "https://storage.zadark.com/zadark26.3-windows.zip",
+            "hash": "9ac3fc2aee83e1fb959ffe7d81b9f47bde67db8032aa164335aaff11e4fa1f87"
         }
     },
     "pre_install": "Rename-Item \"$dir\\zadark$version-windows.exe\" \"zadark.exe\"",
